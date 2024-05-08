@@ -23,7 +23,7 @@ const distDir = join(fileURLToPath(import.meta.url), "..", "..", "dist");
 const buildDir = join(distDir, "build");
 
 // Allow for dynamic port and host
-const PORT = parseInt(process.env.PORT ?? "3000");
+const PORT = parseInt(process.env.PORT ?? "4000");
 const HOST = process.env.HOST ?? "0.0.0.0";
 
 const start = async () => {
