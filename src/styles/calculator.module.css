@@ -1,0 +1,42 @@
+.tool {
+  width: 100%;
+  max-width: 400px;
+}
+
+.tool form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-block: 1rem;
+}
+
+.tool form > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tool input,
+.tool select {
+  padding: 5px;
+}
+
+.tool form button[type="submit"] {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.tool form button[type="submit"]:hover {
+  background-color: var(--tertiary);
+  color: black;
+}
+
+.tool .result div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

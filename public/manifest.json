@@ -1,9 +1,17 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "qwik-project-name",
-  "short_name": "Welcome to Qwik",
+  "name": "MaschPu",
+  "short_name": "MaschPu-App",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
-  "description": "A Qwik project app."
+  "description": "Web-App für Maschinisten von Schmutzwasserpumpen",
+  "theme_color": "#003399",
+  "icons": [
+    {
+      "src": "maskable-icon.png",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
 }

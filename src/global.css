@@ -1,0 +1,20 @@
+@font-face {
+  font-family: BundesSans;
+  src: url("/bundessans.ttf") format("truetype");
+}
+
+:root {
+  font-family: BundesSans;
+  
+  --primary: #003399;
+  --secondary: #ffff00;
+  --tertiary: #00ffff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
