@@ -1,0 +1,65 @@
+---
+title: Durchflussmenge
+description: Die Durchflussmenge beschreibt, wie viel Wasser (Volumen) wir in einer bestimmten Zeit fördern können. Sie berechnet sich aus der Querschnittsfläche der Leitung und der Fließgeschwindigkeit.
+---
+
+import Durchfluss from "./assets/durchfluss.png?jsx"
+import Kontinuitaet from "./assets/koninuitaet.png?jsx"
+
+# Durchflussmenge
+
+## Grundbegriffe
+
+Wenn wir uns mit Pumpen beschäftigen, sprechen wir immer auch über **Durchflussmengen**. Bei Pumpen wird aber eher der Begriff **Förderleistung** verwendet.
+
+Die Durchflussmenge/Förderleistung beschreibt, wie viel Wasser (Volumen) wir in einer bestimmten Zeit fördern können. 
+
+```math
+Durchflussmenge (\dot{m}) = Volumen (V) / Zeit (t)
+```
+
+Oft findet man die Durchflussmenge auch als Produkt aus der **Querschnittsfläche der Leitung** und der **Strömunggeschwindigkeit** des Wassers beschrieben.
+
+<Durchfluss style={{padding: "1rem 4rem", width: "calc(100% - 8rem)"}}/>
+
+```math
+\dot{m} = Fläche (A) * Geschwindigkeit (v)
+```
+
+Durchflussmengen werden im Allgemeinen im **m³/h (Kubikmeter/Stunde)** gerechnet. 
+"Großverbraucher" wie beispielsweise Klärwerken in Großstädten rechnen schon in **m³/s (Kubikmeter/Sekunde)**.
+Im THW hat man sich dafür entschieden in **l/min (Liter/Minute)** zu rechnen.
+
+```math
+1 m^3/h = 1.000 l/h = 16.67 l/min
+```
+
+## Kontinuität
+
+Koninuität bedeutet im Kern, dass die Durchflussmenge in einer Leitung immer konstant bleibt, oder einfacher:
+
+>Alles was rein geht, kommt auch wieder raus.
+
+Dabei ist es egal, wie lang eine Leitung ist, oder ob sich der Querschnitt ändert.
+
+Wenn sich ein Querschnitt ändert, dann änder sich automatisch die Strömungsgeschwindigkeit des Wassers, die Durchflussmenge ist immer konstant.
+
+**Beispiel**
+
+Wir fördern 2000 l/min durch durch einen A-Schlauch (110mm). Jetzt verjüngen wir unsere Leitung auf einen B-Schlauch (75mm). 
+
+Dabei verringert sich unser Schlauchquerschnitt um etwas mehr als die Hälfte. 
+
+Damit am Ende des B-Schlauchs noch immer 2000 l/min gefördert werden, muss das Wasser im B-Schlauch also etwas mehr als doppelt so schnell fließen wie im A-Schlauch.
+
+<Kontinuitaet style={{padding: "1rem 4rem", width: "calc(100% - 8rem)"}}/>
+
+```math
+\dot{m}_1 = \dot{m}_2
+```
+
+```math
+A_1 * v_1 = A_2 * v_2
+```
+
+Dieser Zusammenhang zwischen Querschnittsfläche und Geschwindigkeit nennt sich Kontinuität.

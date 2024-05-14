@@ -1,0 +1,17 @@
+<svg width="20.240868" height="18.770269" viewBox ="0.000000 0.000000 20.240868 18.770269" xmlns="http://www.w3.org/2000/svg"> 
+<g id="Modell">
+<g id="${name.xy_plane}">
+<g id="Calc-Icon">
+<g id="${name.group}4">
+<line  id="${name.line}17" x1="0.010000" y1="4.378004" x2="8.746007" y2="4.378004" stroke-width="1.000000" />
+<line  id="${name.line}18" x1="4.378004" y1="0.010000" x2="4.378004" y2="8.746007" stroke-width="1.000000" />
+<line  id="${name.line}19" x1="11.494857" y1="4.378004" x2="20.230864" y2="4.378004" stroke-width="1.000000" />
+<line  id="${name.line}23" x1="7.466648" y1="18.760270" x2="1.289359" y2="12.582980" stroke-width="1.000000" />
+<line  id="${name.line}24" x1="1.289359" y1="18.760270" x2="7.466648" y2="12.582980" stroke-width="1.000000" />
+<line  id="${name.line}25" x1="11.494857" y1="16.671625" x2="20.230864" y2="16.671625" stroke-width="1.000000" />
+<line  id="${name.line}26" x1="11.494857" y1="14.671625" x2="20.230864" y2="14.671625" stroke-width="1.000000" />
+</g>
+</g>
+</g>
+</g>
+</svg>

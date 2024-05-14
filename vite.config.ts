@@ -9,6 +9,9 @@ import { qwikPwa } from "@qwikdev/pwa";
 import tsconfigPaths from "vite-tsconfig-paths";
 import pkg from "./package.json";
 
+import rehypeKatex from "rehype-katex"
+import remarkMath  from "remark-math";
+
 type PkgDep = Record<string, string>;
 const { dependencies = {}, devDependencies = {} } = pkg as any as {
   dependencies: PkgDep;
@@ -22,7 +25,14 @@ errorOnDuplicatesPkgDeps(devDependencies, dependencies);
  */
 export default defineConfig(({ command, mode }): UserConfig => {
   return {
-    plugins: [qwikCity(), qwikVite(), tsconfigPaths(), qwikPwa({
+    plugins: [qwikCity({
+      mdx: {
+        rehypePlugins: [
+          [rehypeKatex, {output: "mathml"}],
+          [remarkMath]
+        ]
+      }
+    }), qwikVite(), tsconfigPaths(), qwikPwa({
       /* options */
     }),],
     // This tells Vite which dependencies to pre-build in dev mode.
@@ -55,7 +65,6 @@ export default defineConfig(({ command, mode }): UserConfig => {
         "Cache-Control": "public, max-age=0",
       },
       port: 5000,
-      https: {}
     },
     preview: {
       headers: {

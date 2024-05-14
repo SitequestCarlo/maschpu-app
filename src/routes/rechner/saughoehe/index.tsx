@@ -103,7 +103,7 @@ export const HeightCalc = component$(() => {
   return (
   <div class={styles.tool}>
 
-    <h1>Saugleitungsrechner</h1>
+    <h1>Saughöhenrechner</h1>
 
     <Form onSubmitCompleted$={calcHeight}>
       <div>
@@ -116,6 +116,7 @@ export const HeightCalc = component$(() => {
       <div>
         <label for="hose-diam">Saugschauch Typ</label>
         <select required id="hose-diam">
+          <option value={40}>Storz D (40mm)</option>
           <option value={50}>Storz C (50mm)</option>
           <option value={75}>Storz B (75mm)</option>
           <option value={110}>Storz A (110mm)</option>
@@ -150,6 +151,8 @@ export const HeightCalc = component$(() => {
         <label for="safety">Sicherheitsfaktor [%]</label>
         <input type="number" value={20} min={0} max={100} required id="safety"/>
       </div>
+
+      <hr />
 
       <button type="submit">Berechnen</button>
     </Form>
