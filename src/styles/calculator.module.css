@@ -19,7 +19,7 @@
 
 .tool input,
 .tool select {
-  padding: 5px;
+  padding: 10px;
 }
 
 .tool form button[type="submit"] {

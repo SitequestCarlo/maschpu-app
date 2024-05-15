@@ -1,6 +1,16 @@
 import { $, component$, useSignal } from "@builder.io/qwik";
-import { Form } from "@builder.io/qwik-city";
+import { type DocumentHead, Form } from "@builder.io/qwik-city";
 import styles from "~/styles/calculator.module.css"
+
+export const head: DocumentHead = {
+  title: "Fördermendenumrechner",
+  meta: [
+    {
+      name: "description",
+      content: "Wandelt Fördermengen von einer Einheit in andere um.",
+    },
+  ],
+};
 
 export default component$(() => {
   return (

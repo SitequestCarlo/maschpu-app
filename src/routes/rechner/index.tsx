@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
+import { type DocumentHead, Link } from "@builder.io/qwik-city";
 import styles from "~/styles/index.module.css"
 
 export default component$(() => {
@@ -14,6 +14,13 @@ export default component$(() => {
           </div>
         </Link>
 
+        <Link href="/rechner/druckleitung">
+          <div class={styles.title}>Druckleitungsrechner</div>
+          <div class={styles.description}>
+            Bestimmt die aktuelle Förderleistung mittels Leitungsaufbau und Gegendruck.
+          </div>
+        </Link>
+
         <Link href="/rechner/foerdermenge">
           <div class={styles.title}>Fördermengenumrechner</div>
           <div class={styles.description}>
@@ -24,3 +31,13 @@ export default component$(() => {
     </>
   )
 })
+
+export const head: DocumentHead = {
+  title: "Rechner",
+  meta: [
+    {
+      name: "description",
+      content: "Rechen-Tools zur Berechnung von verschiedenen Werten von Pumpstrecken.",
+    },
+  ],
+};

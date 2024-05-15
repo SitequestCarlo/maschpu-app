@@ -1,6 +1,17 @@
 import { $, component$, useSignal } from "@builder.io/qwik";
-import { Form } from "@builder.io/qwik-city";
+import { type DocumentHead, Form } from "@builder.io/qwik-city";
 import styles from "~/styles/calculator.module.css"
+import { dampfdruckPa, dichte } from "~/utils/values";
+
+export const head: DocumentHead = {
+  title: "Saughöhenrechner",
+  meta: [
+    {
+      name: "description",
+      content: "Berechnet die maximal mögliche geodätische und manomatrische Saughöhe anhand verschiedener Parameter.",
+    },
+  ],
+};
 
 export default component$(() => {
   return (
@@ -9,18 +20,6 @@ export default component$(() => {
   </>
   )
 }) 
-
-const dampfdruckPa = (temp: number) => {
-  const values = [6.1115, 6.5709, 7.0599, 7.5808, 8.1355, 8.7258, 9.3536, 10.021, 10.730, 11,483, 12.282, 13.130, 14.028, 15.990, 17.058, 18.188, 19.384, 20.647, 21.983, 23.292, 24.882, 26.453, 28.111, 29.858, 31.699]
-  return values[temp] * 100
-}
-
-const dichte = (temp: number) => {
-  const values = [999.843, 999.907, 999.946, 999.969, 999.975, 999.965, 999.940, 999.900, 999.845, 999.776, 999.694, 999.598, 999.489, 999.367, 999.233, 999.087, 998.930, 998.761, 998.580, 998.389, 998.186, 998.186, 997.974, 997.751, 997.518, 997.275, 997.022]
-  return values[temp]
-}
-
-// https://www.schweizer-fn.de/stroemung/druckverlust/druckverlust.php
 
 
 export const HeightCalc = component$(() => {
@@ -51,7 +50,7 @@ export const HeightCalc = component$(() => {
     /** Länge Saugschlauch in m */
     const hose_length = parseFloat((form.querySelector("input#hose-length") as HTMLInputElement).value)
     /** Luftdruck in Pa */
-    const air_p = parseFloat((form.querySelector("input#air-p") as HTMLInputElement).value) * 100
+    const air_p = parseFloat((form.querySelector("input#air-p") as HTMLInputElement).value) * 100 * 1000
     /** Wassertemperatur in °C */
     const water_temp = parseFloat((form.querySelector("input#water-temp") as HTMLInputElement).value)
 
@@ -114,7 +113,7 @@ export const HeightCalc = component$(() => {
       <hr />
 
       <div>
-        <label for="hose-diam">Saugschauch Typ</label>
+        <label for="hose-diam">Saugschlauch Typ</label>
         <select required id="hose-diam">
           <option value={40}>Storz D (40mm)</option>
           <option value={50}>Storz C (50mm)</option>
@@ -138,8 +137,8 @@ export const HeightCalc = component$(() => {
       <hr />
 
       <div>
-        <label for="air-p">Umgebungsdruck [hPa]</label>
-        <input type="number" value={1013.25} step={0.01} required id="air-p"/>
+        <label for="air-p">Umgebungsdruck [bar]</label>
+        <input type="number" value={1.01325} step={0.01} required id="air-p"/>
       </div>
 
       <div>
