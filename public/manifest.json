@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "MaschPu",
-  "short_name": "MaschPu-App",
+  "name": "MaschPu-App",
+  "short_name": "MaschPu",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
@@ -9,9 +9,11 @@
   "theme_color": "#003399",
   "icons": [
     {
-      "src": "maskable-icon.png",
-      "sizes": "512x512",
-      "type": "image/webp"
+      "src": "favicon.svg",
+      "sizes": "48x48 72x72 96x96 128x128 256x256 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
+    
   ]
 }

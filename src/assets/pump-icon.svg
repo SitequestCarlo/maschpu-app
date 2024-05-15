@@ -1,0 +1,26 @@
+<svg width="25.535606" height="36.918861" viewBox ="0.000000 0.000000 25.535606 36.918861" xmlns="http://www.w3.org/2000/svg"> 
+<g id="Modell">
+<g id="${name.xy_plane}">
+<g id="pump-icon-2">
+<circle id="${name.arc}40" cx="12.452646" cy="18.459432" r="11.622440" stroke-width="1.000000" fill="none" />
+<line  id="${name.line}17" x1="0.830206" y1="18.459432" x2="0.830206" y2="1.650267" stroke-width="1.000000" />
+<line  id="${name.line}19" x1="6.470070" y1="8.495000" x2="6.470070" y2="1.650267" stroke-width="1.000000" />
+<g id="${name.group}7">
+<line  id="${name.line}22" x1="6.470070" y1="0.050267" x2="0.830206" y2="0.050267" stroke-width="1.000000" />
+<path id="${name.arc}43" d=" M 0.830206 0.050267 A 0.800000 0.800000 0.000000 0 0 0.830206 1.650267" stroke-width="1.000000" fill="none" />
+<line  id="${name.line}23" x1="0.830206" y1="1.650267" x2="6.470070" y2="1.650267" stroke-width="1.000000" />
+<path id="${name.arc}44" d=" M 6.470070 1.650267 A 0.800000 0.800000 0.000000 0 0 6.470070 0.050267" stroke-width="1.000000" fill="none" />
+</g>
+<circle id="${name.arc}45" cx="12.452646" cy="18.459432" r="3.677294" stroke-width="1.000000" fill="none" />
+<line  id="${name.line}28" x1="18.435222" y1="28.423863" x2="18.435222" y2="35.268596" stroke-width="1.000000" />
+<line  id="${name.line}29" x1="24.075086" y1="18.459432" x2="24.075086" y2="35.268596" stroke-width="1.000000" />
+<g id="${name.group}9">
+<line  id="${name.line}30" x1="18.435222" y1="36.868596" x2="24.075086" y2="36.868596" stroke-width="1.000000" />
+<path id="${name.arc}48" d=" M 24.075086 36.868596 A 0.800000 0.800000 0.000000 0 0 24.075086 35.268596" stroke-width="1.000000" fill="none" />
+<line  id="${name.line}31" x1="24.075086" y1="35.268596" x2="18.435222" y2="35.268596" stroke-width="1.000000" />
+<path id="${name.arc}49" d=" M 18.435222 35.268596 A 0.800000 0.800000 0.000000 0 0 18.435222 36.868596" stroke-width="1.000000" fill="none" />
+</g>
+</g>
+</g>
+</g>
+</svg>

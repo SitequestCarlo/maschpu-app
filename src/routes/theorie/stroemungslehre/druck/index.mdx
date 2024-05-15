@@ -7,6 +7,7 @@ import Druck from "./assets/druck.png?jsx"
 import Druckaufteilung from "./assets/duckaufteilung.png?jsx"
 import Waterjet from "./assets/waterjet.png?jsx"
 import Bernoulli from "./assets/bernoulli.png?jsx"
+import NextPage from "~/components/next-page/next-page"
 
 # Druck
 
@@ -34,7 +35,7 @@ Dieser Druck entspricht auf Meereshöhe **1013,25 hPa** oder **1,01325 Bar**.
 
 Druck lässt sich grundlegen in zwei Anteile teilen, den statischen und dynamischen Druckanteil.
 
-<Druckaufteilung />
+<Druckaufteilung style={{padding: "1rem 4rem", width: "calc(100% - 8rem)"}}/>
 
 ### Statischer Druckanteil
 
@@ -57,22 +58,7 @@ Mit besonders hohen Staudrücken lässt sich zum Beispiel Stahl zerschneiden.
 
 Genau diese Aufteilung des Drucks in seine Anteile hat der Mathematiker Bernoulli in einer Formel zusammengefasst.
 
-<Bernoulli/>
-
-```math
-\rho = Dichte \ von \ Wasser
-```
-
-```math
-g = Erdbeschleunigung
-```
-
-```math
-v = Strömungsgeschwindigkeit
-```
-
-```math
-h = Höhe \ der \ Wassersäule
-```
-
+<Bernoulli style={{padding: "1rem 0"}}/>
 <desc>Bernoulli-Gleichung: Die wohl wichtigste Formel für die Strömungslehre</desc>
+
+<NextPage href="/theorie/stroemungslehre/venturi" name="Venturi-Effekt"/>

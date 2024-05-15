@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { Link, useLocation } from "@builder.io/qwik-city";
 import styles from "~/styles/nav-bar.module.css"
 
-import PumpIcon from "~/assets/pump-icon-3.svg?jsx"
+import PumpIcon from "~/assets/pump-icon.svg?jsx"
 import CalcIcon from "~/assets/calc-icon.svg?jsx"
 import TheoryIcon from "~/assets/theory-icon.svg?jsx"
 

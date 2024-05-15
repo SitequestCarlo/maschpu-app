@@ -6,6 +6,7 @@ description:
 import Dampfdruck from "./assets/dampfdruck.png?jsx"
 import Microjet from "./assets/microjet.png?jsx"
 import Schaden from "./assets/schaden.png?jsx"
+import NextPage from "~/components/next-page/next-page"
 
 # Kavitation
 
@@ -35,10 +36,14 @@ Beim einbrechen der Dampfblasen entsteht ein kleiner, aber sehr starker Wasserst
 Dieser Wasserstrahl heißt Microjet und kann Drücke von **mehreren tausend Bar** und Temperaturen von **bis zu 5000°C** mit sich bringen.
 
 Wir erinnern uns an die Möglichkeit mit hohen Drücken Stahl zu schneiden? Genau das selbe passiert hier auch. 
-Die extrem druckvollen und heißen Microjets tragen nach und nach Material von unseren Leitungsbauteilen ab, wodurch große Materialschäden entstehen.
+Die extrem druckvollen und heißen Microjets tragen nach und nach Material von unseren Leitungsbauteilen ab. 
+
+Dadurch entstehen schon nach wenigen Minuten große **Materialschäden**.
 
 Besonders wahrscheinlich ist Kavitation in Pumpengehäusen, da hier durch die schnell Drehenden Kreiselräder oder Drehkolben besonders niedrige Oberflächendrücke entstehen.
-Das Wasser wird dort regelrecht "auseinandergerissen".
+Das Wasser wird dort regelrecht "auseinandergerissen". Daher treten die meisten Kavitationsschäden am Pumpenrad selbst auf.
 
-<Schaden />
+<Schaden style={{padding: "1rem 4rem", width: "calc(100% - 8rem)"}}/>
 <desc>Schaden durch Kavitation an einem Kreiselrad</desc>
+
+<NextPage href="/theorie/stroemungslehre/reibung" name="Reibung"/>

@@ -1,13 +1,14 @@
 import { component$ } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
+import { type DocumentHead, Link } from "@builder.io/qwik-city";
 import styles from "~/styles/index.module.css"
 
 export default component$(() => {
   return (
     <>
       <h1>Pumpen</h1>
+      <h2>Großpumpen</h2>
       <div class={styles.list}>
-        <Link href="/pumpen/boerger-5">
+        <Link href="/pumpen/boerger-5000">
           <div class={styles.title}>Börger 5.000 l/min</div>
           <div class={styles.description}>
             Drehkolben-Havariepumpe der Fa. Börger.
@@ -22,20 +23,20 @@ export default component$(() => {
         </Link>
 
         <Link href="/pumpen/dia-1">
-          <div class={styles.title}>DIA I 15.000 l/min</div>
+          <div class={styles.title}>DIA 1 15.000 l/min</div>
           <div class={styles.description}>
             Kreiselrad-Havariepumpe der Fa. DIA.
           </div>
         </Link>
 
         <Link href="/pumpen/dia-2">
-          <div class={styles.title}>DIA II 15.000 l/min</div>
+          <div class={styles.title}>DIA 2 15.000 l/min</div>
           <div class={styles.description}>
             Kreiselrad-Havariepumpe der Fa. DIA.
           </div>
         </Link>
 
-        <Link href="/pumpen/boerger-25">
+        <Link href="/pumpen/boerger-25000">
           <div class={styles.title}>Börger 25.000 l/min</div>
           <div class={styles.description}>
             Drehkolben-Havariepumpe der Fa. Börger.
@@ -46,3 +47,13 @@ export default component$(() => {
     </>
   )
 })
+
+export const head: DocumentHead = {
+  title: "Pumpen",
+  meta: [
+    {
+      name: "description",
+      content: "Übersicht über verschiedene vom THW genutzte Pumpen.",
+    },
+  ],
+};

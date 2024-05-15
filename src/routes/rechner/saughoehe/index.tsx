@@ -139,12 +139,12 @@ export const HeightCalc = component$(() => {
 
       <div>
         <label for="air-p">Umgebungsdruck [hPa]</label>
-        <input type="number" value={1013.25} required id="air-p"/>
+        <input type="number" value={1013.25} step={0.01} required id="air-p"/>
       </div>
 
       <div>
         <label for="water-temp">Wassertemperatur [°C]</label>
-        <input type="number" value={20} required id="water-temp"/>
+        <input type="number" value={20} step={0.01} required id="water-temp"/>
       </div>
 
       <div>

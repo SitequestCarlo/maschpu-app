@@ -17,9 +17,11 @@ export default component$(() => {
   return (
   <>
     <NavBar />
-    <main>
-      <Slot />
-    </main>
+    <div class="content">
+      <main>
+        <Slot />
+      </main>
+    </div>
   </>
 
 )

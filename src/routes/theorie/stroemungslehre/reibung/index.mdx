@@ -6,6 +6,7 @@ description:
 import Druckaufteilung from "./assets/duckaufteilung-reibung.png?jsx"
 import Bernoulli from "./assets/bernoulli-reibung.png?jsx"
 import Reibung from "./assets/reibung.png?jsx"
+import NextPage from "~/components/next-page/next-page"
 
 # Reibung
 
@@ -17,12 +18,7 @@ Für das Verständnis von Schlauchleitungen ist es aber wichtig, zu verstehen, w
 
 Reibung lässt sich dem Dynamischen Druckanteil zuteilen.
 
-<Druckaufteilung />
-
-{/* In der Bernoulli-Gleichung sieht das dann so aus:
-
-<Bernoulli />
- */}
+<Druckaufteilung style={{padding: "1rem 4rem", width: "calc(100% - 8rem)"}}/>
 
 ## Wodurch entsteht Reibung
 
@@ -30,9 +26,9 @@ Reibung ensteht in allen Schlauchleitungen, sobald sich die Flüssigkeit darin b
 
 Wir können aber versuchen, die Reibung in unseren Schlauchleitungen möglichst gering zu halten.
 
-Dafür müssen wir verstehen, welche Faktoren die Reibung beeinflussen. Um das zu verbildlichen schauen wir uns mal die Formel zur Berechnung der Rohrreibung an.
+Dafür müssen wir verstehen, welche Faktoren die Reibung beeinflussen. Dazu schauen wir uns mal die Formel zur Berechnung der Rohrreibung an.
 
-<Reibung />
+<Reibung style={{padding: "1rem 1rem", width: "calc(100% - 2rem)"}}/>
 
 Hier sehen wir einmal, welche Faktoren für die Reibung in Leitungen eine Rolle spielen, und auch wie diese Faktoren zusammenhängen.
 
@@ -79,3 +75,5 @@ Legen wir statt einer F-Leitung zwei F-Leitungen, dann muss unsere Flüssigkeit 
 - Knicke in Schläuchen vermeiden
 - Formteile vermeiden
 - Möglichst viele Leitungen parallel legen
+
+<NextPage href="/theorie/stroemungslehre/saughoehe" name="Saughöhe"/>

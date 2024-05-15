@@ -1,0 +1,27 @@
+.nextPage {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-light);
+  width: calc(100% - 40px);
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.nextPage:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.nextPage .arrow {
+  content: "\1F862";
+  position: absolute;
+  right: 20px;
+  top: 16px;
+}
+
+.nextPage span {
+  font-size: 12px;
+}

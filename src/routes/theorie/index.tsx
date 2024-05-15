@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
+import { type DocumentHead, Link } from "@builder.io/qwik-city";
 import styles from "~/styles/index.module.css"
 
 export default component$(() => {
@@ -90,3 +90,13 @@ export default component$(() => {
     </>
   )
 })
+
+export const head: DocumentHead = {
+  title: "Theorie",
+  meta: [
+    {
+      name: "description",
+      content: "Theorieüberischt zu Themen aus der Strömungslehre und Pumpentechnik.",
+    },
+  ],
+};

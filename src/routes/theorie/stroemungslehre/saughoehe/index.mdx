@@ -3,7 +3,46 @@ title: Saughöhe
 description: 
 ---
 
+import Saughoehe from "./assets/saughoehe.png?jsx"
+
 # Saughöhe
 
 ## Grundbegriffe
+
+Die Saughöhe bei Pumpen beschreibt die Höhe, bis zu der eine Pumpe in der Lage ist, Wasser anzusaugen.
+
+<Saughoehe style={{margin: "2rem 4rem", width: "calc(100% - 8rem)"}}/>
+
+Um mit einer Pumpe anzusaugen, muss der Luftdruck in der Saugleitung geringer sein, als der Umgebungsluftdruck außerhalb der Saugleitung. 
+Dann wird das Wasser vom Umgebungluftdruck in die Saugleitung "hineingedrückt".
+Dafür müssen wir die **Luft** aus unserer Saugleitung **evakuieren**. Sebstansaugende Pumpen (z.B. Drehkolbenpumpe Börger) können das von alleine, andere Pumpen (z.B: Kreiselradpumpe DIA) benötigen zusätzlich eine **Vakuumpumpe**.
+
+Wir unterscheiden in **geodätische** und **manometrische** Saughöhe.
+
+### Die geodätische Saughöhe
+
+Die geodätische Saughöhe ist die Saughöhe, die theoretisch maximal bei einem bestimmten Außenluftdruck erreichbar wäre.
+
+Auf Meereshöhe bei 1013,25hPa oder ca. 1Bar Luftdruck liegt diese Höhe bei ungefähr **10,33m**.
+
+```math
+\cfrac{101325Pa }{1000 \cfrac{kg}{m^3} * 9,81 \cfrac{m}{s^2}} = 10,33m
+```
+
+### Die manometrische Saughöhe
+
+Wie wir aber in den vorangegangenen Abschnitten schon gelernt haben, wirken noch ganz viele andere Faktoren auf das Wasser und dessen Verhalten in der Saugleitung.
+Daher werden wir die 10,33m nie erreichen. Ausschlaggebend für die tatsächliche Saughöhe sind:
+
+- **Umgebungsluftdruck** (Abhängig von Geländehöhe und Wetter)
+- **Temperatur des Fördermediums**
+- **Verschmutzungsgrad des Fördermediums**
+- **Schlauchreibung** (Abhängig von der Fördergeschwindigkeit und dem Aufbau der Saugleitungen)
+- **Dampfdruckverhalten** (siehe Kavitation)
+
+Das THW bemisst die in der Praxis erreichbare Saughöhe mit etwa **7,5m**. 
+Das ist natürlich sehr generell, kann also je nach Situation auch mehr oder weniger sein.
+
+Zu genaueren Bestimmung der Saughöhe habe ich einen [**Saughöhenrechner**](/rechner/saughoehe) entwickelt, mit dem sich die maximale manometrische Saughöhe genauer bestimmen lässt.
+
 
