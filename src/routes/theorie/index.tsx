@@ -57,7 +57,7 @@ export default component$(() => {
         </Link>
       </div>
 
-{/*       <h2>Pumpentechnik</h2>
+      <h2>Pumpentechnik</h2>
       <div class={styles.list}>
         <Link href="/theorie/pumpentechnik/einfuehrung">
           <div class={styles.title}>Einführung</div>
@@ -66,27 +66,27 @@ export default component$(() => {
           </div>
         </Link>
 
-        <Link href="/theorie/pumpentechnik/kreiselrad">
-          <div class={styles.title}>Kreiselrad-pumpen</div>
+        <Link href="/theorie/pumpentechnik/kreisel">
+          <div class={styles.title}>Kreiselpumpen</div>
           <div class={styles.description}>
-            Wie funktionieren Kreiselrad-pumpen?
+            Wie funktionieren Kreiselpumpen?
           </div>
         </Link>
 
         <Link href="/theorie/pumpentechnik/drehkolben">
-          <div class={styles.title}>Drehkolben-pumpen</div>
+          <div class={styles.title}>Drehkolbenpumpen</div>
           <div class={styles.description}>
-            Wie funktionieren Drehkolben-pumpen?
+            Wie funktionieren Drehkolbenpumpen?
           </div>
         </Link>
 
         <Link href="/theorie/pumpentechnik/drehschieber">
-          <div class={styles.title}>Drehschieber-pumpen (Vakuum-pumpen)</div>
+          <div class={styles.title}>Drehschieberpumpen (Vakuumpumpen)</div>
           <div class={styles.description}>
-            Wie funktionieren Drehschieber-pumpen?
+            Wie funktionieren Drehschieberpumpen?
           </div>
         </Link>
-      </div> */}
+      </div>
     </>
   )
 })

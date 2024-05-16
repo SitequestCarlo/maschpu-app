@@ -15,21 +15,21 @@ export default component$(() => {
     <nav class={styles.nav}>
       <ul>
         <Link href="/pumpen">
-          <li class={pn.includes("pumpen") ? styles.active : ""}>
+          <li class={pn.includes("pumpen/") ? styles.active : ""}>
             <PumpIcon />
             <label>Pumpen</label>
           </li>
         </Link>
 
         <Link href="/rechner">
-          <li class={pn.includes("rechner") ? styles.active : ""}>
+          <li class={pn.includes("rechner/") ? styles.active : ""}>
             <CalcIcon />
             <label>Rechner</label>
           </li>
         </Link>
 
         <Link href="/theorie">
-          <li class={pn.includes("theorie") ? styles.active : ""}>
+          <li class={pn.includes("theorie/") ? styles.active : ""}>
             <TheoryIcon />
             <label>Theorie</label>
           </li>

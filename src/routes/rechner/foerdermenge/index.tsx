@@ -65,6 +65,8 @@ export const FlowCalc = component$(() => {
 
       <h1>Fördermengenumrechner</h1>
 
+      <p>Klärwerke und andere Stellen der Abwasserwirschaft rechnen oft nicht in l/min. Mit diesem Rechner lassen sich die Werte in alle relevanten Einheiten umrechnen.</p>
+
       <Form onSubmitCompleted$={calcFlow}>
 
         <div>

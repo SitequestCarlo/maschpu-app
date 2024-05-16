@@ -48,6 +48,10 @@ main img {
   height: auto;
 }
 
+h1, h2, h3 {
+  color: var(--primary);
+}
+
 h2 {
   font-size: 20px;
   margin-top: 3rem;

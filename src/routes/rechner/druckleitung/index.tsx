@@ -75,11 +75,13 @@ export const PumpCalc = component$(() => {
 
       <h1>Druckleitungsrechner</h1>
 
+      <p>Bei Kreiselpumpen kann man die Förderleistung nicht direkt an der Drehuahl ablesen. Dieser Rechner soll dafür eine grobe Schätzung abgeben.</p>
+
       <Form onSubmitCompleted$={calculatePump}>
 
         <div>
           <label for="pressure">Betriebsdruck [bar]</label>
-          <input type="number" value={1} step={0.01} required id="pressure"/>
+          <input type="number" value={1} step={0.00001} required id="pressure"/>
         </div>
 
         <hr />
