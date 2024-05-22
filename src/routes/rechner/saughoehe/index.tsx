@@ -1,7 +1,8 @@
 import { $, component$, useSignal } from "@builder.io/qwik";
 import { type DocumentHead, Form } from "@builder.io/qwik-city";
 import styles from "~/styles/calculator.module.css"
-import { dampfdruckPa, dichte } from "~/utils/values";
+import { getPipeFrictionColebrookWhite } from "~/utils/reibung";
+import { getDensity, getDynamicViscosity, getVaporPressure } from "~/utils/values";
 
 export const head: DocumentHead = {
   title: "Saughöhenrechner",
@@ -57,10 +58,13 @@ export const HeightCalc = component$(() => {
     const safety = (parseFloat((form.querySelector("input#safety") as HTMLInputElement).value) / 100) +1
 
     /** Fluiddichte */
-    const rho = dichte(water_temp)
+    const rho = getDensity(water_temp)
+
+    /** Dynamische Viskosität */
+    const mu = getDynamicViscosity(water_temp)
 
     /** Dampfdruck */
-    const dampfdruck = dampfdruckPa(water_temp)
+    const dampfdruck = getVaporPressure(water_temp)
 
     const max_geodaet = air_p / (rho*g)
     geodaet.value = max_geodaet
@@ -86,11 +90,9 @@ export const HeightCalc = component$(() => {
 /*     const reynolds = hose_diam * v * rho / dyn_visk */
 
     /** Rohrreibungskoeffitient */
-    const lambda = Math.pow( 1/ (2 * Math.log10(hose_diam/k) + 1.14), 2)
-    
-    /* 0.3164/reynolds */ 
-    
-    /* Nikradse? Math.pow(1/ (-2 * Math.log10(k / (3.71 * hose_diam))), 2) */
+    const lambda = getPipeFrictionColebrookWhite(v, hose_diam, k, rho, mu)
+        
+    /* Nikuradse? Math.pow(1/ (-2 * Math.log10(k / (3.71 * hose_diam))), 2) */
 
     /** Verluste aus Reibung */
     const verl_reibung = (lambda * (hose_length/hose_diam) * (rho/2) * Math.pow(v, 2) / (rho*g)) * safety

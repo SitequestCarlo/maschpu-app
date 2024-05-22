@@ -1,7 +1,8 @@
 import { $, component$, useSignal } from "@builder.io/qwik";
 import { Form, type DocumentHead } from "@builder.io/qwik-city";
 import styles from "~/styles/calculator.module.css"
-import { dichte } from "~/utils/values";
+import { getPipeFrictionColebrookWhite } from "~/utils/reibung";
+import { getDensity, getDynamicViscosity, g, k } from "~/utils/values";
 
 export const head: DocumentHead = {
   title: "Druckleitungsrechner",
@@ -30,7 +31,7 @@ export const PumpCalc = component$(() => {
     /** Betriebsdruck in Pa */
     const pressure = parseFloat((form.querySelector("input#pressure") as HTMLInputElement).value) * 100 * 1000
     /** Höhenunterschied in m */
-    const height = parseInt((form.querySelector("input#height") as HTMLInputElement).value)
+    const height = parseFloat((form.querySelector("input#height") as HTMLInputElement).value)
     /** Durchmesser Saugschläuche in m*/
     const hose_diam = parseInt((form.querySelector("select#hose-diam") as HTMLSelectElement).value) / 1000
     /** Anzahl Saugschläuche */
@@ -43,11 +44,9 @@ export const PumpCalc = component$(() => {
     const safety = (parseFloat((form.querySelector("input#safety") as HTMLInputElement).value) / 100) +1
 
     /** Dichte des Mediums */
-    const rho = dichte(water_temp)
-    /** Erdbeschleunigung */
-    const g = 9.81
-    /** Rohrreibung Gummischlauch */
-    const k = 0.0016
+    const rho = getDensity(water_temp)
+    /** Dynamische Viskosität */
+    const mu = getDynamicViscosity(water_temp)
 
     const verl_hoehe = rho * g * height
 
@@ -55,10 +54,17 @@ export const PumpCalc = component$(() => {
 
     const dyn_pressure = pressure - verl_hoehe
 
-    /** Rohrreibungskoeffitient */
-    const lambda = Math.pow( 1/ (2 * Math.log10(hose_diam/k) + 1.14), 2)
+    let v1 = 1
+    let v2 = 1
+    let lambda = getPipeFrictionColebrookWhite(v2, hose_diam, k, rho, mu)
 
-    const v = Math.sqrt(dyn_pressure/(rho/2 + (lambda * hose_length/hose_diam * rho/2) + formteil_fkt/2))
+    do {
+      v1 = v2
+      lambda = getPipeFrictionColebrookWhite(v1, hose_diam, k, rho, mu)
+      v2 = Math.sqrt(dyn_pressure/(rho/2 + (lambda * hose_length/hose_diam * rho/2) + formteil_fkt/2))
+    } while (Math.abs(v1 - v2) > 0.0000001)
+
+    const v = v2
 
     /** Radius SChlauchleitung */
     const r = hose_diam /2
