@@ -125,7 +125,7 @@ export const PumpCalc = component$(() => {
 
         <div>
           <label for="water-temp">Wassertemperatur [°C]</label>
-          <input type="number" value={20} step={0.01} required id="water-temp"/>
+          <input type="number" value={15} step={0.01} required id="water-temp"/>
         </div>
 
         <div>
