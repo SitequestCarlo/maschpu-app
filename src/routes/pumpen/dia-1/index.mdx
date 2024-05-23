@@ -3,6 +3,8 @@ title: DIA 1
 description: Die DIA 1 15.000l/min ist eine Havariepumpe die in den Fachgruppen Typ B disloziert ist.
 ---
 
+import Diagram from "./assets/dia-1-diagramm.png?jsx"
+
 # DIA 1
 
 ![Bild folgt]()
@@ -11,18 +13,25 @@ description: Die DIA 1 15.000l/min ist eine Havariepumpe die in den Fachgruppen 
 
 | | |
 |:------|-----------------:|
-| Name | Perkins 1000er Serie |
+| Name | Perkins 1000er Serie (1004T) |
 | Hubraum | 3.989 ccm |
 | Zylinder | 4 Reihe |
 | Leistung | 63,5kW / 86,4 PS |
-| Drehtahl | 1.000 - 2.600 U/min |
+| Drehzahl | 1.000 - 2.600 U/min |
 | Kühlung | Wassergekühlt |
 | Einspritzung | Verteiler-Einspritzpumpe |
+| Tankinhalt | 198L |
+
+| | |
+|:------|-----------------:|
+| Motoröl | 10W30 / 15W40 |
+| Wasserkühlung | Perkins Antifreeze 21825166 |
 
 ## Pumpe
 
 | | |
 |:------|-----------------:|
+| Typ | AVS 650 TS |
 | Bauart | Kreiselpumpe |
 | Kreiselrad | geschlossenes Zweikanallaufrad |
 | Wirkungsweise | Fliehkraft |
@@ -32,3 +41,62 @@ description: Die DIA 1 15.000l/min ist eine Havariepumpe die in den Fachgruppen 
 | Saugeingänge | 3x Perrot V-Teil 150mm |
 | Druckausgänge | 1x Perrot V-Teil 200mm |
 | Ansaugung | Vakuumpumpe |
+
+| | |
+|:------|-----------------:|
+| Öl Lagergehäuse | ISO-VG 46 oder 68  medizinisches Weißöl 2L |
+| Öl Dichtungskammer | ISO-VG 46 oder 68  medizinisches Weißöl 1,2L |
+
+
+## Vakuumpumpe
+
+| | |
+|:------|-----------------:|
+| Name | Blackmer Enterprise E56 |
+| Saugvermögen | 59 m³/h |
+| Enddruck | 20 mbar |
+| Keilriemen | A/13 x 1550mm |
+
+> Die Ölgebrauchsdauer liegt bei 1 Jahr oder ca. 250 Betriebsstunden
+
+## Betrieb
+
+<Diagram />
+
+### Inbetriebnahme
+
+1. Korrekten Aufbau der Pumpe sicherstellen
+2. WOLKEN
+3. Alle Ablasshähne und Umgehung der Rückschlagklappe schließen
+4. Belüftungshahn am Saugdom bleibt in der Warmlaufphase offen
+5. Zündung einschalten und Selbsttest abwarten
+6. Motor im Standgas starten und warmlaufen lassen : Dazu die rote Rückstelltaste drücken und gleichzeitig den Zunschlüssel drehen. Nach Starten des Motors die Taste weitere 3-4 Sekunden halten, bis sich der Motoröldruck aufgebaut hat.
+7. Zum Beginn der Förderung Belüftungshahn schließen
+8. Schlauchstrecke befüllen
+9. Fördermenge einregeln, Betriebspunkt beachten
+10. Bei auftretender Kavitation, Drehzahl reduzieren
+
+
+### Tandembetrieb
+
+1. Vakuumpumpe duch Absperrhahn absperren
+2. Eingangsdruck beachten (ca. 0.5bar)
+
+### Kurzer technischer Halt
+
+1. Motordrehzahl auf Standgas
+2. Motor einige Zeit nachlaufen lassen
+3. Saugleitung durch Kugelhahn am Saugdom kurz belüften, bis der Motor hörbar lastfrei Drehzahl
+4. Motor abstellen
+5. Kugelhahn direkt wieder schließen
+
+### Ausserbetriebnahme
+
+1. Motordrehzahl auf Standgas
+2. Saugleitungen belüften
+3. Motor einige Zeit nachlaufen lassen
+4. Motor abstellen
+5. Alle Ablasshähne öffnen
+6. Pumpe komplett entwässern
+
+> Winter/Froststellung der Kugelhähne: 45°

@@ -3,6 +3,8 @@ title: Hannibal
 description: Die Hannibal 5.000l/min ist eine Havariepumpe die in den Fachgruppen Typ A disloziert ist.
 ---
 
+import Diagram from "./assets/hannibal-diagramm.png?jsx"
+
 # Hannibal
 
 ![Bild folgt]()
@@ -17,14 +19,24 @@ description: Die Hannibal 5.000l/min ist eine Havariepumpe die in den Fachgruppe
 | Hubraum | 2.704 ccm |
 | Zylinder | 4 Reihe |
 | Leistung | 38kW / 51,7 PS |
-| Drehtahl | 900 - 1.800 U/min |
+| Drehzahl | 900 - 1.800 U/min |
 | Kühlung | Luftgekühlt |
 | Einspritzung | Pumpe-Leitung-Düse |
+| Tankinhalt | 120L |
+
+| | |
+|:------|-----------------:|
+| Motoröl | 10W40 / 15W40 |
+{/* | Ölfilter | 1x MANN W 940/25 |
+| Luftfilter | 1x MANN C 25 125 |
+| Kraftstofffilter | 1x MANN WK 842/23 | */}
+| Kraftstoff | Diesel |
 
 ## Pumpe
 
 | | |
 |:------|-----------------:|
+| Typ | NRS150-315 / 2KR-305 |
 | Bauart | Kreiselradpumpe |
 | Kreiselrad | geschlossenes Einkanallaufrad |
 | Wirkungsweise | Fliehkraft |
@@ -34,3 +46,65 @@ description: Die Hannibal 5.000l/min ist eine Havariepumpe die in den Fachgruppe
 | Saugeingänge | 2x Perrot V-Teil 150mm |
 | Druckausgänge | 2x Perrot V-Teil 150mm |
 | Ansaugung | Busch-Vakuumpumpe |
+
+| | |
+|:------|-----------------:|
+| Quenchflüssigkeit | 50/50 Wasser/Frostschutz |
+| Gleitringdichtung | AX 40K/55 - QQVGG |
+| Fett Pumpenwelle | Kalium verseiftes Fett NLGI Klassifikation 2 nach DIN 51818, abschmieren mit ca. 20g pro Lager bei laufender Maschine |
+
+## Vakuumpumpe
+
+| | |
+|:------|-----------------:|
+| Name | Busch R5 RC 0063 E |
+| Saugvermögen | 63 m³/h |
+| Enddruck | 20 mbar |
+| Keilriemen | 1x SPZ x 1400 mm |
+
+| | |
+|:------|-----------------:|
+| Öl | Kompressorenöl DIN 51506 ISO VC 100, SAE 30, 2L |
+
+> Die Ölgebrauchsdauer liegt bei 1 Jahr oder ca. 250 Betriebsstunden
+
+## Betrieb
+
+<Diagram />
+
+### Inbetriebnahme
+
+1. Korrekten Aufbau der Pumpe sicherstellen
+2. WOLKEN
+3. Alle Ablasshähne und Umgehung der Rückschlagklappe schließen
+4. Belüftungshahn am Saugdom bleibt in der Warmlaufphase offen
+5. Zündung einschalten und Selbsttest abwarten
+6. Motor im Standgas starten und warmlaufen lassen
+7. Zum Beginn der Förderung Belüftungshahn schließen
+8. Schlauchstrecke befüllen
+9. Fördermenge einregeln, Betriebspunkt beachten
+10. Bei auftretender Kavitation, Drehzahl reduzieren
+
+### Tandembetrieb
+
+1. Vakuumpumpe duch Absperrhähne am Schauglas absperren
+2. Eingangsdruck beachten (ca. 0.5bar)
+
+### Kurzer technischer Halt
+
+1. Motordrehzahl auf Standgas
+2. Motor einige Zeit nachlaufen lassen
+3. Saugleitung durch Kugelhahn am Saugdom kurz belüften, bis der Motor hörbar lastfrei Drehzahl
+4. Motor abstellen
+5. Kugelhahn direkt wieder schließen
+
+### Ausserbetriebnahme
+
+1. Motordrehzahl auf Standgas
+2. Saugleitungen belüften
+3. Motor einige Zeit nachlaufen lassen
+4. Motor abstellen
+5. Alle Ablasshähne öffnen
+6. Pumpe komplett entwässern
+
+> Winter/Froststellung der Kugelhähne: 45°

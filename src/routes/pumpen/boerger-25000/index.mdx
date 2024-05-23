@@ -3,6 +3,8 @@ title: Börger 25000
 description: Die Börger 25.000l/min ist eine Havariepumpe die in den Fachgruppen Typ C disloziert ist.
 ---
 
+import Diagram from "./assets/boerger-25000-diagramm.png?jsx"
+
 # Börger 25.000
 
 ![Bild folgt]()
@@ -15,14 +17,23 @@ description: Die Börger 25.000l/min ist eine Havariepumpe die in den Fachgruppe
 | Hubraum | 4.397 ccm |
 | Zylinder | 4 Reihe |
 | Leistung | 130kW / 176,8 PS |
-| Drehtahl | 800 - 2.200 U/min |
+| Drehzahl | 800 - 2.200 U/min |
 | Kühlung | Wassergekühlt |
 | Einspritzung | Common-Rail |
+| Tankinhalt | 510L |
+
+| | |
+|:------|-----------------:|
+| Motoröl | 10W40 9,4L |
+| Getriebeöl | ISO VG 220 26L |
+| Öl Untersetzungsgetriebe | ISO VG 220 |
+| Kraftstoff | Diesel |
 
 ## Pumpe
 
 | | |
 |:------|-----------------:|
+| Typ | XL 5350 |
 | Bauart | Drehkolbenpumpe |
 | Wirkungsweise | Verdränger |
 | max. Förderleistung | 25.000l/min = 1.5300 m³/h |
@@ -31,3 +42,59 @@ description: Die Börger 25.000l/min ist eine Havariepumpe die in den Fachgruppe
 | Saugeingänge | 4x Perrot M-Teil 200mm |
 | Druckausgänge | 3x Perrot V-Teil 200mm |
 | Ansaugung | Selbstansaugend |
+
+| | |
+|:------|-----------------:|
+| Öl Zwischenkammer | ISO VG 68 13L |
+| Öl Gegenlagereinheit | ISO VG 68 220ml |
+
+> Die Ölgebrauchsdauer liegt bei 2 Jahren oder ca. 500 Betriebsstunden
+
+## Betrieb
+
+<Diagram />
+
+### Inbetriebnahme
+
+1. Bei längerem Betrieb: Mobile Tankstelle einhängen
+2. Korrekten Aufbau der Pumpe sicherstellen (min. 3 Saugseiten + 2 Druckseiten)
+3. WOLKEN
+4. Motor warmlaufen lassen (Standgas, Kupplung aus)
+5. Entleerungshähne schließen
+6. Am Display Taste "N" drücken (Drehzahlsperre aufheben)
+7. "Störung Reset" drücken, muss blau leuchten
+8. ca. 10L Wasser in die Pumpe füllen (Trockenlauf)
+9. Im Standgas einkuppeln (Schalter betätigen)
+10. Schlauchstrecke langsam befüllen
+11. Fördermenge einregeln, Betriebspunkt beachten
+12. Bei auftretender Kavitation (klopen im Pumpenraum), Ablasshahn auf der Saugseite leicht öffnen
+13. Bei weiteren Schlägen, Pumpenraum auf Fremdkörper kontrollieren
+
+### Störungen
+
+- Notaus betätigt?
+- Mechanische Überlastkupplung getrennt?
+- Temperaturfühler nicht gesteckt
+- Batteriewächter im Batteriekasten prüfen
+- "Störung Reset" drücken, muss blau leuchten
+
+### Kurzer technischer Halt
+
+1. Motordrehzahl auf Standgas
+2. Pumpe auskuppeln (Schalter betätigen)
+3. Motor einige Zeit nachlaufen lassen
+4. Motor abstellen
+
+### Ausserbetriebnahme
+
+1. Motordrehzahl auf Standgas
+2. Pumpe auskuppeln (Schalter betätigen)
+3. Motor einige Zeit nachlaufen lassen
+4. Motor abstellen
+5. Ablasshähne öffnen
+6. Gehäusedeckel und Verschleisplatte entfernen
+7. Pumpenraum komplett entwässern
+8. Pumpenraum und Dichtleisten mit Korrosionsschutz benetzen
+9. Verschleisplatte und Gehäusedeckel aufsetzen, aber ca. 1cm Luftspalt lassen
+
+> Winter/Froststellung der Kugelhähne: 45°
