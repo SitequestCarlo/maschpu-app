@@ -93,7 +93,7 @@ export const PumpCalc = component$(() => {
         <hr />
 
         <div>
-          <label for="height">Höhenunterschied Augang - Eingang [m]</label>
+          <label for="height">Höhenunterschied Ausgang - Eingang [m]</label>
           <input type="number" value={0} step={0.01} required id="height"/>
         </div>
 

@@ -106,7 +106,7 @@ export const HeightCalc = component$(() => {
 
     <h1>Saughöhenrechner</h1>
 
-    <p>Wie hoch eine Pumpe ansaugen kann, hängt von vielen Faktoren ab. Mit diesem Rechner kann man sich eine grobe EInschätzung abholen.</p>
+    <p>Wie hoch eine Pumpe ansaugen kann, hängt von vielen Faktoren ab. Mit diesem Rechner kann man sich eine grobe Einschätzung abholen.</p>
 
     <Form onSubmitCompleted$={calcHeight}>
       <div>
