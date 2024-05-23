@@ -81,7 +81,7 @@ export const PumpCalc = component$(() => {
 
       <h1>Druckleitungsrechner</h1>
 
-      <p>Bei Kreiselpumpen kann man die Förderleistung nicht direkt an der Drehuahl ablesen. Dieser Rechner soll dafür eine grobe Schätzung abgeben.</p>
+      <p>Bei Kreiselpumpen kann man die Förderleistung nicht direkt an der Drehzahl ablesen. Dieser Rechner soll dafür eine grobe Schätzung abgeben.</p>
 
       <Form onSubmitCompleted$={calculatePump}>
 
