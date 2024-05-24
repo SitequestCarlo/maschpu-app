@@ -44,6 +44,81 @@ export default component$(() => {
         </Link>
 
       </div>
+
+      <h2>Elektropumpen</h2>
+      <div class={styles.list}>
+
+        <Link href="/pumpen/mast-atp-20-r">
+          <div class={styles.title}>Mast ATP 20 R</div>
+          <div class={styles.description}>
+            Elektro-Abwassertauchpumpe der Fa. Mast.
+          </div>
+        </Link>
+        
+        <Link href="/pumpen/mast-t-16">
+          <div class={styles.title}>Mast T 16</div>
+          <div class={styles.description}>
+            Elektro-Tauchpumpe der Fa. Mast.
+          </div>
+        </Link>
+        
+        <Link href="/pumpen/mast-tp-4-1">
+          <div class={styles.title}>Mast TP 4-1</div>
+          <div class={styles.description}>
+            Elektro-Tauchpumpe der Fa. Mast.
+          </div>
+        </Link>
+
+        <Link href="/pumpen/mast-tp-8-1">
+          <div class={styles.title}>Mast TP 8-1</div>
+          <div class={styles.description}>
+            Elektro-Tauchpumpe der Fa. Mast.
+          </div>
+        </Link>
+
+        <Link href="/pumpen/mast-tp-15-1">
+          <div class={styles.title}>Mast TP 15-1</div>
+          <div class={styles.description}>
+            Elektro-Tauchpumpe der Fa. Mast.
+          </div>
+        </Link>
+
+{/*         <Link href="/pumpen/spechtenhauser-chiemsee-ex">
+          <div class={styles.title}>Spechtenhauser Chiemsee EX (B)</div>
+          <div class={styles.description}>
+            Elektro-Pumpe der Fa. Spechtenhauser.
+          </div>
+        </Link>
+
+        <Link href="/pumpen/wilo-tp-100e190-39">
+          <div class={styles.title}>Wilo TP 100E190/39</div>
+          <div class={styles.description}>
+            Elektro-Tauchpumpe der Fa. Wilo.
+          </div>
+        </Link>
+
+        <Link href="/pumpen/wilo-tp-100e210-52">
+          <div class={styles.title}>Wilo TP 100E210/52</div>
+          <div class={styles.description}>
+            Elektro-Tauchpumpe der Fa. Wilo.
+          </div>
+        </Link>
+
+        <Link href="/pumpen/wilo-tp-100e230-70">
+          <div class={styles.title}>Wilo TP 100E230/70</div>
+          <div class={styles.description}>
+            Elektro-Tauchpumpe der Fa. Wilo.
+          </div>
+        </Link>
+
+        <Link href="/pumpen/wilo-tp-100e250-84">
+          <div class={styles.title}>Wilo TP 100E250/84</div>
+          <div class={styles.description}>
+            Elektro-Tauchpumpe der Fa. Wilo.
+          </div>
+        </Link> */}
+
+      </div>
     </>
   )
 })
