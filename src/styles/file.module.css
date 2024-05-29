@@ -1,0 +1,34 @@
+.file {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  background-color: var(--primary-light);
+  width: calc(100% - 40px);
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  align-items: center;
+  margin-block: 1rem;
+}
+
+.file:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.file svg * {
+  stroke: black;
+}
+
+.file:hover svg * {
+  stroke: white;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+}
+
+.filename {
+  font-size: 12px;
+}

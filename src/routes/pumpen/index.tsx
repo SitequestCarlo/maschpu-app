@@ -83,13 +83,13 @@ export default component$(() => {
           </div>
         </Link>
 
-{/*         <Link href="/pumpen/spechtenhauser-chiemsee-ex">
+        <Link href="/pumpen/spechtenhauser-chiemsee-ex">
           <div class={styles.title}>Spechtenhauser Chiemsee EX (B)</div>
           <div class={styles.description}>
             Elektro-Pumpe der Fa. Spechtenhauser.
           </div>
         </Link>
-
+{/* 
         <Link href="/pumpen/wilo-tp-100e190-39">
           <div class={styles.title}>Wilo TP 100E190/39</div>
           <div class={styles.description}>
