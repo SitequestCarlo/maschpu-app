@@ -89,7 +89,7 @@ export default component$(() => {
             Elektro-Pumpe der Fa. Spechtenhauser.
           </div>
         </Link>
-{/* 
+
         <Link href="/pumpen/wilo-tp-100e190-39">
           <div class={styles.title}>Wilo TP 100E190/39</div>
           <div class={styles.description}>
@@ -116,7 +116,7 @@ export default component$(() => {
           <div class={styles.description}>
             Elektro-Tauchpumpe der Fa. Wilo.
           </div>
-        </Link> */}
+        </Link>
 
       </div>
     </>
