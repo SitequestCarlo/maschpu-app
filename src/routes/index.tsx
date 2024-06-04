@@ -28,6 +28,11 @@ export default component$(() => {
         <a href="https://www.spechtenhauser.de">www.spechtenhauser.de</a>
       </p>
 
+      <p>
+        <b>Tec-Science</b> <br />
+        <a href="https://www.tec-science.com">www.tec-science.com</a>
+      </p>
+
       <p>Die Verwendungsrechte der entsprechenden Inhalte liegen bei den oben genannten Parteien.</p>
     </>
   );
