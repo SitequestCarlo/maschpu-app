@@ -5,7 +5,7 @@ export default component$(() => {
   return (
     <>
       <h1>MaschPu-App</h1>
-      <p>Das hier soll eine kleine Zusammenfassung von Lehrunterlagen un nützlichen Tools für Maschinisten von Schmutzwasserpumpen darstellen.</p>
+      <p>Das hier soll eine kleine Zusammenfassung von Datenblättern, Lehrunterlagen und nützlichen Tools für Maschinisten von Schmutzwasserpumpen darstellen.</p>
 
       <Link href="/impressum">Impressum</Link>
 
