@@ -58,7 +58,7 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "Web-App für Maschinisten von SChmutzwasserpumpen im Technischen Hilfswerk",
+      content: "Web-App für Maschinisten von Schmutzwasserpumpen im Technischen Hilfswerk",
     },
   ],
 };
