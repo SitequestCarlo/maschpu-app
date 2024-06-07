@@ -11,6 +11,14 @@ export default component$(() => {
 
       <h2>Inhalte werden bereitgestellt von:</h2>
 
+{/*       <p>
+        <b>Börger GmbH</b><br />
+        Benningsweg 24 <br />
+        46325 Borken-Weseke <br />
+        Deutschland <br />
+        <a href="https://www.boerger.de">www.boerger.de</a>
+      </p> */}
+
       <p>
         <b>Mast Pumpen GmbH</b><br />
         Mönkestraße 1 <br />
@@ -20,8 +28,7 @@ export default component$(() => {
       </p>
 
       <p>
-        <b>SHG</b> <br />
-        Spechtenhauser Hochwasser- und Gewässerschutz GmbH <br />
+        <b>Spechtenhauser Hochwasser- und Gewässerschutz GmbH</b> <br />
         Gewerbestraße 3 <br />
         86875 Waal <br />
         Deutschland <br />

@@ -68,7 +68,12 @@ p {
   line-break: auto;
 }
 
-desc {
+figure {
+  margin: 0;
+}
+
+desc,
+figcaption {
   font-size: 12px;
 }
 

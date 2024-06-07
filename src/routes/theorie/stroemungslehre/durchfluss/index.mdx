@@ -7,19 +7,32 @@ import Durchfluss from "./assets/durchfluss.png?jsx"
 import Kontinuitaet from "./assets/koninuitaet.png?jsx"
 import NextPage from "~/components/next-page/next-page"
 
-# Durchflussmenge
+# Durchfluss
 
 ## Grundbegriffe
 
-Wenn wir uns mit Pumpen beschäftigen, sprechen wir immer auch über **Durchflussmengen**. Bei Pumpen wird aber eher der Begriff **Förderleistung** verwendet.
-
-Die Durchflussmenge/Förderleistung beschreibt, wie viel Wasser (Volumen) wir in einer bestimmten Zeit fördern können. 
+Der Durchfluss beschreibt, welche Wassermenge (Volumen) wir in einer bestimmten Zeit fördern können.
+Wir verwenden auch dafür auch oft den Begriff **Förderleistung**.
 
 ```math
-Durchflussmenge (\dot{m}) = Volumen (V) / Zeit (t)
+Durchfluss (\dot{m}) = Volumen (V) / Zeit (t)
 ```
 
-Oft findet man die Durchflussmenge auch als Produkt aus der **Querschnittsfläche der Leitung** und der **Strömunggeschwindigkeit** des Wassers beschrieben.
+Der Durchfluss wird im Allgemeinen in **m³/h (Kubikmeter/Stunde)** gerechnet. 
+"Großverbraucher" wie beispielsweise Klärwerken in Großstädten rechnen auch gerne mal in **m³/s (Kubikmeter/Sekunde)**.
+Im THW hat man sich dafür entschieden in **l/min (Liter/Minute)** zu rechnen.
+
+Diese Größe ist für das THW so wichtig, dass die Fachgruppen Wasserschade-Pumpen (WP) nach der Förderleistung ihrer Großpumpen eingeteilt werden.
+
+- WP (A) Großpumpe mit **5.000**l/min
+- WP (B) Großpumpe mit **15.000**l/min
+- WP (C) Großpumpe mit **25.000**l/min
+
+## Alternative Betrachtung
+
+Wir haben gelernt, dass der Durchfluss das Produkt aus Volumen und Zeit ist. 
+
+Wenn man diese Formel ein bisschen umstellt, kann man den Durchfluss auch als Produkt aus **Querschnittsfläche** und **Strömungsgeschwindigkeit** beschreiben.
 
 <Durchfluss style={{padding: "1rem 4rem", width: "calc(100% - 8rem)"}}/>
 
@@ -27,13 +40,12 @@ Oft findet man die Durchflussmenge auch als Produkt aus der **Querschnittsfläch
 \dot{m} = Fläche (A) * Geschwindigkeit (v)
 ```
 
-Durchflussmengen werden im Allgemeinen im **m³/h (Kubikmeter/Stunde)** gerechnet. 
-"Großverbraucher" wie beispielsweise Klärwerken in Großstädten rechnen schon in **m³/s (Kubikmeter/Sekunde)**.
-Im THW hat man sich dafür entschieden in **l/min (Liter/Minute)** zu rechnen.
 
 ```math
 1 m^3/h = 1.000 l/h = 16.67 l/min
 ```
+
+Diese alternative Schreibweise ist besonders bei der Betrachtung von Reibung und der Kavitation sehr hilfreich. Deshalb ist es wichtig, dass wir sie kennen.
 
 ## Kontinuität
 
@@ -43,15 +55,12 @@ Koninuität bedeutet im Kern, dass die Durchflussmenge in einer Leitung immer ko
 
 Dabei ist es egal, wie lang eine Leitung ist, oder ob sich der Querschnitt ändert.
 
+<figure>
+  <img src="/gifs/kontinuitaet.gif"/>
+  <figcaption>Quelle: tec-science</figcaption>
+</figure>
+
 Wenn sich ein Querschnitt ändert, dann änder sich automatisch die Strömungsgeschwindigkeit des Wassers, die Durchflussmenge ist immer konstant.
-
-**Beispiel**
-
-Wir fördern 2000 l/min durch einen A-Schlauch (110mm). Jetzt verjüngen wir unsere Leitung auf einen B-Schlauch (75mm). 
-
-Dabei verringert sich unser Schlauchquerschnitt um etwas mehr als die Hälfte. 
-
-Damit am Ende des B-Schlauchs noch immer 2000 l/min gefördert werden, muss das Wasser im B-Schlauch also etwas mehr als doppelt so schnell fließen wie im A-Schlauch.
 
 <Kontinuitaet style={{padding: "1rem 4rem", width: "calc(100% - 8rem)"}}/>
 
@@ -62,7 +71,5 @@ Damit am Ende des B-Schlauchs noch immer 2000 l/min gefördert werden, muss das 
 ```math
 A_1 * v_1 = A_2 * v_2
 ```
-
-Dieser Zusammenhang zwischen Querschnittsfläche und Geschwindigkeit nennt sich Kontinuität.
 
 <NextPage href="/theorie/stroemungslehre/druck" name="Druck"/>

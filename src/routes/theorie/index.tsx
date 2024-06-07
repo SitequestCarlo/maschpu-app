@@ -80,12 +80,12 @@ export default component$(() => {
           </div>
         </Link>
 
-        <Link href="/theorie/pumpentechnik/drehschieber">
+{/*         <Link href="/theorie/pumpentechnik/drehschieber">
           <div class={styles.title}>Drehschieberpumpen (Vakuumpumpen)</div>
           <div class={styles.description}>
             Wie funktionieren Drehschieberpumpen?
           </div>
-        </Link>
+        </Link> */}
       </div>
     </>
   )
