@@ -20,6 +20,14 @@ export default component$(() => {
       </p> */}
 
       <p>
+        <b>Bundesanstalt Technisches Hilfswerk (THW)</b><br />
+        Provinzialstraße 93 <br />
+        53127 Bonn <br />
+        Deutschland <br />
+        <a href="https://www.thw.de">www.thw.de</a>
+      </p>
+
+      <p>
         <b>Mast Pumpen GmbH</b><br />
         Mönkestraße 1 <br />
         73773 Aichwald <br />
