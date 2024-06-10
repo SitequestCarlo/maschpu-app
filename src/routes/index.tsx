@@ -11,13 +11,13 @@ export default component$(() => {
 
       <h2>Inhalte werden bereitgestellt von:</h2>
 
-{/*       <p>
+      <p>
         <b>Börger GmbH</b><br />
         Benningsweg 24 <br />
         46325 Borken-Weseke <br />
         Deutschland <br />
         <a href="https://www.boerger.de">www.boerger.de</a>
-      </p> */}
+      </p>
 
       <p>
         <b>Bundesanstalt Technisches Hilfswerk (THW)</b><br />
