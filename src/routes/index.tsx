@@ -48,6 +48,14 @@ export default component$(() => {
         <a href="https://www.tec-science.com">www.tec-science.com</a>
       </p>
 
+      <p>
+        <b>Wilo SE</b> <br />
+        Wilopark 1 <br />
+        44263 Dortmund <br />
+        Deutschland <br />
+        <a href="https://www.wilo.com">www.wilo.com</a>
+      </p>
+
       <p>Die Verwendungsrechte der entsprechenden Inhalte liegen bei den oben genannten Parteien.</p>
     </>
   );
