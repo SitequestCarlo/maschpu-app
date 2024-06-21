@@ -28,6 +28,15 @@ export default component$(() => {
       </p>
 
       <p>
+        <b>DIA Pumpen GmbH</b> <br />
+        Hans-Böckler-Straße 9 <br />
+        40764 Langenfeld <br />
+        Deutschland <br />
+        <a href="https://www.dia-pumpen.de">www.dia-pumpen.de</a>
+
+      </p>
+
+      <p>
         <b>Mast Pumpen GmbH</b><br />
         Mönkestraße 1 <br />
         73773 Aichwald <br />
