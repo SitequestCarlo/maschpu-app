@@ -37,6 +37,14 @@ export default component$(() => {
       </p>
 
       <p>
+        <b>KSB SE & Co. KGaA</b> <br />
+        Johann-Klein-Straße 9 <br />
+        67227 Frankenthal <br />
+        Deutschland <br />
+        <a href="https://www.ksb.com">www.ksb.com</a>
+      </p>
+
+      <p>
         <b>Mast Pumpen GmbH</b><br />
         Mönkestraße 1 <br />
         73773 Aichwald <br />
