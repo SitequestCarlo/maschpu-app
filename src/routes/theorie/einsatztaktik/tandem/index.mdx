@@ -1,0 +1,56 @@
+---
+title: Tandembetrieb bei Pumpen
+description:
+---
+
+import Tandembetrieb from "./assets/tandembetrieb.png?jsx"
+import TandemKreisel from "./assets/tandem-kreisel.png?jsx"
+
+# Tandembetrieb
+
+Der Tandembetrieb ist eine Möglichkeit, Flüssigkeiten über **längere Strecken** und/oder **größere Höhenunterschiede** zu transportieren.
+
+<Tandembetrieb />
+
+FÜr den Tandembetrieb werden mehrere Pumpen direkt aneinander angeschlossen, so ist fast kein zusätzliches Material nötig.
+An vorderster Stelle sollte immer die Leistungsstärkste Pumpe stehen, die restlichen Pumpen sollten in der Förderleistung absteigend folgen.
+
+Pumpen, die in eine andere Pumpe hineinfördern, werden als **gebende Pumpe** bezeichnet. 
+
+Pumpen, die aus einer anderen Pumpe herausfördern, werden als **nehmende Pumpe** bezeichnet.
+
+Der Tandembetrieb bietet gegenüber dem Pufferbetrieb verschiedene Vor- und Nachteile.
+
+### Vorteile
+
+- **Geringerer Platzbedarf**: Durch die direkte Verbindung der Pumpen wird weniger Platz benötigt.
+- **Geringerer Materialbedarf**: Durch die direkte Verbindung der Pumpen wird weniger Material benötigt.
+
+### Nachteile
+
+- **Geringere Redundanz**: Fällt eine Pumpe aus, so muss die gesamte Förderstrecke stillgelegt werden.
+- **Geringere Flexibilität**: Pumpen mit unterschiedlichen Förderleistungen können nicht ohne große Leistungseinbußen miteinander betrieben werden.
+
+> Kreiselpumpen sind für den Tandembetrieb als nehmende Pumpe besonders geeignet, weil sie den Druck der gebenden Pumpe "weitergeben" können.
+
+## Besonderheiten für Verdrängerpumpen
+
+Verdrängerpumpen sind zwangsfördernde Pumpen. Falls beim Tandembetrieb die gebende Pumpe ausfällt, würde die Verdrängerpumpe einfach den Schlauch "fressen".
+
+Dieser **Schlauchfresser** lässt sich durch eine relativ einfache Umbaumaßnahme **verhindern**.
+
+{/* [Bild Börger mit Rückschlagklappe folgt] */}
+
+Dazu wird an eine Saugseite der Verdrängerpumpen eine **Rückschlagklappe** eingebaut. Im Betrieb würde diese Klappe geschlossen bleiben, und nur im Falle eines Ausfalls der gebenden Pumpe öffnen und so das "Fressen" des Schlauches verhindern.
+
+## Besonderheten für Kreiselpumpen
+
+Ein großer Vorteil bei Kreiselpumpen liegt darin, dass Sie komplett druchströmt werden können. Damit sind sie sehr gut für den Tandembetrieb geeignet.
+
+So können mehrere Kreiselpumpen direkt hintereinander geschaltet werden, um eine höhere Förderleistung zu erreichen. Die Förderleistungen der Pumpen addieren sich.
+
+Es ist also für die Förderleistung egal, ob wir die Kreiselpumpen über die Förderstrecke verteilt, oder alle geballt am Anfang einsetzen. 
+
+<TandemKreisel />
+
+Platzieren wir **alle Pumpen an einem Ort**, erleichtert uns das die Versorgung mit Betriebsstoffen (Beim Tandembetrieb mit Elektropumpen werden so weniger SEA bzw. weniger Kabelstrecken benötigt)

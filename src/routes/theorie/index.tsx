@@ -6,6 +6,7 @@ export default component$(() => {
   return (
     <>
       <h1>Theorie</h1>
+
       <h2>Strömungslehre</h2>
       <div class={styles.list}>
 
@@ -84,6 +85,44 @@ export default component$(() => {
           <div class={styles.title}>Drehschieberpumpen (Vakuumpumpen)</div>
           <div class={styles.description}>
             Wie funktionieren Drehschieberpumpen?
+          </div>
+        </Link> */}
+      </div>
+
+      <h2>Einsatztaktik</h2>
+      <div class={styles.list}>
+        <Link href="/theorie/einsatztaktik/einfuehrung">
+          <div class={styles.title}>Einführung</div>
+          <div class={styles.description}>
+            Welche Einsatzszenarien gibt es für Pumpen?
+          </div>
+        </Link>
+
+        <Link href="/theorie/einsatztaktik/puffer">
+          <div class={styles.title}>Pufferbetrieb</div>
+          <div class={styles.description}>
+            Wie funktioniert der Pufferbetrieb?
+          </div>
+        </Link>
+
+        <Link href="/theorie/einsatztaktik/tandem">
+          <div class={styles.title}>Tandembetrieb</div>
+          <div class={styles.description}>
+            Wie funktioniert der Tandembetrieb?
+          </div>
+        </Link>
+
+{/*         <Link href="/theorie/einsatztaktik/handzeichen">
+          <div class={styles.title}>Handzeichen</div>
+          <div class={styles.description}>
+            Welche Handzeichen gibt es für Maschinisten?
+          </div>
+        </Link>
+
+        <Link href="/theorie/einsatztaktik/schlaeuche">
+          <div class={styles.title}>Schläuche</div>
+          <div class={styles.description}>
+            Welche Schläuche gibt es und wie werden sie eingesetzt?
           </div>
         </Link> */}
       </div>
