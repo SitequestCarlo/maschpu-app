@@ -112,13 +112,13 @@ export default component$(() => {
           </div>
         </Link>
 
-{/*         <Link href="/theorie/einsatztaktik/handzeichen">
+        <Link href="/theorie/einsatztaktik/handzeichen">
           <div class={styles.title}>Handzeichen</div>
           <div class={styles.description}>
             Welche Handzeichen gibt es für Maschinisten?
           </div>
         </Link>
-
+{/*
         <Link href="/theorie/einsatztaktik/schlaeuche">
           <div class={styles.title}>Schläuche</div>
           <div class={styles.description}>
