@@ -102,12 +102,12 @@ export const PumpCalc = component$(() => {
         <div>
           <label for="hose-diam">Druckschlauch Typ</label>
           <select required id="hose-diam">
-            <option value={40}>Storz D (40mm)</option>
-            <option value={50}>Storz C (50mm)</option>
-            <option value={75}>Storz B (75mm)</option>
-            <option value={110}>Storz A (110mm)</option>
-            <option value={150} selected>Perrot-F (150mm)</option>
-            <option value={200}>Perrot-G (200mm)</option>
+            <option value={40}>D (40mm)</option>
+            <option value={50}>C (50mm)</option>
+            <option value={75}>B (75mm)</option>
+            <option value={110}>A (110mm)</option>
+            <option value={150} selected>F (150mm)</option>
+            <option value={200}>G (200mm)</option>
           </select>
         </div>
 
