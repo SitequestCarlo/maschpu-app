@@ -3,7 +3,7 @@ import { type DocumentHead, Form } from "@builder.io/qwik-city";
 import styles from "~/styles/calculator.module.css"
 
 export const head: DocumentHead = {
-  title: "Fördermendenumrechner",
+  title: "Fördermengenumrechner",
   meta: [
     {
       name: "description",
@@ -76,19 +76,21 @@ export const FlowCalc = component$(() => {
 
         <div>
           <label for="unit">Durchflusseinheit</label>
-          <select required id="unit">
-            <optgroup label="Liter">
-              <option value={FlowUnit.LITERS_SECOND}>l/s (Liter/Sekunde)</option>
-              <option value={FlowUnit.LITERS_MINUTE} selected>l/min (Liter/Minute)</option>
-              <option value={FlowUnit.LITERS_HOUR}>l/h (Liter/Stunde)</option>
-            </optgroup>
+          <div class={styles.selectWrapper}>
+            <select required id="unit">
+              <optgroup label="Liter">
+                <option value={FlowUnit.LITERS_SECOND}>l/s (Liter/Sekunde)</option>
+                <option value={FlowUnit.LITERS_MINUTE} selected>l/min (Liter/Minute)</option>
+                <option value={FlowUnit.LITERS_HOUR}>l/h (Liter/Stunde)</option>
+              </optgroup>
 
-            <optgroup label="Kubikmeter">
-              <option value={FlowUnit.CUBIC_SECOND}>m³/s (Kubikmeter/Sekunde)</option>
-              <option value={FlowUnit.CUBIC_MINUTE}>m³/min (Kubikmeter/Minute)</option>
-              <option value={FlowUnit.CUBIC_HOUR}>m³/h (Kubikmeter/Stunde)</option>
-            </optgroup>
-          </select>
+              <optgroup label="Kubikmeter">
+                <option value={FlowUnit.CUBIC_SECOND}>m³/s (Kubikmeter/Sekunde)</option>
+                <option value={FlowUnit.CUBIC_MINUTE}>m³/min (Kubikmeter/Minute)</option>
+                <option value={FlowUnit.CUBIC_HOUR}>m³/h (Kubikmeter/Stunde)</option>
+              </optgroup>
+            </select>
+          </div>
         </div>
 
         <hr />

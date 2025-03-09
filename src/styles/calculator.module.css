@@ -23,6 +23,30 @@
   margin: 5px 0;
   border: 1px solid #888;
   background-color: white;
+  border-radius:  0;
+  color: black;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.tool .selectWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.tool .selectWrapper select {
+  width: 100%;
+}
+
+.tool .selectWrapper::after {
+  position: absolute;
+  font-weight: 700;
+  font-size: 1rem;;
+  transform: scaleY(0.6);
+  top: 15px;
+  right: 10px;
+  content: '\02C5';
 }
 
 .tool form button[type="submit"] {
