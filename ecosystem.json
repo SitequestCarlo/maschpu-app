@@ -1,6 +1,6 @@
 {
   "apps" : [{
-    "name" : "sitequest",
+    "name" : "maschpu",
     "script": "server/entry.fastify.js",
     "exec_mode" : "cluster",
     "instances" : "max",
