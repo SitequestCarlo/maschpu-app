@@ -28,7 +28,7 @@ export default component$(() => {
           </div>
         </Link>
 
-        <Link href="/rechner/max-length">
+        <Link href="/rechner/max-laenge">
           <div class={styles.title}>Maximale Leitungslänge</div>
           <div class={styles.description}>
             Berechnet die maximale Länge einer Leitung.
