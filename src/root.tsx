@@ -24,7 +24,7 @@ export default component$(() => {
         <meta name="theme-color" content="#003399" />
         <RouterHead />
       </head>
-      <body lang="en">
+      <body lang="de">
         <RouterOutlet />
         <ServiceWorkerRegister />
       </body>

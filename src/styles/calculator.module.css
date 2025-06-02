@@ -17,8 +17,7 @@
   flex-direction: column;
 }
 
-.tool input,
-.tool select {
+.tool input {
   padding: 10px;
   margin: 5px 0;
   border: 1px solid #888;
@@ -30,23 +29,15 @@
   appearance: none;
 }
 
-.tool .selectWrapper {
+.tool select {
+  padding: 10px;
+  background-color: white;
+  border-radius:  0;
+  color: black;
   position: relative;
   width: 100%;
-}
-
-.tool .selectWrapper select {
-  width: 100%;
-}
-
-.tool .selectWrapper::after {
-  position: absolute;
-  font-weight: 700;
-  font-size: 1rem;;
-  transform: scaleY(0.6);
-  top: 15px;
-  right: 10px;
-  content: '\02C5';
+  border: transparent;
+  border-right: 5px solid transparent;
 }
 
 .tool form button[type="submit"] {
@@ -66,4 +57,35 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.unitInput {
+  width: 100%;;
+  display: flex;
+  flex-direction: row;
+  border: solid 1px #888;
+  padding: 0;
+  position: relative;
+  margin: 10px 0;
+}
+
+.unitInput input {
+  width: 100%;
+  border: 0;
+  margin: 0;
+}
+
+.unitInput select {
+  border: 0;
+  margin: 0;
+  width: 78px;
+  min-width: 78px;
+  background-color: #f0f0f0;
+  border-right: 5px transparent solid;
+}
+
+.selectInput {
+  margin: 10px 0;
+  padding: 0;
+  border: 1px solid #888;
 }

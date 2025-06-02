@@ -14,17 +14,38 @@ export default component$(() => {
           </div>
         </Link>
 
-        <Link href="/rechner/druckleitung">
-          <div class={styles.title}>Druckleitungsrechner</div>
-          <div class={styles.description}>
-            Bestimmt die aktuelle Förderleistung mittels Leitungsaufbau und Gegendruck.
-          </div>
-        </Link>
-
         <Link href="/rechner/foerdermenge">
           <div class={styles.title}>Fördermengenumrechner</div>
           <div class={styles.description}>
             Wandelt Durchflussmengen in andere Einheiten um.
+          </div>
+        </Link>
+
+        <Link href="/rechner/min-druck">
+          <div class={styles.title}>Erforderlicher Pumpendruck</div>
+          <div class={styles.description}>
+            Berechnet den erforderlichen Pumpendruck für eine bestimmte Fördermenge.
+          </div>
+        </Link>
+
+        <Link href="/rechner/max-length">
+          <div class={styles.title}>Maximale Leitungslänge</div>
+          <div class={styles.description}>
+            Berechnet die maximale Länge einer Leitung.
+          </div>
+        </Link>
+
+        <Link href="/rechner/max-menge">
+          <div class={styles.title}>Maximale Fördermenge</div>
+          <div class={styles.description}>
+            Berechnet die maximal mögliche Fördermenge einer Leitung.
+          </div>
+        </Link>
+
+        <Link href="/rechner/min-durchmesser">
+          <div class={styles.title}>Erforderlicher Leitungsdurchmesser</div>
+          <div class={styles.description}>
+            Berechnet den erforderlichen Leitungsdurchmesser für eine bestimmte Fördermenge.
           </div>
         </Link>
       </div>
