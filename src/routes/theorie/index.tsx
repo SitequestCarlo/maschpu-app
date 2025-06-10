@@ -126,6 +126,24 @@ export default component$(() => {
           </div>
         </Link> */}
       </div>
+
+      <h2>Pufferbecken</h2>
+      <div class={styles.list}>
+        <Link href="/theorie/pufferbecken/palettenbecken-klein">
+          <div class={styles.title}>Palettenbecken (klein)</div>
+          <div class={styles.description}>
+            Ein schnell und einfach zu errichtendes Pufferbecken.
+          </div>
+        </Link>
+
+        <Link href="/theorie/pufferbecken/palettenbecken-gross">
+          <div class={styles.title}>Palettenbecken (groß)</div>
+          <div class={styles.description}>
+            Ein stabiles Pufferbecken für größere Mengen Wasser.
+          </div>
+        </Link>
+
+      </div>
     </>
   )
 })
