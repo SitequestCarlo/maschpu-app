@@ -129,6 +129,14 @@ export default component$(() => {
 
       <h2>Pufferbecken</h2>
       <div class={styles.list}>
+
+        <Link href="/theorie/pufferbecken/faltsilo-24m3-becken">
+          <div class={styles.title}>Faltsilo 24m³ Becken</div>
+          <div class={styles.description}>
+            Ein robustes Standard-Becken für große Wassermengen.
+          </div>
+        </Link>
+
         <Link href="/theorie/pufferbecken/palettenbecken-klein">
           <div class={styles.title}>Palettenbecken (klein)</div>
           <div class={styles.description}>

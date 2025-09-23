@@ -109,3 +109,7 @@ select {
   border: none;
   background-color:  transparent;
 }
+
+ul, ol {
+  padding-left: 20px;
+}

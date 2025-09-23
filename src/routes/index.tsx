@@ -37,6 +37,14 @@ export default component$(() => {
       </p>
 
       <p>
+        <b>Faltsilo GmbH</b> <br />
+        Am Hasselt 3 <br />
+        24576 Bad Bramstedt <br />
+        Deutschland <br />
+        <a href="https://www.faltsilo.de">www.faltsilo.de</a>
+      </p>
+
+      <p>
         <b>KSB SE & Co. KGaA</b> <br />
         Johann-Klein-Straße 9 <br />
         67227 Frankenthal <br />
