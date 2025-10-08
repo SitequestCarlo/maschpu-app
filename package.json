@@ -29,8 +29,8 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@builder.io/qwik": "^1.16.1",
-    "@builder.io/qwik-city": "^1.16.1",
+    "@builder.io/qwik": "^1.5.4",
+    "@builder.io/qwik-city": "^1.5.4",
     "@fastify/compress": "^6.2.1",
     "@fastify/static": "^6.10.1",
     "@qwikdev/pwa": "^0.0.4",
@@ -41,7 +41,7 @@
     "@vitejs/plugin-basic-ssl": "^1.1.0",
     "dotenv": "^16.3.2",
     "eslint": "^8.57.0",
-    "eslint-plugin-qwik": "^1.16.1",
+    "eslint-plugin-qwik": "^1.5.4",
     "fastify": "^4.17.0",
     "fastify-plugin": "^4.5.0",
     "prettier": "^3.2.5",
