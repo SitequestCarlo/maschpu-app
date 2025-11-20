@@ -119,6 +119,16 @@ export default component$(() => {
         </Link>
 
       </div>
+
+      <h2>Motorpumpen</h2>
+      <div class={styles.list}>
+        <Link href="/pumpen/mast-np-12-b">
+          <div class={styles.title}>Mast NP 12 B</div>
+          <div class={styles.description}>
+            Benzinmotorpumpe der Fa. Mast.
+          </div>
+        </Link>
+      </div>
     </>
   )
 })
