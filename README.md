@@ -8,6 +8,44 @@
 
 ---
 
+## PWA Features
+
+This application is a fully-featured Progressive Web App (PWA) with:
+
+### 🚀 Full Offline Support
+- Works completely offline after the first visit
+- Intelligent caching strategies for optimal performance
+- Automatic background updates when online
+
+### 📱 Service Worker Features
+- **Cache-First Strategy** for static assets (JS, CSS, images)
+- **Network-First Strategy** for dynamic content
+- **Stale-While-Revalidate** for optimal user experience
+- Automatic cleanup of old cache versions
+
+### 🔄 Automatic Updates
+- Detects new versions automatically
+- User-friendly update notification banner
+- One-click update without losing offline data
+- Seamless update process
+
+### 📊 Cache Management
+- `/cache-map.json` endpoint lists all cacheable resources
+- Includes all routes, static files, and assets
+- Dynamic scanning of dist folder in production
+- Efficient batch caching to prevent browser overload
+
+### 💾 What Gets Cached
+- All HTML pages and routes
+- JavaScript bundles and CSS files
+- Images, fonts, and other static assets
+- Q-data JSON files for prefetching
+- Manifest and PWA configuration
+
+To increment the service worker version and force an update, edit `CACHE_VERSION` in `src/entry.sw.tsx`.
+
+---
+
 ## Project Structure
 
 This project is using Qwik with [QwikCity](https://qwik.dev/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.

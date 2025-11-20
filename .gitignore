@@ -4,6 +4,9 @@
 /lib-types
 /server
 
+# Generated files
+/public/sw.js
+
 # Development
 node_modules
 *.local

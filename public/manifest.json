@@ -2,12 +2,15 @@
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
   "name": "MaschPu-App",
   "short_name": "MaschPu",
-  "start_url": ".",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#fafafa",
   "description": "Web-App für Maschinisten von Schmutzwasserpumpen",
   "theme_color": "#003399",
   "orientation": "portrait",
+  "categories": ["utilities", "education"],
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "favicon.svg",
@@ -27,6 +30,5 @@
       "type": "image/png",
       "purpose": "maskable any"
     }
-    
   ]
 }

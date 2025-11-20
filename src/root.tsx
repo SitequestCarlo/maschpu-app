@@ -2,9 +2,12 @@ import { component$ } from "@builder.io/qwik";
 import {
   QwikCityProvider,
   RouterOutlet,
-  ServiceWorkerRegister,
 } from "@builder.io/qwik-city";
 import { RouterHead } from "./components/router-head/router-head";
+import { OfflineIndicator } from "./components/offline-indicator/offline-indicator";
+import { CacheProgress } from "./components/cache-progress/cache-progress";
+import { ServiceWorkerRegistration } from "./components/sw-registration/sw-registration";
+import { useNetworkProvider } from "./contexts/network-context";
 
 import "./global.css";
 
@@ -16,6 +19,9 @@ export default component$(() => {
    * Don't remove the `<head>` and `<body>` elements.
    */
 
+  // Provide network context globally
+  useNetworkProvider();
+
   return (
     <QwikCityProvider>
       <head>
@@ -25,8 +31,10 @@ export default component$(() => {
         <RouterHead />
       </head>
       <body lang="de">
+        <CacheProgress />
+        <OfflineIndicator />
         <RouterOutlet />
-        <ServiceWorkerRegister />
+        <ServiceWorkerRegistration />
       </body>
     </QwikCityProvider>
   );
