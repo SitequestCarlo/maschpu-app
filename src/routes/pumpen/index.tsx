@@ -83,8 +83,15 @@ export default component$(() => {
           </div>
         </Link>
 
+        <Link href="/pumpen/spechtenhauser-mini-chiemsee">
+          <div class={styles.title}>Spechtenhauser Mini Chiemsee</div>
+          <div class={styles.description}>
+            Elektro-Pumpe der Fa. Spechtenhauser.
+          </div>
+        </Link>
+
         <Link href="/pumpen/spechtenhauser-chiemsee-ex">
-          <div class={styles.title}>Spechtenhauser Chiemsee EX (B)</div>
+          <div class={styles.title}>Spechtenhauser Chiemsee EX</div>
           <div class={styles.description}>
             Elektro-Pumpe der Fa. Spechtenhauser.
           </div>
@@ -122,10 +129,18 @@ export default component$(() => {
 
       <h2>Motorpumpen</h2>
       <div class={styles.list}>
+
         <Link href="/pumpen/mast-np-12-b">
           <div class={styles.title}>Mast NP 12 B</div>
           <div class={styles.description}>
             Benzinmotorpumpe der Fa. Mast.
+          </div>
+        </Link>
+
+        <Link href="/pumpen/spechtenhauser-atlantica">
+          <div class={styles.title}>Spechtenhauser Atlantica</div>
+          <div class={styles.description}>
+            Benzinmotorpumpe der Fa. Spechtenhauser.
           </div>
         </Link>
       </div>
