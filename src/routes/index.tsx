@@ -45,6 +45,14 @@ export default component$(() => {
       </p>
 
       <p>
+        <b>Faszitech UG</b> <br />
+        AM Schloßpark 23 <br />
+        64625 Bensheim <br />
+        Deutschland <br />
+        <a href="https://www.faszitech.de">www.faszitech.de</a>
+      </p>
+
+      <p>
         <b>KSB SE & Co. KGaA</b> <br />
         Johann-Klein-Straße 9 <br />
         67227 Frankenthal <br />
