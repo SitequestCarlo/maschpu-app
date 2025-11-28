@@ -7,6 +7,10 @@ const CACHE_VERSION = 'v3';
 const CACHE_NAME = `maschpu-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `maschpu-runtime-${CACHE_VERSION}`;
 
+// Dev hosts need query-aware cache lookups so Vite's ?t= busting works
+const DEV_HOSTS = new Set(['localhost', '127.0.0.1', '::1']);
+const isDevHost = DEV_HOSTS.has(self.location.hostname);
+
 // Broadcast channel for cache progress (works even before clients are controlled)
 const progressChannel = new BroadcastChannel('sw-cache-progress');
 
@@ -52,6 +56,11 @@ self.addEventListener('install', (event) => {
   
   event.waitUntil(
     (async () => {
+      if (isDevHost) {
+        console.log('[SW] Dev host detected, skipping precache to keep assets live');
+        self.skipWaiting();
+        return;
+      }
       try {
         const cache = await caches.open(CACHE_NAME);
         
@@ -189,15 +198,20 @@ self.addEventListener('fetch', (event) => {
   // Use cache if available, otherwise let browser fetch normally
   const matchedPattern = CACHE_FIRST_PATTERNS.find((pattern) => pattern.test(url.pathname));
   if (matchedPattern) {
+    if (isDevHost) {
+      event.respondWith(fetch(request));
+      return;
+    }
     console.log('[SW] 🎯 Cache-first pattern matched:', matchedPattern, 'for', url.pathname);
     
     event.respondWith(
       (async () => {
-        // Check cache first
-        const cached = await caches.match(request, { 
+        // Check cache first (respect ?t=... params in dev for fast refresh)
+        const cacheMatchOptions = isDevHost ? undefined : {
           ignoreSearch: true,
-          ignoreVary: true 
-        });
+          ignoreVary: true
+        };
+        const cached = await caches.match(request, cacheMatchOptions);
         
         if (cached) {
           console.log('[SW] ✓ Serving from cache:', url.pathname);
