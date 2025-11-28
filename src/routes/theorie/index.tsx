@@ -203,7 +203,7 @@ export default component$(() => {
         <Link href="/theorie/sonderausstattung/schacht-einlauftonne">
           <div class={styles.title}>Schacht-Einlauftonne (SET)</div>
           <div class={styles.description}>
-            Eine mobile Einlauftonne für Schacht- und Unterflureinläufe.
+            Mobile Vorrichtung der Fa. Faszitech für das Einleiten in Schächte und andere Einsatzbereiche.
           </div>
         </Link>
       </div>
