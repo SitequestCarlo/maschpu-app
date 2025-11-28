@@ -88,6 +88,44 @@ export default component$(() => {
           </div>
         </Link> */}
       </div>
+{/* 
+      <h2>Motorentechnik</h2>
+      <div class={styles.list}>
+        <Link href="/theorie/motorentechnik/einfuehrung">
+          <div class={styles.title}>Einführung</div>
+          <div class={styles.description}>
+            Welche Motoren werden für Pumpen genutzt und wie funktionieren sie?
+          </div>
+        </Link>
+
+        <Link href="/theorie/motorentechnik/bauformen">
+          <div class={styles.title}>Bauformen</div>
+          <div class={styles.description}>
+            Welche Bauformen von Motoren gibt es?
+          </div>
+        </Link>
+
+        <Link href="/theorie/motorentechnik/arbeitsweise">
+          <div class={styles.title}>Arbeitsweise (4-Takt)</div>
+          <div class={styles.description}>
+            Wie funktionieren Diesel- und Benzinmotoren?
+          </div>
+        </Link>
+
+        <Link href="/theorie/motorentechnik/ansaugung">
+          <div class={styles.title}>Ansaugung und Aufladung</div>
+          <div class={styles.description}>
+            Wie funktioniert die Ansaugung bei Verbrennungsmotoren?
+          </div>
+        </Link>
+
+        <Link href="/theorie/motorentechnik/kuehlung">
+          <div class={styles.title}>Kühlung</div>
+          <div class={styles.description}>
+            Luft-, Wasser- und Ölkühlung - wie funktionieren sie?
+          </div>
+        </Link>
+      </div> */}
 
       <h2>Einsatztaktik</h2>
       <div class={styles.list}>
@@ -125,6 +163,13 @@ export default component$(() => {
             Welche Schläuche gibt es und wie werden sie eingesetzt?
           </div>
         </Link> */}
+{/* 
+        <Link href="/theorie/einsatztaktik/einleiten">
+          <div class={styles.title}>Einleiten</div>
+          <div class={styles.description}>
+            Welche Möglichkeiten gibt es, Wasser einzuleiten?
+          </div>
+        </Link> */}
       </div>
 
       <h2>Pufferbecken</h2>
@@ -151,6 +196,16 @@ export default component$(() => {
           </div>
         </Link>
 
+      </div>
+
+      <h2>Sonderausstattung</h2>
+      <div class={styles.list}>
+        <Link href="/theorie/sonderausstattung/schacht-einlauftonne">
+          <div class={styles.title}>Schacht-Einlauftonne (SET)</div>
+          <div class={styles.description}>
+            Eine mobile Einlauftonne für Schacht- und Unterflureinläufe.
+          </div>
+        </Link>
       </div>
     </>
   )
