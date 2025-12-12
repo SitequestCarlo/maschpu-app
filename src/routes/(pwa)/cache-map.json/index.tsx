@@ -37,7 +37,8 @@ function getAllDistFiles(dir: string, baseDir: string): string[] {
   return files;
 }
 
-export const onGet: RequestHandler = async ({ json, headers }) => {
+export const onGet: RequestHandler = async (ev) => {
+  const { headers } = ev;
   try {
     const paths: string[] = [];
     
@@ -100,15 +101,25 @@ export const onGet: RequestHandler = async ({ json, headers }) => {
     
     // Set cache headers to prevent stale data
     headers.set('Cache-Control', 'no-cache, must-revalidate');
-    headers.set('Content-Type', 'application/json');
     
     console.log(`[cache-map] Returning ${uniquePaths.length} total paths`);
     console.log(`[cache-map] Build files:`, uniquePaths.filter(p => p.includes('/build/')).length);
     
-    json(200, uniquePaths);
+    const response = new Response(JSON.stringify(uniquePaths), {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache, must-revalidate',
+      },
+    });
+    ev.send(response);
   } catch (err) {
     console.error('Error generating cache map:', err);
     // Return empty array on error rather than failing
-    json(200, []);
+    const response = new Response(JSON.stringify([]), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
+    ev.send(response);
   }
 };

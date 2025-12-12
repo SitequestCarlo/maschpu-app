@@ -1,17 +1,25 @@
 import type { RequestHandler } from '@builder.io/qwik-city';
 import { trackPageView, getClientIp, getClientLanguage } from '../../../lib/analytics';
 
+const jsonResponse = (status: number, data: object) => {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: { 'Content-Type': 'application/json' },
+  });
+};
+
 /**
  * API endpoint for service worker to report cached page views
  * This allows tracking even when pages are served from SW cache
  */
-export const onPost: RequestHandler = async ({ request, json }) => {
+export const onPost: RequestHandler = async (ev) => {
+  const { request } = ev;
   try {
     // Read body as text first to handle empty bodies gracefully
     const text = await request.text();
     
     if (!text) {
-      json(400, { error: 'Empty request body' });
+      ev.send(jsonResponse(400, { error: 'Empty request body' }));
       return;
     }
 
@@ -19,14 +27,14 @@ export const onPost: RequestHandler = async ({ request, json }) => {
     try {
       body = JSON.parse(text);
     } catch {
-      json(400, { error: 'Invalid JSON' });
+      ev.send(jsonResponse(400, { error: 'Invalid JSON' }));
       return;
     }
 
     const { url, referrer } = body;
 
     if (!url || typeof url !== 'string') {
-      json(400, { error: 'Missing url parameter' });
+      ev.send(jsonResponse(400, { error: 'Missing url parameter' }));
       return;
     }
 
@@ -40,21 +48,22 @@ export const onPost: RequestHandler = async ({ request, json }) => {
       ip: getClientIp(request),
     });
 
-    json(200, { ok: true });
+    ev.send(jsonResponse(200, { ok: true }));
   } catch (error) {
     // Don't fail the request, just log
     console.error('[Track API] Error:', error);
-    json(200, { ok: true }); // Still return success to not block SW
+    ev.send(jsonResponse(200, { ok: true })); // Still return success to not block SW
   }
 };
 
 // Allow GET for simple beacon tracking (navigator.sendBeacon fallback)
-export const onGet: RequestHandler = async ({ url, request, json }) => {
+export const onGet: RequestHandler = async (ev) => {
+  const { url, request } = ev;
   const trackUrl = url.searchParams.get('url');
   const referrer = url.searchParams.get('referrer');
 
   if (!trackUrl) {
-    json(400, { error: 'Missing url parameter' });
+    ev.send(jsonResponse(400, { error: 'Missing url parameter' }));
     return;
   }
 
@@ -67,5 +76,5 @@ export const onGet: RequestHandler = async ({ url, request, json }) => {
     ip: getClientIp(request),
   });
 
-  json(200, { ok: true });
+  ev.send(jsonResponse(200, { ok: true }));
 };

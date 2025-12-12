@@ -14,8 +14,13 @@ export default extendConfig(baseConfig, () => {
       name: "fastify",
       ssg: {
         include: ["/*"], // Include all pages
-        exclude: [], // We'll add problematic pages here if needed
-        maxWorkers: 1 // Single worker to avoid concurrency issues
+        exclude: [
+          "/api/*",             // API routes  
+          "/dyn-sitemap.xml",   // Dynamic sitemap
+          "/cache-map.json",    // Cache map (PWA)
+        ],
+        origin: "https://maschpu.de",
+        maxWorkers: 1,          // Single worker to avoid stream issues
       }
     })],
   };

@@ -334,12 +334,19 @@ self.addEventListener('fetch', (event) => {
         }
         return response;
       } catch (err) {
-        // Network failed and no cache - for HTML navigation, return homepage as fallback
+        // Network failed and no cache - for HTML navigation, return 404 page as fallback
         if (request.mode === 'navigate' || request.headers.get('accept')?.includes('text/html')) {
-          console.log('[SW] Network failed for navigation, checking for homepage fallback');
+          console.log('[SW] Network failed for navigation, checking for 404 fallback');
+          // Try to serve cached 404 page
+          const notFoundCache = await caches.match('/404/') || await caches.match('/404');
+          if (notFoundCache) {
+            console.log('[SW] Returning 404 page as offline fallback for:', url.pathname);
+            return notFoundCache;
+          }
+          // Final fallback to homepage if 404 not cached
           const homepageCache = await caches.match('/');
           if (homepageCache) {
-            console.log('[SW] Returning homepage as offline fallback for:', url.pathname);
+            console.log('[SW] Returning homepage as final fallback for:', url.pathname);
             return homepageCache;
           }
         }
