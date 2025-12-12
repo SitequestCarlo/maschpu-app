@@ -221,6 +221,24 @@ self.addEventListener('fetch', (event) => {
     return;
   }
   
+  // Track page views for navigations and SPA transitions (q-data.json)
+  // This fires for all SW-handled requests, both cache and network
+  const isNavigation = request.mode === 'navigate';
+  const isSPANavigation = url.pathname.endsWith('/q-data.json') && !url.pathname.startsWith('/build/');
+  
+  if (isNavigation || isSPANavigation) {
+    // Skip prefetch requests
+    const isPrefetch = request.headers.get('purpose') === 'prefetch' || 
+                      request.headers.get('sec-purpose')?.includes('prefetch');
+    if (!isPrefetch) {
+      const pagePath = isSPANavigation 
+        ? url.pathname.replace(/q-data\.json$/, '')
+        : url.pathname;
+      console.log('[SW] 📊 Tracking page view:', pagePath);
+      trackCachedPageView(pagePath, request.referrer);
+    }
+  }
+  
   // Don't intercept if we're still installing - let browser handle it
   if (self.registration.installing) {
     return;
@@ -289,11 +307,11 @@ self.addEventListener('fetch', (event) => {
   
   event.respondWith(
     (async () => {
-      // For HTML pages and q-data.json: Check cache with variations
+      // For HTML pages: Check cache with variations
       let cached = await caches.match(request);
       
-      // If not found, try with/without trailing slash for HTML and q-data.json
-      if (!cached && (request.mode === 'navigate' || request.headers.get('accept')?.includes('text/html') || url.pathname.endsWith('q-data.json'))) {
+      // If not found, try with/without trailing slash for HTML
+      if (!cached && (request.mode === 'navigate' || request.headers.get('accept')?.includes('text/html'))) {
         const altUrl = url.pathname.endsWith('/') 
           ? new URL(url.pathname.slice(0, -1), url.origin)
           : new URL(url.pathname + '/', url.origin);
@@ -306,21 +324,6 @@ self.addEventListener('fetch', (event) => {
       
       if (cached) {
         console.log('[SW] Cache hit:', url.pathname);
-        
-        // Track page view for cached HTML navigations
-        if (request.mode === 'navigate' || request.headers.get('accept')?.includes('text/html')) {
-          trackCachedPageView(url.pathname, request.referrer);
-        }
-        
-        // Track page view for q-data.json requests (SPA navigation)
-        // Skip prefetch requests to avoid false positives
-        const isPrefetch = request.headers.get('purpose') === 'prefetch' || 
-                          request.headers.get('sec-purpose')?.includes('prefetch');
-        if (url.pathname.endsWith('/q-data.json') && !isPrefetch) {
-          // Extract page path from q-data.json URL: /pumpen/q-data.json -> /pumpen/
-          const pagePath = url.pathname.replace(/q-data\.json$/, '');
-          trackCachedPageView(pagePath, request.referrer);
-        }
         
         // Return cached immediately and update in background
         fetch(request)
