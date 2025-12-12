@@ -7,7 +7,22 @@ import { trackPageView, getClientIp, getClientLanguage } from '../../../lib/anal
  */
 export const onPost: RequestHandler = async ({ request, json }) => {
   try {
-    const body = await request.json();
+    // Read body as text first to handle empty bodies gracefully
+    const text = await request.text();
+    
+    if (!text) {
+      json(400, { error: 'Empty request body' });
+      return;
+    }
+
+    let body;
+    try {
+      body = JSON.parse(text);
+    } catch {
+      json(400, { error: 'Invalid JSON' });
+      return;
+    }
+
     const { url, referrer } = body;
 
     if (!url || typeof url !== 'string') {

@@ -22,12 +22,13 @@ function trackCachedPageView(url, referrer) {
   // Don't track in dev mode
   if (isDevHost) return;
   
+  // Use GET with query params - more reliable with keepalive than POST with body
+  const params = new URLSearchParams({ url });
+  if (referrer) params.set('referrer', referrer);
+  
   // Fire and forget - don't await
-  fetch('/api/track', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ url, referrer }),
-    // Use keepalive to ensure request completes even if page unloads
+  fetch(`/api/track?${params.toString()}`, {
+    method: 'GET',
     keepalive: true,
   }).catch(() => {
     // Silently fail - analytics should never break the app
