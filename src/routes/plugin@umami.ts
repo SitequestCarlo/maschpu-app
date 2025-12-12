@@ -47,6 +47,8 @@ const BOT_PATH_PATTERNS = [
   // Other scanner targets
   /^\/phpmyadmin/i,
   /^\/mysql/i,
+  // Java/Spring management endpoints
+  /^\/actuator/i,
 ];
 
 /**
