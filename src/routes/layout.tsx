@@ -1,6 +1,7 @@
 import { component$, Slot } from "@builder.io/qwik";
 import type { RequestHandler } from "@builder.io/qwik-city";
 import NavBar from "~/components/nav-bar/nav-bar";
+import { Analytics } from "~/components/analytics/analytics";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -16,6 +17,7 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 export default component$(() => {
   return (
   <>
+    <Analytics />
     <NavBar />
     <div class="content">
       <main>

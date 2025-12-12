@@ -87,36 +87,14 @@ const CRAWLER_USER_AGENTS = [
  */
 const STATIC_ASSET_PATTERNS = [
   /^\/(build|assets|fonts|images|favicon|robots|manifest|service-worker|q-|@qwik|api\/)/i,
-  /\.(js|css|map|ico|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot|xml|txt)$/i,
-  // Exclude json except q-data.json (used for SPA navigation tracking)
-  /\.json$/i,
+  /\.(js|css|map|ico|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot|json|xml|txt)$/i,
 ];
-
-/**
- * Check if this is a SPA navigation request (q-data.json)
- * Returns the page path if it's a trackable SPA navigation, null otherwise
- */
-function getSPANavigationPath(url: URL, request: Request): string | null {
-  // Only track q-data.json requests (Qwik SPA navigation)
-  if (!url.pathname.endsWith('/q-data.json')) {
-    return null;
-  }
-  
-  // Skip prefetch requests
-  const purpose = request.headers.get('purpose') || '';
-  const secPurpose = request.headers.get('sec-purpose') || '';
-  if (purpose === 'prefetch' || purpose === 'preload' || secPurpose.includes('prefetch')) {
-    return null;
-  }
-  
-  // Extract page path: /pumpen/q-data.json -> /pumpen/
-  return url.pathname.replace(/q-data\.json$/, '');
-}
 
 /**
  * Umami Analytics Plugin
  * 
- * Handles server-side page view tracking with bot filtering.
+ * Handles server-side page view tracking for initial page loads.
+ * SPA navigations are tracked client-side by the Analytics component.
  * Bot/scanner requests are tracked as events, not page views.
  * Crawlers are excluded entirely.
  */
@@ -131,21 +109,6 @@ export const onRequest: RequestHandler = ({ request, url }) => {
 
   // Skip crawlers entirely
   if (isCrawler) {
-    return;
-  }
-
-  // Check if this is a SPA navigation (q-data.json request)
-  const spaPagePath = getSPANavigationPath(url, request);
-  if (spaPagePath) {
-    // Track SPA navigation with the actual page path
-    trackPageView({
-      url: spaPagePath,
-      hostname: 'maschpu.de',
-      referrer: request.headers.get('referer') || undefined,
-      language: getClientLanguage(request),
-      userAgent: userAgent || undefined,
-      ip: getClientIp(request),
-    });
     return;
   }
 
