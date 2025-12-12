@@ -312,6 +312,16 @@ self.addEventListener('fetch', (event) => {
           trackCachedPageView(url.pathname, request.referrer);
         }
         
+        // Track page view for q-data.json requests (SPA navigation)
+        // Skip prefetch requests to avoid false positives
+        const isPrefetch = request.headers.get('purpose') === 'prefetch' || 
+                          request.headers.get('sec-purpose')?.includes('prefetch');
+        if (url.pathname.endsWith('/q-data.json') && !isPrefetch) {
+          // Extract page path from q-data.json URL: /pumpen/q-data.json -> /pumpen/
+          const pagePath = url.pathname.replace(/q-data\.json$/, '');
+          trackCachedPageView(pagePath, request.referrer);
+        }
+        
         // Return cached immediately and update in background
         fetch(request)
           .then(async (response) => {
