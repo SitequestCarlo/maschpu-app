@@ -221,29 +221,13 @@ self.addEventListener('fetch', (event) => {
     return;
   }
   
-  // Track page views for navigations and SPA transitions (q-data.json)
-  // This fires for all SW-handled requests, both cache and network
-  const isNavigation = request.mode === 'navigate';
-  const isSPANavigation = url.pathname.endsWith('/q-data.json') && !url.pathname.startsWith('/build/');
-  
-  if (isNavigation || isSPANavigation) {
-    // Skip prefetch/preload requests - check multiple headers browsers might use
-    const purpose = request.headers.get('purpose') || '';
-    const secPurpose = request.headers.get('sec-purpose') || '';
-    const secFetchMode = request.headers.get('sec-fetch-mode') || '';
-    const isPrefetch = purpose === 'prefetch' || 
-                      purpose === 'preload' ||
-                      secPurpose.includes('prefetch') ||
-                      secFetchMode === 'no-cors';  // Qwik prefetches use no-cors
-    
-    // Only track actual user navigations (not prefetches)
-    if (!isPrefetch && request.mode !== 'no-cors') {
-      const pagePath = isSPANavigation 
-        ? url.pathname.replace(/q-data\.json$/, '')
-        : url.pathname;
-      console.log('[SW] 📊 Tracking page view:', pagePath);
-      trackCachedPageView(pagePath, request.referrer);
-    }
+  // Track page views for full page navigations only
+  // SPA navigations (q-data.json) can't be reliably distinguished from prefetches in SW
+  // SPA tracking is handled by the server-side plugin when q-data.json is fetched from network
+  if (request.mode === 'navigate') {
+    const pagePath = url.pathname;
+    console.log('[SW] 📊 Tracking page view:', pagePath);
+    trackCachedPageView(pagePath, request.referrer);
   }
   
   // Don't intercept if we're still installing - let browser handle it

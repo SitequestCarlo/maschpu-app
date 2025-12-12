@@ -87,8 +87,31 @@ const CRAWLER_USER_AGENTS = [
  */
 const STATIC_ASSET_PATTERNS = [
   /^\/(build|assets|fonts|images|favicon|robots|manifest|service-worker|q-|@qwik|api\/)/i,
-  /\.(js|css|map|ico|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot|json|xml|txt)$/i,
+  /\.(js|css|map|ico|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot|xml|txt)$/i,
+  // Exclude json except q-data.json (used for SPA navigation tracking)
+  /\.json$/i,
 ];
+
+/**
+ * Check if this is a SPA navigation request (q-data.json)
+ * Returns the page path if it's a trackable SPA navigation, null otherwise
+ */
+function getSPANavigationPath(url: URL, request: Request): string | null {
+  // Only track q-data.json requests (Qwik SPA navigation)
+  if (!url.pathname.endsWith('/q-data.json')) {
+    return null;
+  }
+  
+  // Skip prefetch requests
+  const purpose = request.headers.get('purpose') || '';
+  const secPurpose = request.headers.get('sec-purpose') || '';
+  if (purpose === 'prefetch' || purpose === 'preload' || secPurpose.includes('prefetch')) {
+    return null;
+  }
+  
+  // Extract page path: /pumpen/q-data.json -> /pumpen/
+  return url.pathname.replace(/q-data\.json$/, '');
+}
 
 /**
  * Umami Analytics Plugin
@@ -104,12 +127,33 @@ export const onRequest: RequestHandler = ({ request, url }) => {
   }
 
   const userAgent = request.headers.get('user-agent') || '';
-  const isStaticAsset = STATIC_ASSET_PATTERNS.some(pattern => pattern.test(url.pathname));
-  const isBotPath = BOT_PATH_PATTERNS.some(pattern => pattern.test(url.pathname));
   const isCrawler = CRAWLER_USER_AGENTS.some(pattern => pattern.test(userAgent));
 
-  // Skip static assets and crawlers entirely
-  if (isStaticAsset || isCrawler) {
+  // Skip crawlers entirely
+  if (isCrawler) {
+    return;
+  }
+
+  // Check if this is a SPA navigation (q-data.json request)
+  const spaPagePath = getSPANavigationPath(url, request);
+  if (spaPagePath) {
+    // Track SPA navigation with the actual page path
+    trackPageView({
+      url: spaPagePath,
+      hostname: 'maschpu.de',
+      referrer: request.headers.get('referer') || undefined,
+      language: getClientLanguage(request),
+      userAgent: userAgent || undefined,
+      ip: getClientIp(request),
+    });
+    return;
+  }
+
+  const isStaticAsset = STATIC_ASSET_PATTERNS.some(pattern => pattern.test(url.pathname));
+  const isBotPath = BOT_PATH_PATTERNS.some(pattern => pattern.test(url.pathname));
+
+  // Skip static assets
+  if (isStaticAsset) {
     return;
   }
 
