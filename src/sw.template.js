@@ -14,6 +14,26 @@ const isDevHost = DEV_HOSTS.has(self.location.hostname);
 // Broadcast channel for cache progress (works even before clients are controlled)
 const progressChannel = new BroadcastChannel('sw-cache-progress');
 
+/**
+ * Track a page view via the server API
+ * Used when serving cached pages so analytics still work
+ */
+function trackCachedPageView(url, referrer) {
+  // Don't track in dev mode
+  if (isDevHost) return;
+  
+  // Fire and forget - don't await
+  fetch('/api/track', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url, referrer }),
+    // Use keepalive to ensure request completes even if page unloads
+    keepalive: true,
+  }).catch(() => {
+    // Silently fail - analytics should never break the app
+  });
+}
+
 // Fetch the list of URLs to cache from the cache-map.json endpoint
 async function getPrecacheUrls() {
   try {
@@ -96,10 +116,16 @@ self.addEventListener('install', (event) => {
         for (let i = 0; i < total; i += batchSize) {
           const batch = PRECACHE_URLS.slice(i, i + batchSize);
           
-          const results = await Promise.allSettled(
+          await Promise.allSettled(
             batch.map(async (url) => {
               try {
-                await cache.add(url);
+                // Use fetch with custom header so server knows this is pre-caching, not a real visit
+                const response = await fetch(url, {
+                  headers: { 'X-Purpose': 'precache' }
+                });
+                if (response.ok) {
+                  await cache.put(url, response);
+                }
                 cached++;
                 // Notify progress after each file
                 notifyProgress();
@@ -189,6 +215,11 @@ self.addEventListener('fetch', (event) => {
     return;
   }
   
+  // Skip API requests - always go to network
+  if (url.pathname.startsWith('/api/')) {
+    return;
+  }
+  
   // Don't intercept if we're still installing - let browser handle it
   if (self.registration.installing) {
     return;
@@ -274,6 +305,12 @@ self.addEventListener('fetch', (event) => {
       
       if (cached) {
         console.log('[SW] Cache hit:', url.pathname);
+        
+        // Track page view for cached HTML navigations
+        if (request.mode === 'navigate' || request.headers.get('accept')?.includes('text/html')) {
+          trackCachedPageView(url.pathname, request.referrer);
+        }
+        
         // Return cached immediately and update in background
         fetch(request)
           .then(async (response) => {
