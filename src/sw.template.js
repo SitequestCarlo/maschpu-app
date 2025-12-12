@@ -227,10 +227,17 @@ self.addEventListener('fetch', (event) => {
   const isSPANavigation = url.pathname.endsWith('/q-data.json') && !url.pathname.startsWith('/build/');
   
   if (isNavigation || isSPANavigation) {
-    // Skip prefetch requests
-    const isPrefetch = request.headers.get('purpose') === 'prefetch' || 
-                      request.headers.get('sec-purpose')?.includes('prefetch');
-    if (!isPrefetch) {
+    // Skip prefetch/preload requests - check multiple headers browsers might use
+    const purpose = request.headers.get('purpose') || '';
+    const secPurpose = request.headers.get('sec-purpose') || '';
+    const secFetchMode = request.headers.get('sec-fetch-mode') || '';
+    const isPrefetch = purpose === 'prefetch' || 
+                      purpose === 'preload' ||
+                      secPurpose.includes('prefetch') ||
+                      secFetchMode === 'no-cors';  // Qwik prefetches use no-cors
+    
+    // Only track actual user navigations (not prefetches)
+    if (!isPrefetch && request.mode !== 'no-cors') {
       const pagePath = isSPANavigation 
         ? url.pathname.replace(/q-data\.json$/, '')
         : url.pathname;
