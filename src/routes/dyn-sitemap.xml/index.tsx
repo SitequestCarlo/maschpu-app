@@ -7,11 +7,11 @@ const SITE_URL = "https://maschpu.de";
  * Routes to exclude from sitemap
  */
 const EXCLUDED_PATTERNS = [
-  /dyn-sitemap\.xml/, // This sitemap
-  /api/, // API routes
-  /cache-map\.json/, // Cache map
-  /404/, // 404 pages
-  /q-data\.json/, // Qwik data files
+  /dyn-sitemap\.xml/,        // This sitemap
+  /api/,                     // API routes
+  /cache-map\.json/,         // Cache map
+  /404/,                     // 404 pages
+  /q-data\.json/,            // Qwik data files
 ];
 
 /**
@@ -29,9 +29,9 @@ function getPriority(route: string): number {
   const normalized = normalizeRoute(route);
   if (normalized === "/") return 1.0;
   if (normalized === "/impressum") return 0.3;
-
+  
   const depth = normalized.split("/").filter(Boolean).length;
-
+  
   // Main sections
   if (depth === 1) return 0.9;
   // Sub-pages (calculators, pump details, theory pages)
@@ -65,8 +65,7 @@ function createSitemap(baseUrl: string): string {
       // Exclude dynamic routes with parameters
       if (route.includes("[") || route.includes("]")) return false;
       // Exclude routes matching exclusion patterns
-      if (EXCLUDED_PATTERNS.some((pattern) => pattern.test(route)))
-        return false;
+      if (EXCLUDED_PATTERNS.some((pattern) => pattern.test(route))) return false;
       return true;
     })
     .sort();

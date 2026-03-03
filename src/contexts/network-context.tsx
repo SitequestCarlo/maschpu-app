@@ -1,11 +1,4 @@
-import {
-  createContextId,
-  useContext,
-  useContextProvider,
-  useSignal,
-  useVisibleTask$,
-  type Signal,
-} from "@builder.io/qwik";
+import { createContextId, useContext, useContextProvider, useSignal, useVisibleTask$, type Signal } from '@builder.io/qwik';
 
 /**
  * Network status context
@@ -15,8 +8,7 @@ export interface NetworkContext {
   isOnline: Signal<boolean>;
 }
 
-export const NetworkContextId =
-  createContextId<NetworkContext>("network-context");
+export const NetworkContextId = createContextId<NetworkContext>('network-context');
 
 /**
  * Hook to access network context
@@ -33,8 +25,8 @@ export const useNetworkProvider = () => {
 
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(async ({ cleanup }) => {
-    const { checkRealConnectivity } = await import("~/utils/pwa");
-
+    const { checkRealConnectivity } = await import('~/utils/pwa');
+    
     // Set initial state with real connectivity check
     isOnline.value = await checkRealConnectivity();
 
@@ -48,8 +40,8 @@ export const useNetworkProvider = () => {
       isOnline.value = false;
     };
 
-    window.addEventListener("online", handleOnline);
-    window.addEventListener("offline", handleOffline);
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
 
     // Also periodically check connectivity (every 30 seconds)
     const intervalId = setInterval(async () => {
@@ -58,8 +50,8 @@ export const useNetworkProvider = () => {
 
     // Cleanup
     cleanup(() => {
-      window.removeEventListener("online", handleOnline);
-      window.removeEventListener("offline", handleOffline);
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
       clearInterval(intervalId);
     });
   });

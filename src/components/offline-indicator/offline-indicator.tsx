@@ -1,6 +1,6 @@
-import { component$ } from "@builder.io/qwik";
-import { useNetworkContext } from "~/contexts/network-context";
-import styles from "./offline-indicator.module.css";
+import { component$ } from '@builder.io/qwik';
+import { useNetworkContext } from '~/contexts/network-context';
+import styles from './offline-indicator.module.css';
 
 /**
  * Component that shows an indicator when the user is offline

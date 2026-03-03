@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { type DocumentHead, Link } from "@builder.io/qwik-city";
-import styles from "~/styles/index.module.css";
+import styles from "~/styles/index.module.css"
 
 export default component$(() => {
   return (
@@ -24,8 +24,7 @@ export default component$(() => {
         <Link href="/rechner/min-druck">
           <div class={styles.title}>Erforderlicher Pumpendruck</div>
           <div class={styles.description}>
-            Berechnet den erforderlichen Pumpendruck für eine bestimmte
-            Fördermenge.
+            Berechnet den erforderlichen Pumpendruck für eine bestimmte Fördermenge.
           </div>
         </Link>
 
@@ -46,22 +45,20 @@ export default component$(() => {
         <Link href="/rechner/min-durchmesser">
           <div class={styles.title}>Erforderlicher Leitungsdurchmesser</div>
           <div class={styles.description}>
-            Berechnet den erforderlichen Leitungsdurchmesser für eine bestimmte
-            Fördermenge.
+            Berechnet den erforderlichen Leitungsdurchmesser für eine bestimmte Fördermenge.
           </div>
         </Link>
       </div>
     </>
-  );
-});
+  )
+})
 
 export const head: DocumentHead = {
   title: "Rechner",
   meta: [
     {
       name: "description",
-      content:
-        "Rechen-Tools zur Berechnung von verschiedenen Werten von Pumpstrecken.",
+      content: "Rechen-Tools zur Berechnung von verschiedenen Werten von Pumpstrecken.",
     },
   ],
 };

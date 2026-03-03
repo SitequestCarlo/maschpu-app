@@ -1,16 +1,17 @@
 import { component$ } from "@builder.io/qwik";
 import { Link, useLocation } from "@builder.io/qwik-city";
-import styles from "~/styles/nav-bar.module.css";
+import styles from "~/styles/nav-bar.module.css"
 
-import PumpIcon from "~/assets/pump-icon.svg?jsx";
-import CalcIcon from "~/assets/calc-icon.svg?jsx";
-import TheoryIcon from "~/assets/theory-icon.svg?jsx";
+import PumpIcon from "~/assets/pump-icon.svg?jsx"
+import CalcIcon from "~/assets/calc-icon.svg?jsx"
+import TheoryIcon from "~/assets/theory-icon.svg?jsx"
 
 export default component$(() => {
-  const loc = useLocation();
-  const pn = loc.url.pathname;
 
-  return (
+  const loc = useLocation()
+  const pn = loc.url.pathname
+
+  return  (
     <nav class={styles.nav}>
       <ul>
         <Link href="/pumpen">
@@ -35,5 +36,5 @@ export default component$(() => {
         </Link>
       </ul>
     </nav>
-  );
-});
+  )
+})

@@ -1,13 +1,13 @@
 import { component$ } from "@builder.io/qwik";
-import styles from "~/styles/file.module.css";
-import Icon from "~/assets/file-icon.svg?jsx";
+import styles from "~/styles/file.module.css"
+import Icon from "~/assets/file-icon.svg?jsx"
 
 type FileProps = {
-  href: string;
-  name: string;
-};
+  href: string
+  name: string
+}
 
-export default component$(({ href, name }: FileProps) => {
+export default component$(({href, name}: FileProps) => {
   return (
     <>
       <a href={href} class={styles.file}>
@@ -18,5 +18,5 @@ export default component$(({ href, name }: FileProps) => {
         </div>
       </a>
     </>
-  );
-});
+  )
+})

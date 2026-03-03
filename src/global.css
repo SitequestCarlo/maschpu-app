@@ -5,20 +5,19 @@
 
 :root {
   font-family: BundesSans;
-
+  
   --primary: #003399;
   --secondary: #ffff00;
-  --tertiary: #009ee3;
+  --tertiary: #009EE3;
 
   --primary-light: #00339911;
 
   --background: #fafafa;
-  --neutral: #ddd;
+  --neutral : #ddd;
   --neutral-dark: #222;
 }
 
-html,
-body {
+html, body {
   height: 100%;
 }
 
@@ -49,9 +48,7 @@ main img {
   height: auto;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   color: var(--primary);
 }
 
@@ -94,6 +91,7 @@ math {
   /* background-color: var(--primary-light); */
 }
 
+
 table {
   width: 100%;
   margin-block: 1rem;
@@ -109,10 +107,9 @@ select {
   padding: 0;
   margin: 0;
   border: none;
-  background-color: transparent;
+  background-color:  transparent;
 }
 
-ul,
-ol {
+ul, ol {
   padding-left: 20px;
 }

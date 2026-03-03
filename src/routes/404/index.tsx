@@ -8,27 +8,27 @@ export default component$(() => {
       <div class="error-content">
         {/* 404 Number */}
         <h1>404</h1>
-
+        
         {/* Message */}
         <div class="error-message">
           <h2>Seite nicht gefunden</h2>
           <p>
             Die gesuchte Seite existiert leider nicht oder wurde verschoben.
           </p>
-
+          
           {/* Back to Home Button */}
           <div class="error-actions">
             <Link href="/" class="btn btn-primary">
-              <svg
-                class="icon"
-                fill="none"
-                stroke="currentColor"
+              <svg 
+                class="icon" 
+                fill="none" 
+                stroke="currentColor" 
                 viewBox="0 0 24 24"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <path 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  stroke-width="2" 
                   d="M10 19l-7-7m0 0l7-7m-7 7h18"
                 />
               </svg>

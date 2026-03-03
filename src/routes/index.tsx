@@ -5,19 +5,14 @@ export default component$(() => {
   return (
     <>
       <h1>MaschPu-App</h1>
-      <p>
-        Das hier soll eine kleine Zusammenfassung von Datenblättern,
-        Lehrunterlagen und nützlichen Tools für Maschinisten von
-        Schmutzwasserpumpen darstellen.
-      </p>
+      <p>Das hier soll eine kleine Zusammenfassung von Datenblättern, Lehrunterlagen und nützlichen Tools für Maschinisten von Schmutzwasserpumpen darstellen.</p>
 
       <Link href="/impressum">Impressum</Link>
 
       <h2>Inhalte werden bereitgestellt von:</h2>
 
       <p>
-        <b>Börger GmbH</b>
-        <br />
+        <b>Börger GmbH</b><br />
         Benningsweg 24 <br />
         46325 Borken-Weseke <br />
         Deutschland <br />
@@ -25,8 +20,7 @@ export default component$(() => {
       </p>
 
       <p>
-        <b>Bundesanstalt Technisches Hilfswerk (THW)</b>
-        <br />
+        <b>Bundesanstalt Technisches Hilfswerk (THW)</b><br />
         Provinzialstraße 93 <br />
         53127 Bonn <br />
         Deutschland <br />
@@ -39,6 +33,7 @@ export default component$(() => {
         40764 Langenfeld <br />
         Deutschland <br />
         <a href="https://www.dia-pumpen.de">www.dia-pumpen.de</a>
+
       </p>
 
       <p>
@@ -66,8 +61,7 @@ export default component$(() => {
       </p>
 
       <p>
-        <b>Mast Pumpen GmbH</b>
-        <br />
+        <b>Mast Pumpen GmbH</b><br />
         Mönkestraße 1 <br />
         73773 Aichwald <br />
         Deutschland <br />
@@ -95,10 +89,7 @@ export default component$(() => {
         <a href="https://www.wilo.com">www.wilo.com</a>
       </p>
 
-      <p>
-        Die Verwendungsrechte der entsprechenden Inhalte liegen bei den oben
-        genannten Parteien.
-      </p>
+      <p>Die Verwendungsrechte der entsprechenden Inhalte liegen bei den oben genannten Parteien.</p>
     </>
   );
 });
@@ -108,8 +99,7 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content:
-        "Web-App für Maschinisten von Schmutzwasserpumpen im Technischen Hilfswerk",
+      content: "Web-App für Maschinisten von Schmutzwasserpumpen im Technischen Hilfswerk",
     },
   ],
 };

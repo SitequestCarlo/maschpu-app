@@ -15,13 +15,14 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 
 export default component$(() => {
   return (
-    <>
-      <NavBar />
-      <div class="content">
-        <main>
-          <Slot />
-        </main>
-      </div>
-    </>
-  );
+  <>
+    <NavBar />
+    <div class="content">
+      <main>
+        <Slot />
+      </main>
+    </div>
+  </>
+
+)
 });

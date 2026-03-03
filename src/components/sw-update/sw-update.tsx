@@ -1,5 +1,5 @@
-import { component$, useSignal, useVisibleTask$, $ } from "@builder.io/qwik";
-import styles from "./sw-update.module.css";
+import { component$, useSignal, useVisibleTask$, $ } from '@builder.io/qwik';
+import styles from './sw-update.module.css';
 
 /**
  * Component that shows a notification when a new version of the app is available
@@ -12,18 +12,18 @@ export const SwUpdate = component$(() => {
 
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(() => {
-    if ("serviceWorker" in navigator) {
+    if ('serviceWorker' in navigator) {
       // Listen for service worker updates and cache progress
-      navigator.serviceWorker.addEventListener("message", (event) => {
-        if (event.data?.type === "SW_UPDATED") {
+      navigator.serviceWorker.addEventListener('message', (event) => {
+        if (event.data?.type === 'SW_UPDATED') {
           showUpdate.value = true;
         }
-
-        if (event.data?.type === "CACHE_PROGRESS") {
+        
+        if (event.data?.type === 'CACHE_PROGRESS') {
           cacheProgress.value = {
             cached: event.data.cached,
             total: event.data.total,
-            complete: event.data.complete,
+            complete: event.data.complete
           };
         }
       });
@@ -35,14 +35,11 @@ export const SwUpdate = component$(() => {
         }
 
         // Listen for updates
-        registration.addEventListener("updatefound", () => {
+        registration.addEventListener('updatefound', () => {
           const newWorker = registration.installing;
           if (newWorker) {
-            newWorker.addEventListener("statechange", () => {
-              if (
-                newWorker.state === "installed" &&
-                navigator.serviceWorker.controller
-              ) {
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                 showUpdate.value = true;
               }
             });
@@ -54,17 +51,17 @@ export const SwUpdate = component$(() => {
 
   const handleUpdate = $(() => {
     isUpdating.value = true;
-
-    if ("serviceWorker" in navigator) {
+    
+    if ('serviceWorker' in navigator) {
       navigator.serviceWorker.ready.then((registration) => {
         if (registration.waiting) {
           // Tell the waiting service worker to skip waiting
-          registration.waiting.postMessage({ type: "SKIP_WAITING" });
+          registration.waiting.postMessage({ type: 'SKIP_WAITING' });
         }
       });
 
       // Reload the page when the new service worker takes control
-      navigator.serviceWorker.addEventListener("controllerchange", () => {
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
         window.location.reload();
       });
     }
@@ -78,28 +75,23 @@ export const SwUpdate = component$(() => {
     return null;
   }
 
-  const progressPercent =
-    cacheProgress.value.total > 0
-      ? Math.round(
-          (cacheProgress.value.cached / cacheProgress.value.total) * 100,
-        )
-      : 0;
+  const progressPercent = cacheProgress.value.total > 0 
+    ? Math.round((cacheProgress.value.cached / cacheProgress.value.total) * 100)
+    : 0;
 
   return (
     <div class={styles.updateBanner}>
       <div class={styles.updateContent}>
         <div class={styles.updateTextContainer}>
           <p class={styles.updateText}>
-            {cacheProgress.value.complete
-              ? "Neue Version bereit!"
-              : "Eine neue Version wird geladen..."}
+            {cacheProgress.value.complete 
+              ? 'Neue Version bereit!' 
+              : 'Eine neue Version wird geladen...'}
           </p>
           {cacheProgress.value.total > 0 && (
             <p class={styles.progressText}>
-              {cacheProgress.value.cached} von {cacheProgress.value.total}{" "}
-              Dateien
-              {cacheProgress.value.complete ? " geladen" : " werden geladen"} (
-              {progressPercent}%)
+              {cacheProgress.value.cached} von {cacheProgress.value.total} Dateien 
+              {cacheProgress.value.complete ? ' geladen' : ' werden geladen'} ({progressPercent}%)
             </p>
           )}
         </div>
@@ -109,7 +101,7 @@ export const SwUpdate = component$(() => {
             onClick$={handleUpdate}
             disabled={isUpdating.value || !cacheProgress.value.complete}
           >
-            {isUpdating.value ? "Aktualisiere..." : "Jetzt aktualisieren"}
+            {isUpdating.value ? 'Aktualisiere...' : 'Jetzt aktualisieren'}
           </button>
           <button
             class={styles.dismissButton}

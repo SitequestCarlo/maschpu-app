@@ -3,9 +3,9 @@ title: Durchflussmenge
 description: Die Durchflussmenge beschreibt, wie viel Wasser (Volumen) wir in einer bestimmten Zeit fördern können. Sie berechnet sich aus der Querschnittsfläche der Leitung und der Fließgeschwindigkeit.
 ---
 
-import Durchfluss from "./assets/durchfluss.png?jsx";
-import Kontinuitaet from "./assets/koninuitaet.png?jsx";
-import NextPage from "~/components/next-page/next-page";
+import Durchfluss from "./assets/durchfluss.png?jsx"
+import Kontinuitaet from "./assets/koninuitaet.png?jsx"
+import NextPage from "~/components/next-page/next-page"
 
 # Durchfluss
 
@@ -18,7 +18,7 @@ Wir verwenden auch dafür auch oft den Begriff **Förderleistung**.
 Durchfluss (\dot{m}) = Volumen (V) / Zeit (t)
 ```
 
-Der Durchfluss wird im Allgemeinen in **m³/h (Kubikmeter/Stunde)** gerechnet.
+Der Durchfluss wird im Allgemeinen in **m³/h (Kubikmeter/Stunde)** gerechnet. 
 "Großverbraucher" wie beispielsweise Klärwerken in Großstädten rechnen auch gerne mal in **m³/s (Kubikmeter/Sekunde)**.
 Im THW hat man sich dafür entschieden in **l/min (Liter/Minute)** zu rechnen.
 
@@ -30,15 +30,16 @@ Diese Größe ist für das THW so wichtig, dass die Fachgruppen Wasserschade-Pum
 
 ## Alternative Betrachtung
 
-Wir haben gelernt, dass der Durchfluss das Produkt aus Volumen und Zeit ist.
+Wir haben gelernt, dass der Durchfluss das Produkt aus Volumen und Zeit ist. 
 
 Wenn man diese Formel ein bisschen umstellt, kann man den Durchfluss auch als Produkt aus **Querschnittsfläche** und **Strömungsgeschwindigkeit** beschreiben.
 
-<Durchfluss style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} />
+<Durchfluss style={{padding: "1rem 4rem", width: "calc(100% - 8rem)"}}/>
 
 ```math
 \dot{m} = Fläche (A) * Geschwindigkeit (v)
 ```
+
 
 ```math
 1 m^3/h = 1.000 l/h = 16.67 l/min
@@ -50,23 +51,18 @@ Diese alternative Schreibweise ist besonders bei der Betrachtung von Reibung und
 
 Kontinuität bedeutet im Kern, dass die Durchflussmenge in einer Leitung immer konstant bleibt, oder einfacher:
 
-> Alles was rein geht, kommt auch wieder raus.
+>Alles was rein geht, kommt auch wieder raus.
 
 Dabei ist es egal, wie lang eine Leitung ist, oder ob sich der Querschnitt ändert.
 
 <figure>
-  <img src="/gifs/kontinuitaet.gif" />
-  <figcaption>
-    Quelle:{" "}
-    <a href="https://www.tec-science.com/" target="_blank">
-      tec-science
-    </a>
-  </figcaption>
+  <img src="/gifs/kontinuitaet.gif"/>
+  <figcaption>Quelle: <a href="https://www.tec-science.com/" target="_blank">tec-science</a></figcaption>
 </figure>
 
 Wenn sich ein Querschnitt ändert, dann änder sich automatisch die Strömungsgeschwindigkeit des Wassers, die Durchflussmenge ist immer konstant.
 
-<Kontinuitaet style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} />
+<Kontinuitaet style={{padding: "1rem 4rem", width: "calc(100% - 8rem)"}}/>
 
 ```math
 \dot{m}_1 = \dot{m}_2
@@ -76,4 +72,4 @@ Wenn sich ein Querschnitt ändert, dann änder sich automatisch die Strömungsge
 A_1 * v_1 = A_2 * v_2
 ```
 
-<NextPage href="/theorie/stroemungslehre/druck" name="Druck" />
+<NextPage href="/theorie/stroemungslehre/druck" name="Druck"/>
