@@ -2,6 +2,8 @@
 
 MaschPu ist eine Progressive Web App (PWA) rund um das Thema Pumpen und Pumpentechnik im THW / Feuerwehr-Umfeld. Die App funktioniert vollständig offline und bietet Theorie, Rechner und Pumpen-Datenblätter für den Einsatz und die Ausbildung.
 
+Die App ist unter **[maschpu.de](https://maschpu.de)** erreichbar.
+
 ## Features
 
 - Vollständige Offline-Funktionalität nach dem ersten Besuch
