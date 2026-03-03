@@ -1,5 +1,5 @@
-import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
-import styles from './cache-progress.module.css';
+import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import styles from "./cache-progress.module.css";
 
 /**
  * Component that shows progress when service worker is caching files
@@ -15,12 +15,12 @@ export const CacheProgress = component$(() => {
       const { cached: cachedCount, total: totalCount } = event.detail;
       cached.value = cachedCount;
       total.value = totalCount;
-      
+
       // Show the indicator when caching starts
       if (totalCount > 0 && cachedCount < totalCount) {
         isVisible.value = true;
       }
-      
+
       // Hide after a delay when caching completes
       if (cachedCount === totalCount && totalCount > 0) {
         setTimeout(() => {
@@ -29,10 +29,16 @@ export const CacheProgress = component$(() => {
       }
     };
 
-    window.addEventListener('sw-cache-progress', handleProgress as EventListener);
+    window.addEventListener(
+      "sw-cache-progress",
+      handleProgress as EventListener,
+    );
 
     return () => {
-      window.removeEventListener('sw-cache-progress', handleProgress as EventListener);
+      window.removeEventListener(
+        "sw-cache-progress",
+        handleProgress as EventListener,
+      );
     };
   });
 
@@ -40,7 +46,8 @@ export const CacheProgress = component$(() => {
     return null;
   }
 
-  const percentage = total.value > 0 ? Math.round((cached.value / total.value) * 100) : 0;
+  const percentage =
+    total.value > 0 ? Math.round((cached.value / total.value) * 100) : 0;
 
   return (
     <div class={styles.cacheIndicator} role="status" aria-live="polite">
@@ -60,7 +67,8 @@ export const CacheProgress = component$(() => {
           <line x1="12" y1="15" x2="12" y2="3"></line>
         </svg>
         <span class={styles.cacheText}>
-          {cached.value}/{total.value} Dateien zwischengespeichert ({percentage}%)
+          {cached.value}/{total.value} Dateien zwischengespeichert ({percentage}
+          %)
         </span>
       </div>
     </div>

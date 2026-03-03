@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { type DocumentHead, Link } from "@builder.io/qwik-city";
-import styles from "~/styles/index.module.css"
+import styles from "~/styles/index.module.css";
 
 export default component$(() => {
   return (
@@ -9,10 +9,11 @@ export default component$(() => {
 
       <h2>Strömungslehre</h2>
       <div class={styles.list}>
-
         <Link href="/theorie/stroemungslehre/einfuehrung">
           <div class={styles.title}>Einführung</div>
-          <div class={styles.description}>Eine kleine Übersicht über Strömunglehre im THW.</div>
+          <div class={styles.description}>
+            Eine kleine Übersicht über Strömunglehre im THW.
+          </div>
         </Link>
 
         <Link href="/theorie/stroemungslehre/durchfluss">
@@ -24,9 +25,7 @@ export default component$(() => {
 
         <Link href="/theorie/stroemungslehre/druck">
           <div class={styles.title}>Druck</div>
-          <div class={styles.description}>
-            Was ist eigentlich Druck?
-          </div>
+          <div class={styles.description}>Was ist eigentlich Druck?</div>
         </Link>
 
         <Link href="/theorie/stroemungslehre/venturi">
@@ -69,9 +68,7 @@ export default component$(() => {
 
         <Link href="/theorie/pumpentechnik/kreisel">
           <div class={styles.title}>Kreiselpumpen</div>
-          <div class={styles.description}>
-            Wie funktionieren Kreiselpumpen?
-          </div>
+          <div class={styles.description}>Wie funktionieren Kreiselpumpen?</div>
         </Link>
 
         <Link href="/theorie/pumpentechnik/drehkolben">
@@ -81,14 +78,14 @@ export default component$(() => {
           </div>
         </Link>
 
-{/*         <Link href="/theorie/pumpentechnik/drehschieber">
+        {/*         <Link href="/theorie/pumpentechnik/drehschieber">
           <div class={styles.title}>Drehschieberpumpen (Vakuumpumpen)</div>
           <div class={styles.description}>
             Wie funktionieren Drehschieberpumpen?
           </div>
         </Link> */}
       </div>
-{/* 
+      {/* 
       <h2>Motorentechnik</h2>
       <div class={styles.list}>
         <Link href="/theorie/motorentechnik/einfuehrung">
@@ -156,14 +153,14 @@ export default component$(() => {
             Welche Handzeichen gibt es für Maschinisten?
           </div>
         </Link>
-{/*
+        {/*
         <Link href="/theorie/einsatztaktik/schlaeuche">
           <div class={styles.title}>Schläuche</div>
           <div class={styles.description}>
             Welche Schläuche gibt es und wie werden sie eingesetzt?
           </div>
         </Link> */}
-{/* 
+        {/* 
         <Link href="/theorie/einsatztaktik/einleiten">
           <div class={styles.title}>Einleiten</div>
           <div class={styles.description}>
@@ -174,7 +171,6 @@ export default component$(() => {
 
       <h2>Pufferbecken</h2>
       <div class={styles.list}>
-
         <Link href="/theorie/pufferbecken/faltsilo-24m3-becken">
           <div class={styles.title}>Faltsilo 24m³ Becken</div>
           <div class={styles.description}>
@@ -195,7 +191,6 @@ export default component$(() => {
             Ein stabiles Pufferbecken für größere Mengen Wasser.
           </div>
         </Link>
-
       </div>
 
       <h2>Sonderausstattung</h2>
@@ -203,20 +198,22 @@ export default component$(() => {
         <Link href="/theorie/sonderausstattung/schacht-einlauftonne">
           <div class={styles.title}>Schacht-Einlauftonne (SET)</div>
           <div class={styles.description}>
-            Mobile Vorrichtung der Fa. Faszitech für das Einleiten in Schächte und andere Einsatzbereiche.
+            Mobile Vorrichtung der Fa. Faszitech für das Einleiten in Schächte
+            und andere Einsatzbereiche.
           </div>
         </Link>
       </div>
     </>
-  )
-})
+  );
+});
 
 export const head: DocumentHead = {
   title: "Theorie",
   meta: [
     {
       name: "description",
-      content: "Theorieüberischt zu Themen aus der Strömungslehre und Pumpentechnik.",
+      content:
+        "Theorieüberischt zu Themen aus der Strömungslehre und Pumpentechnik.",
     },
   ],
 };
