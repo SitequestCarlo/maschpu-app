@@ -7,6 +7,11 @@
 # Generated files
 /public/sw.js
 
+# Environment variables
+.env
+.env.*
+!.env.example
+
 # Development
 node_modules
 *.local

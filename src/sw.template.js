@@ -14,27 +14,6 @@ const isDevHost = DEV_HOSTS.has(self.location.hostname);
 // Broadcast channel for cache progress (works even before clients are controlled)
 const progressChannel = new BroadcastChannel('sw-cache-progress');
 
-/**
- * Track a page view via the server API
- * Used when serving cached pages so analytics still work
- */
-function trackCachedPageView(url, referrer) {
-  // Don't track in dev mode
-  if (isDevHost) return;
-  
-  // Use GET with query params - more reliable with keepalive than POST with body
-  const params = new URLSearchParams({ url });
-  if (referrer) params.set('referrer', referrer);
-  
-  // Fire and forget - don't await
-  fetch(`/api/track?${params.toString()}`, {
-    method: 'GET',
-    keepalive: true,
-  }).catch(() => {
-    // Silently fail - analytics should never break the app
-  });
-}
-
 // Fetch the list of URLs to cache from the cache-map.json endpoint
 async function getPrecacheUrls() {
   try {
@@ -219,15 +198,6 @@ self.addEventListener('fetch', (event) => {
   // Skip API requests - always go to network
   if (url.pathname.startsWith('/api/')) {
     return;
-  }
-  
-  // Track page views for full page navigations only
-  // SPA navigations (q-data.json) can't be reliably distinguished from prefetches in SW
-  // SPA tracking is handled by the server-side plugin when q-data.json is fetched from network
-  if (request.mode === 'navigate') {
-    const pagePath = url.pathname;
-    console.log('[SW] 📊 Tracking page view:', pagePath);
-    trackCachedPageView(pagePath, request.referrer);
   }
   
   // Don't intercept if we're still installing - let browser handle it
