@@ -50,14 +50,19 @@ export const CacheProgress = component$(() => {
     total.value > 0 ? Math.round((cached.value / total.value) * 100) : 0;
 
   return (
-    <div class={styles.cacheIndicator} role="status" aria-live="polite">
+    <div class={styles.cacheIndicator} role="status" aria-live="polite" style={{ '--progress': `${percentage}%` } as any}>
       <div
         class={styles.cacheFill}
         style={{ width: `${percentage}%` }}
       />
-      <span class={styles.cacheText}>
-        {percentage}% zwischengespeichert
-      </span>
+      <div class={styles.cacheTextWrap}>
+        <span class={styles.cacheTextBack}>
+          Lade Daten herunter... {cached.value}/{total.value}
+        </span>
+        <span class={styles.cacheTextFront} aria-hidden="true">
+          Lade Daten herunter... {cached.value}/{total.value}
+        </span>
+      </div>
     </div>
   );
 });
