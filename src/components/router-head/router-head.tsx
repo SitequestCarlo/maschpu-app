@@ -13,7 +13,8 @@ export const RouterHead = component$(() => {
       <title>{head.title}</title>
 
       <link rel="canonical" href={loc.url.href} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
       {head.meta.map((m) => (
