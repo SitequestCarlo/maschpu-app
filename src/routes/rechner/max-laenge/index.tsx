@@ -23,6 +23,7 @@ export const head: DocumentHead = {
       content:
         "Berechnet die maximale Leitungslänge nach Hazen-Williams basierend auf der maximalen Druckdifferenz und anderen Parametern.",
     },
+    { name: "search:tags", content: "rechner, maximale leitungslänge, hazen-williams, druckdifferenz" },
   ],
 };
 

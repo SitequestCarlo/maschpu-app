@@ -111,5 +111,6 @@ export const head: DocumentHead = {
       content:
         "Web-App für Maschinisten von Schmutzwasserpumpen im Technischen Hilfswerk",
     },
+    { name: "search:tags", content: "startseite, home, maschpu, app" },
   ],
 };

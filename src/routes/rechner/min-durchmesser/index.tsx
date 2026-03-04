@@ -23,6 +23,7 @@ export const head: DocumentHead = {
       content:
         "Dieser Rechner verwendet die Hazen-Wiliams-Gleichung, um den erfoderlichen Leitungsduchmesser für eine bestimmte Fördermenge zu ermitteln.",
     },
+    { name: "search:tags", content: "rechner, durchmesser, leitungsdurchmesser, hazen-williams" },
   ],
 };
 

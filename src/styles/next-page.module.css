@@ -8,6 +8,7 @@
   padding: 10px 20px;
   margin-top: 2rem;
   position: relative;
+  border-radius: 10px;
 }
 
 .nextPage:hover {

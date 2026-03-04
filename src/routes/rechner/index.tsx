@@ -63,5 +63,6 @@ export const head: DocumentHead = {
       content:
         "Rechen-Tools zur Berechnung von verschiedenen Werten von Pumpstrecken.",
     },
+    { name: "search:tags", content: "rechner, berechnung, kalkulator, tools" },
   ],
 };

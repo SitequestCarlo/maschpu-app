@@ -32,6 +32,7 @@ export const head: DocumentHead = {
       content:
         "Berechnet die maximal mögliche geodätische und manomatrische Saughöhe anhand verschiedener Parameter.",
     },
+    { name: "search:tags", content: "rechner, saughöhe, geodätisch, manometrisch" },
   ],
 };
 

@@ -30,18 +30,45 @@ body {
 }
 
 .content {
-  max-height: calc(100% - 80px);
+  max-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
 }
 
+/* Thin overlay scrollbar on desktop — no layout shift */
+@media (hover: hover) and (pointer: fine) {
+  .content {
+    overflow-y: overlay; /* Chromium: scrollbar overlays content */
+    scrollbar-width: thin;
+    scrollbar-color: var(--neutral) transparent;
+    padding-left: 6px; /* balance the 6px scrollbar on the right */
+  }
+
+  .content::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .content::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .content::-webkit-scrollbar-thumb {
+    background: var(--neutral);
+    border-radius: 3px;
+  }
+
+  .content::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+  }
+}
+
 main {
   width: calc(100% - 30px);
   max-width: 400px;
   padding: 15px;
-  padding-bottom: 1rem;
+  padding-bottom: 100px;
 }
 
 main img {

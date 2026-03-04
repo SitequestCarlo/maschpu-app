@@ -28,6 +28,7 @@ export const head: DocumentHead = {
       content:
         "Berechnet die Leistung einer Förderstrecke anhand des Aufbaus und des Gegendrucks.",
     },
+    { name: "search:tags", content: "rechner, druckleitung, förderstrecke, gegendruck" },
   ],
 };
 

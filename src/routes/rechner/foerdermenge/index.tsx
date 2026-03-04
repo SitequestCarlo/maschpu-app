@@ -10,6 +10,7 @@ export const head: DocumentHead = {
       name: "description",
       content: "Wandelt Fördermengen von einer Einheit in andere um.",
     },
+    { name: "search:tags", content: "rechner, fördermenge, umrechner, einheiten" },
   ],
 };
 

@@ -1,0 +1,552 @@
+[
+  {
+    "url": "/rechner/min-durchmesser/",
+    "title": "Berechne den erforderlich Durchmesser",
+    "desc": "Dieser Rechner verwendet die Hazen-Wiliams-Gleichung, um den erfoderlichen Leitungsduchmesser für eine bestimmte Fördermenge zu ermitteln.",
+    "tags": [
+      "rechner",
+      "durchmesser",
+      "leitungsdurchmesser",
+      "hazen-williams"
+    ]
+  },
+  {
+    "url": "/rechner/min-druck/",
+    "title": "Berechne den erforderlichen Pumpendruck",
+    "desc": "Berechnet den erforderlichen Pumpendruck nach der Hazen-Williams-Gleichung.",
+    "tags": [
+      "rechner",
+      "pumpendruck",
+      "mindestdruck",
+      "hazen-williams"
+    ]
+  },
+  {
+    "url": "/rechner/max-menge/",
+    "title": "Berechne die maximale Fördermenge",
+    "desc": "Berechnet die maximale Fördermenge basierend auf verschiedenen Parametern.",
+    "tags": [
+      "rechner",
+      "maximale fördermenge",
+      "hazen-williams"
+    ]
+  },
+  {
+    "url": "/rechner/max-laenge/",
+    "title": "Berechne die maximale Leitungslänge",
+    "desc": "Berechnet die maximale Leitungslänge nach Hazen-Williams basierend auf der maximalen Druckdifferenz und anderen Parametern.",
+    "tags": [
+      "rechner",
+      "maximale leitungslänge",
+      "hazen-williams",
+      "druckdifferenz"
+    ]
+  },
+  {
+    "url": "/pumpen/boerger-25000/",
+    "title": "Börger 25000",
+    "desc": "Die Börger 25.000l/min ist eine Havariepumpe die in den Fachgruppen Typ C disloziert ist.",
+    "tags": [
+      "havariepumpe",
+      "grosspumpe",
+      "drehkolbenpumpe",
+      "börger",
+      "25000",
+      "fachgruppe typ c"
+    ]
+  },
+  {
+    "url": "/pumpen/boerger-5000/",
+    "title": "Börger 5000",
+    "desc": "Die Börger 5.000l/min ist eine Havariepumpe die in den Fachgruppen Typ A disloziert ist.",
+    "tags": [
+      "havariepumpe",
+      "grosspumpe",
+      "drehkolbenpumpe",
+      "börger",
+      "5000",
+      "fachgruppe typ a"
+    ]
+  },
+  {
+    "url": "/pumpen/dia-1/",
+    "title": "DIA 1",
+    "desc": "Die DIA 1 15.000l/min ist eine Havariepumpe die in den Fachgruppen Typ B disloziert ist.",
+    "tags": [
+      "havariepumpe",
+      "grosspumpe",
+      "dia",
+      "15000",
+      "fachgruppe typ b"
+    ]
+  },
+  {
+    "url": "/pumpen/dia-2/",
+    "title": "DIA 2",
+    "desc": "Die DIA 2 15.000l/min ist eine Havariepumpe die in den Fachgruppen Typ B disloziert ist.",
+    "tags": [
+      "havariepumpe",
+      "grosspumpe",
+      "dia",
+      "15000",
+      "fachgruppe typ b"
+    ]
+  },
+  {
+    "url": "/theorie/pumpentechnik/drehkolben/",
+    "title": "Drehkolbenpumpen",
+    "desc": "tags: pumpentechnik, drehkolbenpumpe, verdrängerpumpe",
+    "tags": [
+      "pumpentechnik",
+      "drehkolbenpumpe",
+      "verdrängerpumpe"
+    ]
+  },
+  {
+    "url": "/theorie/pumpentechnik/drehschieber/",
+    "title": "Drehschieberpumpen",
+    "desc": "tags: pumpentechnik, drehschieberpumpe, verdrängerpumpe",
+    "tags": [
+      "pumpentechnik",
+      "drehschieberpumpe",
+      "verdrängerpumpe"
+    ]
+  },
+  {
+    "url": "/theorie/stroemungslehre/druck/",
+    "title": "Druck",
+    "desc": "tags: strömungslehre, druck, druckverlust, hydrostatik",
+    "tags": [
+      "strömungslehre",
+      "druck",
+      "druckverlust",
+      "hydrostatik"
+    ]
+  },
+  {
+    "url": "/rechner/druckleitung/",
+    "title": "Druckleitungsrechner",
+    "desc": "Berechnet die Leistung einer Förderstrecke anhand des Aufbaus und des Gegendrucks.",
+    "tags": [
+      "rechner",
+      "druckleitung",
+      "förderstrecke",
+      "gegendruck"
+    ]
+  },
+  {
+    "url": "/theorie/stroemungslehre/durchfluss/",
+    "title": "Durchflussmenge",
+    "desc": "Die Durchflussmenge beschreibt, wie viel Wasser (Volumen) wir in einer bestimmten Zeit fördern können. Sie berechnet sich aus der Querschnittsfläche der Leitung und der Fließgeschwindigkeit.",
+    "tags": [
+      "strömungslehre",
+      "durchfluss",
+      "durchflussmenge",
+      "volumen",
+      "fliessgeschwindigkeit"
+    ]
+  },
+  {
+    "url": "/theorie/einsatztaktik/einfuehrung/",
+    "title": "Einführung in die Einsatztaktik für Pumpen",
+    "desc": "Ein kurzer Überblick über die Einsatztaktik für Pumpen",
+    "tags": [
+      "einsatztaktik",
+      "einführung",
+      "taktik"
+    ]
+  },
+  {
+    "url": "/theorie/pumpentechnik/einfuehrung/",
+    "title": "Einführung in die Pumpentechnik",
+    "desc": "tags: pumpentechnik, einführung, pumpenarten",
+    "tags": [
+      "pumpentechnik",
+      "einführung",
+      "pumpenarten"
+    ]
+  },
+  {
+    "url": "/theorie/stroemungslehre/einfuehrung/",
+    "title": "Einführung in die Strömungslehre",
+    "desc": "Eine kleine Einführung in die Strömungslehre",
+    "tags": [
+      "strömungslehre",
+      "einführung",
+      "grundlagen"
+    ]
+  },
+  {
+    "url": "/theorie/pufferbecken/faltsilo-24m3-becken/",
+    "title": "Faltsilo 24m³ Becken",
+    "desc": "Ein selbstaufrichtendes Pufferbecken mit 24m³ Volumen",
+    "tags": [
+      "pufferbecken",
+      "faltsilo",
+      "24m³",
+      "selbstaufrichtend"
+    ]
+  },
+  {
+    "url": "/rechner/foerdermenge/",
+    "title": "Fördermengenumrechner",
+    "desc": "Wandelt Fördermengen von einer Einheit in andere um.",
+    "tags": [
+      "rechner",
+      "fördermenge",
+      "umrechner",
+      "einheiten"
+    ]
+  },
+  {
+    "url": "/theorie/einsatztaktik/handzeichen/",
+    "title": "Handzeichen für Maschinisten",
+    "desc": "tags: einsatztaktik, handzeichen, kommunikation, signale",
+    "tags": [
+      "einsatztaktik",
+      "handzeichen",
+      "kommunikation",
+      "signale"
+    ]
+  },
+  {
+    "url": "/pumpen/hannibal/",
+    "title": "Hannibal",
+    "desc": "Die Hannibal 5.000l/min ist eine Havariepumpe die in den Fachgruppen Typ A disloziert ist.",
+    "tags": [
+      "havariepumpe",
+      "grosspumpe",
+      "hannibal",
+      "5000",
+      "fachgruppe typ a"
+    ]
+  },
+  {
+    "url": "/impressum/",
+    "title": "Impressum",
+    "desc": "Impressum für die MaschPu-WebApp",
+    "tags": [
+      "impressum",
+      "rechtliches",
+      "kontakt"
+    ]
+  },
+  {
+    "url": "/theorie/stroemungslehre/kavitation/",
+    "title": "Kavitation",
+    "desc": "tags: strömungslehre, kavitation, dampfdruck",
+    "tags": [
+      "strömungslehre",
+      "kavitation",
+      "dampfdruck"
+    ]
+  },
+  {
+    "url": "/theorie/pumpentechnik/kreisel/",
+    "title": "Kreiselpumpen",
+    "desc": "tags: pumpentechnik, kreiselpumpe, zentrifugalpumpe",
+    "tags": [
+      "pumpentechnik",
+      "kreiselpumpe",
+      "zentrifugalpumpe"
+    ]
+  },
+  {
+    "url": "/index.tsx/",
+    "title": "MaschPu-App",
+    "desc": "Web-App für Maschinisten von Schmutzwasserpumpen im Technischen Hilfswerk",
+    "tags": [
+      "startseite",
+      "home",
+      "maschpu",
+      "app"
+    ]
+  },
+  {
+    "url": "/pumpen/mast-atp-20-r/",
+    "title": "Mast ATP 20 R",
+    "desc": "Elektro-Pumpe der Firma Mast vom Typ ATP 20 R",
+    "tags": [
+      "elektropumpe",
+      "mast",
+      "atp 20 r",
+      "schmutzwasser"
+    ]
+  },
+  {
+    "url": "/pumpen/mast-np-12-b/",
+    "title": "Mast NP 12 B",
+    "desc": "Benzinmotorpumpe der Firma Mast vom Typ NP 12 B",
+    "tags": [
+      "motorpumpe",
+      "benzinmotorpumpe",
+      "mast",
+      "np 12 b",
+      "schmutzwasser"
+    ]
+  },
+  {
+    "url": "/pumpen/mast-t-16/",
+    "title": "Mast T 16",
+    "desc": "Elektro-Tauchpumpe der Firma Mast vom Typ T 16",
+    "tags": [
+      "elektropumpe",
+      "tauchpumpe",
+      "mast",
+      "t 16",
+      "schmutzwasser"
+    ]
+  },
+  {
+    "url": "/pumpen/mast-tp-15-1/",
+    "title": "Mast TP 15-1",
+    "desc": "Elektro-Tauchpumpe der Firma Mast vom Typ TP 15-1",
+    "tags": [
+      "elektropumpe",
+      "tauchpumpe",
+      "mast",
+      "tp 15-1",
+      "schmutzwasser"
+    ]
+  },
+  {
+    "url": "/pumpen/mast-tp-4-1/",
+    "title": "Mast TP 4-1",
+    "desc": "Elektro-Tauchpumpe der Firma Mast vom Typ TP 4-1",
+    "tags": [
+      "elektropumpe",
+      "tauchpumpe",
+      "mast",
+      "tp 4-1",
+      "schmutzwasser"
+    ]
+  },
+  {
+    "url": "/pumpen/mast-tp-8-1/",
+    "title": "Mast TP 8-1",
+    "desc": "Elektro-Tauchpumpe der Firma Mast vom Typ TP 8-1",
+    "tags": [
+      "elektropumpe",
+      "tauchpumpe",
+      "mast",
+      "tp 8-1",
+      "schmutzwasser"
+    ]
+  },
+  {
+    "url": "/theorie/pufferbecken/palettenbecken-gross/",
+    "title": "Palettenbecken Groß",
+    "desc": "Diese Pufferbecken aus Europaletten kann in verschiedenen Größen gebaut werden und kann zur Löschwasserbereitstellung für Hubschrauber genutzt werden.",
+    "tags": [
+      "pufferbecken",
+      "palettenbecken",
+      "europaletten",
+      "gross",
+      "hubschrauber"
+    ]
+  },
+  {
+    "url": "/theorie/pufferbecken/palettenbecken-klein/",
+    "title": "Palettenbecken Klein",
+    "desc": "Diese Pufferbecken aus Europaletten kann in verschiedenen Größen gebaut werden und hat einen sehr geringen Materialbedarf.",
+    "tags": [
+      "pufferbecken",
+      "palettenbecken",
+      "europaletten",
+      "klein"
+    ]
+  },
+  {
+    "url": "/theorie/einsatztaktik/puffer/",
+    "title": "Pufferbetrieb bei Pumpen",
+    "desc": "tags: einsatztaktik, pufferbetrieb, puffer, taktik",
+    "tags": [
+      "einsatztaktik",
+      "pufferbetrieb",
+      "puffer",
+      "taktik"
+    ]
+  },
+  {
+    "url": "/pumpen/",
+    "title": "Pumpen",
+    "desc": "Übersicht über verschiedene vom THW genutzte Pumpen.",
+    "tags": [
+      "pumpen",
+      "übersicht",
+      "elektropumpen",
+      "motorpumpen",
+      "grosspumpen"
+    ]
+  },
+  {
+    "url": "/rechner/",
+    "title": "Rechner",
+    "desc": "Rechen-Tools zur Berechnung von verschiedenen Werten von Pumpstrecken.",
+    "tags": [
+      "rechner",
+      "berechnung",
+      "kalkulator",
+      "tools"
+    ]
+  },
+  {
+    "url": "/theorie/stroemungslehre/reibung/",
+    "title": "Reibung",
+    "desc": "tags: strömungslehre, reibung, reibungsverlust, druckverlust",
+    "tags": [
+      "strömungslehre",
+      "reibung",
+      "reibungsverlust",
+      "druckverlust"
+    ]
+  },
+  {
+    "url": "/theorie/stroemungslehre/saughoehe/",
+    "title": "Saughöhe",
+    "desc": "tags: strömungslehre, saughöhe, geodätisch, manometrisch",
+    "tags": [
+      "strömungslehre",
+      "saughöhe",
+      "geodätisch",
+      "manometrisch"
+    ]
+  },
+  {
+    "url": "/rechner/saughoehe/",
+    "title": "Saughöhenrechner",
+    "desc": "Berechnet die maximal mögliche geodätische und manomatrische Saughöhe anhand verschiedener Parameter.",
+    "tags": [
+      "rechner",
+      "saughöhe",
+      "geodätisch",
+      "manometrisch"
+    ]
+  },
+  {
+    "url": "/theorie/sonderausstattung/schacht-einlauftonne/",
+    "title": "Schacht-Einlauftonne (SET)",
+    "desc": "Mobile Vorrichtung der Fa. Faszitech für das Einleiten in Schächte und andere Einsatzbereiche.",
+    "tags": [
+      "sonderausstattung",
+      "schacht-einlauftonne",
+      "set",
+      "faszitech",
+      "schacht"
+    ]
+  },
+  {
+    "url": "/pumpen/spechtenhauser-atlantica/",
+    "title": "Spechtenhauser Atlantica",
+    "desc": "Motorpumpe der Firma Spechtenhauser vom Typ Atlantica",
+    "tags": [
+      "motorpumpe",
+      "spechtenhauser",
+      "atlantica",
+      "schmutzwasser"
+    ]
+  },
+  {
+    "url": "/pumpen/spechtenhauser-chiemsee-ex/",
+    "title": "Spechtenhauser Chiemsee EX",
+    "desc": "Elektro-Tauchpumpe der Firma Spechtenhauser vom Typ Chiemsee EX",
+    "tags": [
+      "elektropumpe",
+      "tauchpumpe",
+      "spechtenhauser",
+      "chiemsee ex",
+      "explosionsschutz",
+      "atex"
+    ]
+  },
+  {
+    "url": "/pumpen/spechtenhauser-mini-chiemsee/",
+    "title": "Spechtenhauser Mini Chiemsee",
+    "desc": "Elektro-Tauchpumpe der Firma Spechtenhauser vom Typ Mini Chiemsee",
+    "tags": [
+      "elektropumpe",
+      "tauchpumpe",
+      "spechtenhauser",
+      "mini chiemsee",
+      "schmutzwasser"
+    ]
+  },
+  {
+    "url": "/theorie/einsatztaktik/tandem/",
+    "title": "Tandembetrieb bei Pumpen",
+    "desc": "tags: einsatztaktik, tandembetrieb, tandem, taktik",
+    "tags": [
+      "einsatztaktik",
+      "tandembetrieb",
+      "tandem",
+      "taktik"
+    ]
+  },
+  {
+    "url": "/theorie/",
+    "title": "Theorie",
+    "desc": "Theorieüberischt zu Themen aus der Strömungslehre und Pumpentechnik.",
+    "tags": [
+      "theorie",
+      "übersicht",
+      "strömungslehre",
+      "pumpentechnik",
+      "einsatztaktik"
+    ]
+  },
+  {
+    "url": "/theorie/stroemungslehre/venturi/",
+    "title": "Venturi-Effekt",
+    "desc": "tags: strömungslehre, venturi, venturi-effekt, bernoulli",
+    "tags": [
+      "strömungslehre",
+      "venturi",
+      "venturi-effekt",
+      "bernoulli"
+    ]
+  },
+  {
+    "url": "/pumpen/wilo-tp-100e190-39/",
+    "title": "Wilo TP 100E190/39",
+    "desc": "Elektro-Pumpe der Firma Wilo vom Typ TP 100E190/39",
+    "tags": [
+      "elektropumpe",
+      "wilo",
+      "tp 100e190/39",
+      "schmutzwasser"
+    ]
+  },
+  {
+    "url": "/pumpen/wilo-tp-100e210-52/",
+    "title": "Wilo TP 100E210/52",
+    "desc": "Elektro-Pumpe der Firma Wilo vom Typ TP 100E210/52",
+    "tags": [
+      "elektropumpe",
+      "wilo",
+      "tp 100e210/52",
+      "schmutzwasser"
+    ]
+  },
+  {
+    "url": "/pumpen/wilo-tp-100e230-70/",
+    "title": "Wilo TP 100E230/70",
+    "desc": "Elektro-Pumpe der Firma Wilo vom Typ TP 100E230/70",
+    "tags": [
+      "elektropumpe",
+      "wilo",
+      "tp 100e230/70",
+      "schmutzwasser"
+    ]
+  },
+  {
+    "url": "/pumpen/wilo-tp-100e250-84/",
+    "title": "Wilo TP 100E250/84",
+    "desc": "Elektro-Pumpe der Firma Wilo vom Typ TP 100E250/84",
+    "tags": [
+      "elektropumpe",
+      "wilo",
+      "tp 100e250/84",
+      "schmutzwasser"
+    ]
+  }
+]

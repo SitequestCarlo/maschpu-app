@@ -133,5 +133,6 @@ export const head: DocumentHead = {
       name: "description",
       content: "Übersicht über verschiedene vom THW genutzte Pumpen.",
     },
+    { name: "search:tags", content: "pumpen, übersicht, elektropumpen, motorpumpen, grosspumpen" },
   ],
 };

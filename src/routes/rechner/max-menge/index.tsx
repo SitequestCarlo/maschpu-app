@@ -23,6 +23,7 @@ export const head: DocumentHead = {
       content:
         "Berechnet die maximale Fördermenge basierend auf verschiedenen Parametern.",
     },
+    { name: "search:tags", content: "rechner, maximale fördermenge, hazen-williams" },
   ],
 };
 

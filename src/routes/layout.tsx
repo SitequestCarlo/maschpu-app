@@ -1,6 +1,8 @@
-import { component$, Slot } from "@builder.io/qwik";
+import { component$, Slot, useSignal, useContextProvider } from "@builder.io/qwik";
 import type { RequestHandler } from "@builder.io/qwik-city";
 import NavBar from "~/components/nav-bar/nav-bar";
+import SearchOverlay from "~/components/search/search-overlay";
+import { SearchContext } from "~/contexts/search-context";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -14,6 +16,9 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 };
 
 export default component$(() => {
+  const searchOpen = useSignal(false);
+  useContextProvider(SearchContext, searchOpen);
+
   return (
     <>
       <NavBar />
@@ -22,6 +27,7 @@ export default component$(() => {
           <Slot />
         </main>
       </div>
+      <SearchOverlay open={searchOpen} />
     </>
   );
 });

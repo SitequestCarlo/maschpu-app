@@ -23,6 +23,7 @@ export const head: DocumentHead = {
       content:
         "Berechnet den erforderlichen Pumpendruck nach der Hazen-Williams-Gleichung.",
     },
+    { name: "search:tags", content: "rechner, pumpendruck, mindestdruck, hazen-williams" },
   ],
 };
 

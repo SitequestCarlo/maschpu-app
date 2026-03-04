@@ -215,5 +215,6 @@ export const head: DocumentHead = {
       content:
         "Theorieüberischt zu Themen aus der Strömungslehre und Pumpentechnik.",
     },
+    { name: "search:tags", content: "theorie, übersicht, strömungslehre, pumpentechnik, einsatztaktik" },
   ],
 };
