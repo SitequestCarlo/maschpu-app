@@ -3,7 +3,7 @@
  * Provides full offline capabilities with intelligent caching
  */
 
-const CACHE_VERSION = "v3";
+const CACHE_VERSION = "__SW_VERSION__";
 const CACHE_NAME = `maschpu-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `maschpu-runtime-${CACHE_VERSION}`;
 

@@ -18,7 +18,7 @@ console.log(`[Build] Generating service worker with version: ${version}`);
 
 // Replace the version placeholder
 const output = template.replace(
-  /const CACHE_VERSION = ['"]v\d+['"];/,
+  /const CACHE_VERSION = ['"]__SW_VERSION__['"];/,
   `const CACHE_VERSION = '${version}';`,
 );
 
