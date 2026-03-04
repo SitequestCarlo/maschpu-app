@@ -48,7 +48,9 @@ export default component$<SearchOverlayProps>(({ open }) => {
     visible.value = true;
     closing.value = false;
 
-    inputRef.value?.focus();
+    // Wait for Qwik to re-render (input enters DOM), then transfer focus.
+    // iOS allows this because keyboard is already open from the temp input.
+    setTimeout(() => inputRef.value?.focus(), 50);
   });
 
   // Filter results when query changes

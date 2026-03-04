@@ -68,7 +68,16 @@ export default component$(() => {
         </ul>
       </div>
 
-      <button class={styles.searchBtn} aria-label="Suche" onClick$={() => { searchOpen.value = true; }}>
+      <button class={styles.searchBtn} aria-label="Suche" onClick$={() => {
+        // iOS: programmatic focus only works within user gesture call stack.
+        // Open keyboard via temp input, then transfer focus to real search input.
+        const tmp = document.createElement('input');
+        tmp.style.cssText = 'position:fixed;opacity:0;top:0;left:0;width:10px;height:10px;font-size:16px;';
+        document.body.appendChild(tmp);
+        tmp.focus();
+        searchOpen.value = true;
+        setTimeout(() => tmp.remove(), 1000);
+      }}>
         <SearchIcon />
       </button>
     </nav>
