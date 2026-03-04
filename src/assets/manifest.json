@@ -7,7 +7,7 @@
   "display": "standalone",
   "background_color": "#fafafa",
   "description": "Web-App für Maschinisten von Schmutzwasserpumpen",
-  "theme_color": "#003399",
+  "theme_color": "#fafafa",
   "orientation": "portrait",
   "categories": ["utilities", "education"],
   "prefer_related_applications": false,

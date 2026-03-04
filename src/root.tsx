@@ -24,7 +24,7 @@ export default component$(() => {
       <head>
         <meta charSet="utf-8" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#003399" />
+        <meta name="theme-color" content="#fafafa" />
         <RouterHead />
       </head>
       <body lang="de">
