@@ -18,22 +18,30 @@
 }
 
 .tool input {
-  padding: 10px;
-  margin: 5px 0;
+  padding: 14px;
+  margin: 2px 0;
   border: 1px solid #888;
   background-color: white;
-  border-radius:  0;
+  border-radius: 0;
   color: black;
+  font-size: 16px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
+.tool input:focus-visible,
+.tool select:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
+}
+
 .tool select {
-  padding: 10px;
+  padding: 14px;
   background-color: white;
-  border-radius:  0;
+  border-radius: 0;
   color: black;
+  font-size: 16px;
   position: relative;
   width: 100%;
   border: transparent;
@@ -44,13 +52,24 @@
   background-color: var(--primary);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 14px;
+  font-size: 16px;
   cursor: pointer;
+  min-height: 48px;
 }
 
 .tool form button[type="submit"]:hover {
   background-color: var(--tertiary);
   color: black;
+}
+
+.tool form button[type="submit"]:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.tool form button[type="submit"]:active {
+  opacity: 0.85;
 }
 
 .tool .result div {
@@ -60,13 +79,13 @@
 }
 
 .unitInput {
-  width: 100%;;
+  width: 100%;
   display: flex;
   flex-direction: row;
   border: solid 1px #888;
   padding: 0;
   position: relative;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 .unitInput input {
@@ -78,14 +97,38 @@
 .unitInput select {
   border: 0;
   margin: 0;
-  width: 78px;
-  min-width: 78px;
+  width: 88px;
+  min-width: 88px;
   background-color: #f0f0f0;
   border-right: 5px transparent solid;
 }
 
 .selectInput {
-  margin: 10px 0;
+  margin: 5px 0;
   padding: 0;
   border: 1px solid #888;
+}
+
+/* Desktop: kleinere Touch-Targets da Maus statt Finger */
+@media (hover: hover) and (pointer: fine) {
+  .tool input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .tool select {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .tool form button[type="submit"] {
+    padding: 8px;
+    font-size: 14px;
+    min-height: unset;
+  }
+
+  .unitInput select {
+    width: 80px;
+    min-width: 80px;
+  }
 }

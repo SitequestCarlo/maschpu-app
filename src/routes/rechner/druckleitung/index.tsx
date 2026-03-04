@@ -3,6 +3,15 @@ import { Form, type DocumentHead } from "@builder.io/qwik-city";
 import styles from "~/styles/calculator.module.css"
 import { getPipeFrictionColebrookWhite } from "~/utils/reibung";
 import { getDensity, getDynamicViscosity, g, k } from "~/utils/values";
+import {
+  PressurePaInput, readPressurePa,
+  HeightInput, readHeight,
+  LengthInput, readLength,
+  CountInput, readCount,
+  TemperatureInput, readTemperature,
+  FactorInput, readFactor,
+  HoseTypeInput, readHoseType,
+} from "~/components/form/inputs";
 
 export const head: DocumentHead = {
   title: "Druckleitungsrechner",
@@ -29,19 +38,19 @@ export const PumpCalc = component$(() => {
   const calculatePump = $((e: Event, form: HTMLFormElement) => {
 
     /** Betriebsdruck in Pa */
-    const pressure = parseFloat((form.querySelector("input#pressure") as HTMLInputElement).value) * 100 * 1000
+    const pressure = readPressurePa(form, "pressure")
     /** Höhenunterschied in m */
-    const height = parseFloat((form.querySelector("input#height") as HTMLInputElement).value)
-    /** Durchmesser Saugschläuche in m*/
-    const hose_diam = parseInt((form.querySelector("select#hose-diam") as HTMLSelectElement).value) / 1000
+    const height = readHeight(form, "height")
+    /** Durchmesser Saugschläuche in m */
+    const hose_diam = readHoseType(form, "hose-diam")
     /** Anzahl Saugschläuche */
-    const hose_amt = parseInt((form.querySelector("input#hose-amt") as HTMLInputElement).value)
+    const hose_amt = readCount(form, "hose-amt")
     /** Länge Saugschlauch in m */
-    const hose_length = parseFloat((form.querySelector("input#hose-length") as HTMLInputElement).value)
+    const hose_length = readLength(form, "hose-length")
     /** Wassertemperatur in °C */
-    const water_temp = parseFloat((form.querySelector("input#water-temp") as HTMLInputElement).value)
-
-    const safety = (parseFloat((form.querySelector("input#safety") as HTMLInputElement).value) / 100) +1
+    const water_temp = readTemperature(form, "water-temp")
+    /** Sicherheitsfaktor */
+    const safety = (readFactor(form, "safety") / 100) + 1
 
     /** Dichte des Mediums */
     const rho = getDensity(water_temp)
@@ -85,55 +94,23 @@ export const PumpCalc = component$(() => {
 
       <Form onSubmitCompleted$={calculatePump}>
 
-        <div>
-          <label for="pressure">Betriebsdruck [bar]</label>
-          <input type="number" value={1} step={0.00001} required id="pressure"/>
-        </div>
+        <PressurePaInput name="pressure" label="Betriebsdruck" />
 
         <hr />
 
-        <div>
-          <label for="height">Höhenunterschied Ausgang - Eingang [m]</label>
-          <input type="number" value={0} step={0.01} required id="height"/>
-        </div>
+        <HeightInput name="height" label="Höhenunterschied Ausgang - Eingang" value={0} />
 
         <hr />
 
-        <div>
-          <label for="hose-diam">Druckschlauch Typ</label>
-          <div class={styles.selectWrapper}>
-            <select required id="hose-diam">
-              <option value={40}>D (40mm)</option>
-              <option value={50}>C (50mm)</option>
-              <option value={75}>B (75mm)</option>
-              <option value={110}>A (110mm)</option>
-              <option value={150} selected>F (150mm)</option>
-              <option value={200}>G (200mm)</option>
-            </select>
-          </div>
-        </div>
+        <HoseTypeInput name="hose-diam" label="Druckschlauch Typ" />
 
-        <div>
-          <label for="hose-length">Druckschlauch Länge [m]</label>
-          <input type="number" value={100} required id="hose-length"/>
-        </div>
-
-        <div>
-          <label for="hose-amt">Druckschlauch Anzahl [stk]</label>
-          <input type="number" value={1} required id="hose-amt"/>
-        </div>
+        <LengthInput name="hose-length" label="Druckschlauch Länge" value={100} />
+        <CountInput name="hose-amt" label="Druckschlauch Anzahl" />
 
         <hr />
 
-        <div>
-          <label for="water-temp">Wassertemperatur [°C]</label>
-          <input type="number" value={15} step={0.01} required id="water-temp"/>
-        </div>
-
-        <div>
-          <label for="safety">Sicherheitsfaktor [%]</label>
-          <input type="number" value={20} min={0} max={100} required id="safety"/>
-        </div>
+        <TemperatureInput name="water-temp" />
+        <FactorInput name="safety" />
 
         <button type="submit">Berechnen</button>
       </Form>

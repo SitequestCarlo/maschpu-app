@@ -12,26 +12,26 @@ export default component$(() => {
   const pn = loc.url.pathname
 
   return  (
-    <nav class={styles.nav}>
+    <nav class={styles.nav} aria-label="Hauptnavigation">
       <ul>
         <Link href="/pumpen">
           <li class={pn.includes("pumpen/") ? styles.active : ""}>
             <PumpIcon />
-            <label>Pumpen</label>
+            <span>Pumpen</span>
           </li>
         </Link>
 
         <Link href="/rechner">
           <li class={pn.includes("rechner/") ? styles.active : ""}>
             <CalcIcon />
-            <label>Rechner</label>
+            <span>Rechner</span>
           </li>
         </Link>
 
         <Link href="/theorie">
           <li class={pn.includes("theorie/") ? styles.active : ""}>
             <TheoryIcon />
-            <label>Theorie</label>
+            <span>Theorie</span>
           </li>
         </Link>
       </ul>
