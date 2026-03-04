@@ -59,7 +59,7 @@ export default component$<SearchOverlayProps>(({ open }) => {
     }
 
     // Focus the input
-    setTimeout(() => inputRef.value?.focus(), 50);
+    requestAnimationFrame(() => inputRef.value?.focus());
   });
 
   // Filter results when query changes
@@ -121,6 +121,7 @@ export default component$<SearchOverlayProps>(({ open }) => {
           <input
             ref={inputRef}
             type="text"
+            autoFocus
             placeholder="Suche…"
             value={query.value}
             onInput$={(_, el) => {
