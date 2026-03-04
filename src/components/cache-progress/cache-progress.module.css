@@ -1,63 +1,50 @@
 .cacheIndicator {
-  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-  color: white;
-  padding: 0.5rem 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 30px);
+  max-width: 430px;
+  height: 36px;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.10);
   z-index: 9999;
+  overflow: hidden;
   animation: slideDown 0.3s ease-out;
 }
 
 @keyframes slideDown {
   from {
-    transform: translateY(-100%);
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 0;
   }
   to {
-    transform: translateY(0);
-  }
-}
-
-.cacheContent {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  justify-content: center;
-}
-
-.cacheIcon {
-  width: 1.25rem;
-  height: 1.25rem;
-  flex-shrink: 0;
-  animation: pulse 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
+    transform: translateX(-50%) translateY(0);
     opacity: 1;
   }
-  50% {
-    opacity: 0.6;
-  }
+}
+
+.cacheFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 999px;
+  transition: width 0.3s ease-out;
 }
 
 .cacheText {
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-@media (max-width: 600px) {
-  .cacheIndicator {
-    padding: 0.75rem 1rem;
-  }
-
-  .cacheText {
-    font-size: 0.85rem;
-  }
-
-  .cacheIcon {
-    width: 1rem;
-    height: 1rem;
-  }
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  mix-blend-mode: difference;
+  filter: invert(1);
 }

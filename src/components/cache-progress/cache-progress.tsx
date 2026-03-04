@@ -51,26 +51,13 @@ export const CacheProgress = component$(() => {
 
   return (
     <div class={styles.cacheIndicator} role="status" aria-live="polite">
-      <div class={styles.cacheContent}>
-        <svg
-          class={styles.cacheIcon}
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-          <polyline points="7 10 12 15 17 10"></polyline>
-          <line x1="12" y1="15" x2="12" y2="3"></line>
-        </svg>
-        <span class={styles.cacheText}>
-          {cached.value}/{total.value} Dateien zwischengespeichert ({percentage}
-          %)
-        </span>
-      </div>
+      <div
+        class={styles.cacheFill}
+        style={{ width: `${percentage}%` }}
+      />
+      <span class={styles.cacheText}>
+        {percentage}% zwischengespeichert
+      </span>
     </div>
   );
 });

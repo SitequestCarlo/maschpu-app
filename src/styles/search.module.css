@@ -1,16 +1,17 @@
 .overlay {
   position: fixed;
-  inset: 0;
+  top: -60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 200;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(4px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 15px 20px;
-  padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  padding: 100px 15px 20px;
   animation: fadeIn 0.15s ease-out;
-  height: 100dvh;
   box-sizing: border-box;
 }
 
