@@ -1,10 +1,12 @@
 {
-  "apps" : [{
-    "name" : "maschpu",
-    "script": "server/entry.fastify.js",
-    "exec_mode" : "cluster",
-    "instances" : "max",
-    "watch": true,
-    "autorestart" : true
-  }]
+  "apps": [
+    {
+      "name": "maschpu",
+      "script": "server/entry.fastify.js",
+      "exec_mode": "cluster",
+      "instances": "max",
+      "watch": true,
+      "autorestart": true
+    }
+  ]
 }

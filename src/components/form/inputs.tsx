@@ -255,7 +255,9 @@ export const HoseTypeInput = component$<SelectInputProps>((props) => (
         <option value={50}>C (50mm)</option>
         <option value={75}>B (75mm)</option>
         <option value={110}>A (110mm)</option>
-        <option value={150} selected>F (150mm)</option>
+        <option value={150} selected>
+          F (150mm)
+        </option>
         <option value={200}>G (200mm)</option>
       </select>
     </div>
@@ -281,14 +283,18 @@ export const PipeMaterialInput = component$<SelectInputProps>((props) => (
           <option value="stl">Stahl</option>
         </optgroup>
         <optgroup label="Kunststoffe">
-          <option value="rub" selected>Gummi (NBR)</option>
+          <option value="rub" selected>
+            Gummi (NBR)
+          </option>
           <option value="hdpe">Hochverdichtetes Polyethylen (HDPE)</option>
           <option value="pvc">Polyvinylchlorid (PVC)</option>
           <option value="frp">Glasfaserverstärkter Kunststoff (GFK)</option>
         </optgroup>
         <optgroup label="Beton">
           <option value="con">Beton</option>
-          <option value="cmc">Zementmörtel-ausgekleidetes duktiles Gusseisenrohr</option>
+          <option value="cmc">
+            Zementmörtel-ausgekleidetes duktiles Gusseisenrohr
+          </option>
         </optgroup>
       </select>
     </div>

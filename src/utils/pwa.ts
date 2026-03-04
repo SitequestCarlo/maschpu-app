@@ -22,13 +22,13 @@ export async function checkRealConnectivity(): Promise<boolean> {
     // Try to fetch a small resource with a timeout
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 3000);
-    
-    const response = await fetch('/favicon.svg', {
-      method: 'HEAD',
-      cache: 'no-cache',
-      signal: controller.signal
+
+    const response = await fetch("/favicon.svg", {
+      method: "HEAD",
+      cache: "no-cache",
+      signal: controller.signal,
     });
-    
+
     clearTimeout(timeoutId);
     return response.ok;
   } catch {
@@ -40,7 +40,7 @@ export async function checkRealConnectivity(): Promise<boolean> {
  * Get the current service worker version
  */
 export async function getServiceWorkerVersion(): Promise<string | null> {
-  if (!('serviceWorker' in navigator)) {
+  if (!("serviceWorker" in navigator)) {
     return null;
   }
 
@@ -52,14 +52,13 @@ export async function getServiceWorkerVersion(): Promise<string | null> {
         messageChannel.port1.onmessage = (event) => {
           resolve(event.data.version || null);
         };
-        registration.active?.postMessage(
-          { type: 'GET_VERSION' },
-          [messageChannel.port2]
-        );
+        registration.active?.postMessage({ type: "GET_VERSION" }, [
+          messageChannel.port2,
+        ]);
       });
     }
   } catch (error) {
-    console.error('Error getting service worker version:', error);
+    console.error("Error getting service worker version:", error);
   }
 
   return null;
@@ -69,7 +68,7 @@ export async function getServiceWorkerVersion(): Promise<string | null> {
  * Clear all caches manually (useful for debugging or forced refresh)
  */
 export async function clearAllCaches(): Promise<boolean> {
-  if (!('serviceWorker' in navigator)) {
+  if (!("serviceWorker" in navigator)) {
     return false;
   }
 
@@ -81,14 +80,13 @@ export async function clearAllCaches(): Promise<boolean> {
         messageChannel.port1.onmessage = (event) => {
           resolve(event.data.success || false);
         };
-        registration.active?.postMessage(
-          { type: 'CLEAR_CACHE' },
-          [messageChannel.port2]
-        );
+        registration.active?.postMessage({ type: "CLEAR_CACHE" }, [
+          messageChannel.port2,
+        ]);
       });
     }
   } catch (error) {
-    console.error('Error clearing caches:', error);
+    console.error("Error clearing caches:", error);
   }
 
   return false;
@@ -98,7 +96,7 @@ export async function clearAllCaches(): Promise<boolean> {
  * Check if service worker is supported
  */
 export function isServiceWorkerSupported(): boolean {
-  return 'serviceWorker' in navigator;
+  return "serviceWorker" in navigator;
 }
 
 /**
@@ -106,7 +104,7 @@ export function isServiceWorkerSupported(): boolean {
  */
 export function isInstalled(): boolean {
   // Check if running in standalone mode (installed PWA)
-  if (window.matchMedia('(display-mode: standalone)').matches) {
+  if (window.matchMedia("(display-mode: standalone)").matches) {
     return true;
   }
 
@@ -121,17 +119,19 @@ export function isInstalled(): boolean {
 /**
  * Listen for online/offline events
  */
-export function onConnectivityChange(callback: (online: boolean) => void): () => void {
+export function onConnectivityChange(
+  callback: (online: boolean) => void,
+): () => void {
   const onlineHandler = () => callback(true);
   const offlineHandler = () => callback(false);
 
-  window.addEventListener('online', onlineHandler);
-  window.addEventListener('offline', offlineHandler);
+  window.addEventListener("online", onlineHandler);
+  window.addEventListener("offline", offlineHandler);
 
   // Return cleanup function
   return () => {
-    window.removeEventListener('online', onlineHandler);
-    window.removeEventListener('offline', offlineHandler);
+    window.removeEventListener("online", onlineHandler);
+    window.removeEventListener("offline", offlineHandler);
   };
 }
 
@@ -143,7 +143,7 @@ export async function getCacheInfo(): Promise<{
   quota: number;
   percentage: number;
 } | null> {
-  if ('storage' in navigator && 'estimate' in navigator.storage) {
+  if ("storage" in navigator && "estimate" in navigator.storage) {
     try {
       const estimate = await navigator.storage.estimate();
       const usage = estimate.usage || 0;
@@ -156,7 +156,7 @@ export async function getCacheInfo(): Promise<{
         percentage,
       };
     } catch (error) {
-      console.error('Error getting cache info:', error);
+      console.error("Error getting cache info:", error);
     }
   }
 
@@ -167,28 +167,28 @@ export async function getCacheInfo(): Promise<{
  * Format bytes to human-readable format
  */
 export function formatBytes(bytes: number, decimals = 2): string {
-  if (bytes === 0) return '0 Bytes';
+  if (bytes === 0) return "0 Bytes";
 
   const k = 1024;
   const dm = decimals < 0 ? 0 : decimals;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+  const sizes = ["Bytes", "KB", "MB", "GB"];
 
   const i = Math.floor(Math.log(bytes) / Math.log(k));
 
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i];
 }
 
 /**
  * Request persistent storage (prevents browser from clearing cache)
  */
 export async function requestPersistentStorage(): Promise<boolean> {
-  if ('storage' in navigator && 'persist' in navigator.storage) {
+  if ("storage" in navigator && "persist" in navigator.storage) {
     try {
       const isPersisted = await navigator.storage.persist();
-      console.log(`Persistent storage ${isPersisted ? 'granted' : 'denied'}`);
+      console.log(`Persistent storage ${isPersisted ? "granted" : "denied"}`);
       return isPersisted;
     } catch (error) {
-      console.error('Error requesting persistent storage:', error);
+      console.error("Error requesting persistent storage:", error);
     }
   }
 
@@ -199,11 +199,11 @@ export async function requestPersistentStorage(): Promise<boolean> {
  * Check if persistent storage is already granted
  */
 export async function isPersistentStorageGranted(): Promise<boolean> {
-  if ('storage' in navigator && 'persisted' in navigator.storage) {
+  if ("storage" in navigator && "persisted" in navigator.storage) {
     try {
       return await navigator.storage.persisted();
     } catch (error) {
-      console.error('Error checking persistent storage:', error);
+      console.error("Error checking persistent storage:", error);
     }
   }
 

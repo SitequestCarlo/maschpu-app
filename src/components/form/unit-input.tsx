@@ -93,7 +93,6 @@ export function readUnitInput(
   const select = form.querySelector(`#${name}_unit`) as HTMLSelectElement;
 
   const rawValue = parseFloat(input.value);
-  const selectedUnit =
-    units.find((u) => u.value === select.value) ?? units[0];
+  const selectedUnit = units.find((u) => u.value === select.value) ?? units[0];
   return rawValue * selectedUnit.factor;
 }

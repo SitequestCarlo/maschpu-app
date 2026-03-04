@@ -1,14 +1,14 @@
 ---
 title: Venturi-Effekt
-description: 
+description:
 ---
 
-import Druckaufteilung from "./assets/duckaufteilung.png?jsx"
-import Bernoulli from "./assets/bernoulli-venturi.png?jsx"
-import VenturiBasis from "./assets/venturi-basis.png?jsx"
-import VenturiDruckaenderung from "./assets/venturi-druckaenderung.png?jsx"
-import VenturiSaug from "./assets/venturi-saug.png?jsx"
-import NextPage from "~/components/next-page/next-page"
+import Druckaufteilung from "./assets/duckaufteilung.png?jsx";
+import Bernoulli from "./assets/bernoulli-venturi.png?jsx";
+import VenturiBasis from "./assets/venturi-basis.png?jsx";
+import VenturiDruckaenderung from "./assets/venturi-druckaenderung.png?jsx";
+import VenturiSaug from "./assets/venturi-saug.png?jsx";
+import NextPage from "~/components/next-page/next-page";
 
 # Venturi-Effekt
 
@@ -16,7 +16,7 @@ import NextPage from "~/components/next-page/next-page"
 
 Um den Venturi-Effekt zu verstehen, müssen wir uns kurz an die verschiedenen Druckanteile erinnern.
 
-<Druckaufteilung style={{padding: "1rem 4rem", width: "calc(100% - 8rem)"}}/>
+<Druckaufteilung style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} />
 
 Der Einfachheit halber betrachten wir den Venturi-Effekt in einem komplett waagerechten Leitungsteil. Damit fallen Effekte durch den Schweredruck raus. Übrig bleiben nur **Oberflächendruck** und **Staudruck**.
 
@@ -26,23 +26,23 @@ Der Einfachheit halber betrachten wir den Venturi-Effekt in einem komplett waage
 
 Beim Venturi-Effekt betrachten wir immer Drücke an zwei verschiedenen Stellen.
 
-<VenturiBasis style={{padding: "1rem 4rem", width: "calc(100% - 8rem)"}}/>
+<VenturiBasis style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} />
 
 ```math
 p_1 = p_2
 ```
 
-Das Zauberwort hierbei heißt **Kontinuität**. Genau wie die Durchflussmenge, sind auch die Drücke innerhalb einer *reibungsfreien!* Leitung immer konstant. Lediglich die verschiedenen Druckanteile ändern sich.
+Das Zauberwort hierbei heißt **Kontinuität**. Genau wie die Durchflussmenge, sind auch die Drücke innerhalb einer _reibungsfreien!_ Leitung immer konstant. Lediglich die verschiedenen Druckanteile ändern sich.
 
 ### Beispiel
 
-Verjüngen wir ein Rohr so, dass sich der Rohrquerschnitt halbiert (s. oben). 
+Verjüngen wir ein Rohr so, dass sich der Rohrquerschnitt halbiert (s. oben).
 Dann wird unser Medium doppelt so schnell fließen. Dadurch erhöht sich der Staudruck.
 
 Aber der Druck ist doch konstant? Wie kann sich da der Staudruck erhöhen?
 Ganz einfach: Der Oberflächendruck verringert sich um den gleichen Betrag, um den der Staudruck größer wird.
 
-<VenturiDruckaenderung style={{padding: "1rem 0"}}/>
+<VenturiDruckaenderung style={{ padding: "1rem 0" }} />
 
 Das bedeutet: Dort, wo der Querschnitt verengt ist und das Fluid schneller fließt, wird der Oberflächendruck geringer.
 Mit diesem geringeren Oberflächendruck lassen sich Gase oder Flüssigkeiten ansaugen.
@@ -51,18 +51,23 @@ Diese Änderung des Oberflächen-Drucks nennt man Venturi-Effekt.
 
 ## Venturi-Düse
 
-Ein Weg, um den Ventui-Effekt zu nutzen, ist die sogenannte Venturi-Düse. 
+Ein Weg, um den Ventui-Effekt zu nutzen, ist die sogenannte Venturi-Düse.
 Bei ihr wird auf der Rohrseite mit dem niedrigeren Querschnitt ein seitliches Rohr angebracht, das nach außen offen ist.
 
 <figure>
-  <img src="/gifs/venturi.gif"/>
-  <figcaption>Quelle: <a href="https://www.tec-science.com/" target="_blank">tec-science</a></figcaption>
+  <img src="/gifs/venturi.gif" />
+  <figcaption>
+    Quelle:{" "}
+    <a href="https://www.tec-science.com/" target="_blank">
+      tec-science
+    </a>
+  </figcaption>
 </figure>
 
 Dadurch kommt die Wasseroberfläche mit der Umgebungsluft in Kontakt. Die Umgebungsluft wird auf Grund des geringen Oberflächendrucks in das Wasser gesaugt.
 
-<VenturiSaug style={{padding: "1rem 4rem", width: "calc(100% - 8rem)"}}/>
+<VenturiSaug style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} />
 
 So lässt sich Luft/Sauerstoff in eine Wasserleitung einbringen. Das kann sehr effektiv bei der Gewässerbelüftung genutzt werden.
 
-<NextPage href="/theorie/stroemungslehre/kavitation" name="Kavitation"/>
+<NextPage href="/theorie/stroemungslehre/kavitation" name="Kavitation" />
