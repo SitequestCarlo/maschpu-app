@@ -1,6 +1,7 @@
 {
   "name": "maschpu-qwik",
-  "description": "App with Routing built-in ready to create your app",
+  "description": "Pumpen-Rechner und Nachschlagewerk für Maschinisten",
+  "author": "Carlo Schulz",
   "engines": {
     "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
   },
@@ -29,26 +30,24 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@builder.io/qwik": "^1.17.2",
-    "@builder.io/qwik-city": "^1.17.2",
-    "@fastify/compress": "^6.2.1",
-    "@fastify/static": "^6.10.1",
+    "@builder.io/qwik": "^1.19.1",
+    "@builder.io/qwik-city": "^1.19.1",
+    "@fastify/compress": "^8.3.1",
+    "@fastify/static": "^8.3.0",
     "@parcel/source-map": "^2.0.2",
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.12.7",
     "@typescript-eslint/eslint-plugin": "^7.7.1",
     "@typescript-eslint/parser": "^7.7.1",
-    "@vitejs/plugin-basic-ssl": "^1.1.0",
     "dotenv": "^16.3.2",
     "eslint": "^8.57.0",
     "eslint-plugin-qwik": "^1.17.2",
-    "fastify": "^4.17.0",
-    "fastify-plugin": "^4.5.0",
+    "fastify": "^5.7.4",
+    "fastify-plugin": "^5.1.0",
     "prettier": "^3.2.5",
     "typescript": "5.4.5",
     "undici": "*",
-    "vite": "^5.2.10",
-    "vite-plugin-mkcert": "^1.17.5",
+    "vite": "^7.3.1",
     "vite-tsconfig-paths": "^4.2.1"
   },
   "dependencies": {
