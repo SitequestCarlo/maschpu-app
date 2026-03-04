@@ -9,6 +9,7 @@ import {
 import { useNavigate } from "@builder.io/qwik-city";
 import styles from "~/styles/search.module.css";
 import SearchIcon from "~/assets/search-icon.svg?jsx";
+import searchIndex from "../../../public/search-index.json";
 
 interface SearchEntry {
   url: string;
@@ -23,7 +24,7 @@ interface SearchOverlayProps {
 
 export default component$<SearchOverlayProps>(({ open }) => {
   const query = useSignal("");
-  const entries = useSignal<SearchEntry[]>([]);
+  const entries = searchIndex as SearchEntry[];
   const filtered = useSignal<SearchEntry[]>([]);
   const inputRef = useSignal<HTMLInputElement>();
   const visible = useSignal(false);
@@ -39,33 +40,21 @@ export default component$<SearchOverlayProps>(({ open }) => {
     }, 150);
   });
 
-  // Load the search index once when the overlay is first opened
   // eslint-disable-next-line qwik/no-use-visible-task
-  useVisibleTask$(async ({ track }) => {
+  useVisibleTask$(({ track }) => {
     track(() => open.value);
     if (!open.value) return;
 
     visible.value = true;
     closing.value = false;
 
-    // Only fetch once
-    if (entries.value.length === 0) {
-      try {
-        const res = await fetch("/search-index.json");
-        entries.value = await res.json();
-      } catch {
-        entries.value = [];
-      }
-    }
-
-    // Focus the input
-    requestAnimationFrame(() => inputRef.value?.focus());
+    inputRef.value?.focus();
   });
 
   // Filter results when query changes
   useTask$(({ track }) => {
     const q = track(() => query.value).toLowerCase().trim();
-    const all = entries.value;
+    const all = entries;
 
     if (!q || q.length < 2) {
       filtered.value = [];
