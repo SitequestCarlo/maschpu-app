@@ -1,0 +1,100 @@
+---
+title: Pumpenkennlinie
+description: Wie liest man eine Pumpenkennlinie und was sagt sie uns?
+tags: strömungslehre, pumpenkennlinie, betriebspunkt, förderhöhe, fördermenge, anlagenkennlinie
+---
+
+import NextPage from "~/components/next-page/next-page";
+import Dia2Diagramm from "~/routes/pumpen/(grosspumpen)/dia-2/assets/dia-2-diagramm.png?jsx";
+import HannibalDiagramm from "~/routes/pumpen/(grosspumpen)/hannibal/assets/hannibal-diagramm.png?jsx";
+import BoergerDiagramm from "~/routes/pumpen/(grosspumpen)/boerger-5000/assets/boerger-5000-diagramm.png?jsx";
+
+# Pumpenkennlinie
+
+## Was ist eine Pumpenkennlinie?
+
+Eine Pumpenkennlinie zeigt das Verhältnis zwischen **Fördermenge** (Q) und **Förderhöhe** (H) einer Pumpe.
+
+Sie beantwortet die Frage: **Wie viel Wasser kann die Pumpe bei welchem Gegendruck fördern?**
+
+- Bei **wenig Gegendruck** (niedrige Förderhöhe) kann die Pumpe **viel Wasser** fördern
+- Bei **viel Gegendruck** (hohe Förderhöhe) kann die Pumpe **weniger Wasser** fördern
+- Irgendwann ist der Gegendruck so hoch, dass die Pumpe **gar kein Wasser** mehr fördert – das ist die **maximale Förderhöhe**
+
+In den meisten Kennlinien ist außerdem die **Drehzahl** (n) vermerkt, bei der die Kennlinie aufgenommen wurde. Die Kennlinie gilt immer nur für eine bestimmte Drehzahl.
+
+## Wie lese ich eine Pumpenkennlinie?
+
+Schauen wir uns die Kennlinie der **DIA 2** (Kreiselpumpe, 15.000 l/min) an:
+
+<figure>
+  <Dia2Diagramm />
+  <figcaption>Pumpenkennlinie der DIA 2 (Kreiselpumpe)</figcaption>
+</figure>
+
+Auf der **X-Achse** steht die Fördermenge (Q) in l/min oder m³/h, auf der **Y-Achse** die Förderhöhe (H) in Metern oder Bar.
+
+Beispielhafte Ablesewerte bei verschiedenen Drehzahlen:
+
+| Drehzahl | Gegendruck | Fördermenge |
+|---|---|---|
+| 1.200 U/min | 1,0 bar | ca. 570 m³/h |
+| 1.500 U/min | 2,0 bar | ca. 460 m³/h|
+| 1.800 U/min | 2,5 bar | ca. 740 m³/h |
+
+Man erkennt: Bei **höherer Drehzahl** verschiebt sich die gesamte Kennlinie nach oben und rechts – die Pumpe kann dann mehr fördern und gegen höheren Druck arbeiten.
+
+## Kreiselpumpe vs. Drehkolbenpumpe
+
+Die Form der Kennlinie unterscheidet sich je nach Pumpentyp grundlegend.
+
+### Kreiselpumpe – nicht-lineare Kennlinie
+
+<figure>
+  <HannibalDiagramm />
+  <figcaption>Hannibal – Kreiselpumpe mit gekrümmter Kennlinie</figcaption>
+</figure>
+
+Bei Kreiselpumpen verläuft die Kennlinie **gekrümmt**. Mit steigender Fördermenge sinkt die Förderhöhe nicht gleichmäßig, sondern fällt zunehmend steiler ab.
+
+Eine Kreiselpumpe reagiert **empfindlich** auf Veränderungen im Gegendruck. Steigt der Widerstand in der Leitung, sinkt die Fördermenge deutlich.
+
+### Drehkolbenpumpe – lineare Kennlinie
+
+<figure>
+  <BoergerDiagramm />
+  <figcaption>Börger 5000 – Drehkolbenpumpe mit nahezu linearer Kennlinie</figcaption>
+</figure>
+
+Bei Drehkolbenpumpen verläuft die Kennlinie nahezu **linear**. Die Fördermenge ist fast ausschließlich von der **Drehzahl** abhängig und kaum vom Gegendruck.
+
+Eine Drehkolbenpumpe fördert bei gleicher Drehzahl immer annähernd die gleiche Menge – egal ob gegen 1 Bar oder 3 Bar Gegendruck.
+
+### Was bedeutet das für Maschinisten?
+
+Bei einer **Kreiselpumpe** regulieren wir die Förderleistung über die Drehzahl **und** den Gegendruck. Bei einer **Drehkolbenpumpe** fast ausschließlich über die **Drehzahl**.
+
+## Pumpenkennlinie vs. Anlagenkennlinie
+
+Die **Pumpenkennlinie** beschreibt, was die Pumpe leisten *kann*. Die **Anlagenkennlinie** beschreibt, was unsere Schlauchleitung an Widerstand *erzeugt*.
+
+Die Anlagenkennlinie setzt sich zusammen aus:
+
+```math
+H_{Anlage} = H_{geo} + H_{Reibung}(Q)
+```
+
+- **H<sub>geo</sub>** – der Höhenunterschied (konstant, unabhängig von der Fördermenge)
+- **H<sub>Reibung</sub>** – die Reibungsverluste (steigen quadratisch mit der Fördermenge)
+
+Der **Betriebspunkt** ist dort, wo die Pumpenkennlinie die Anlagenkennlinie schneidet. An diesem Punkt stimmen Angebot (Pumpe) und Nachfrage (Anlage) überein.
+
+## Parallel- und Tandembetrieb
+
+### Parallelbetrieb – mehr Fördermenge
+
+Zwei Pumpen **parallel** geschaltet verdoppeln bei gleichem Gegendruck die Fördermenge. Durch die steigende Reibung ist der tatsächliche Gewinn aber **geringer als die Verdopplung**.
+
+### Tandembetrieb – mehr Förderhöhe
+
+Zwei Pumpen **in Reihe** geschaltet addieren bei gleicher Fördermenge die Förderhöhen. Das nutzen wir, wenn wir über große Höhen oder lange Strecken fördern müssen.

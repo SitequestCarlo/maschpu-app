@@ -1,0 +1,86 @@
+---
+title: NPSH
+description: Was ist der NPSH-Wert und warum ist er für Maschinisten wichtig?
+tags: strömungslehre, npsh, net positive suction head, haltedruckhöhe, kavitation, saughöhe
+---
+
+import NextPage from "~/components/next-page/next-page";
+import HannibalNPSH from "./assets/hannibal-npsh.png?jsx";
+
+# NPSH
+
+## Was bedeutet NPSH?
+
+NPSH steht für **Net Positive Suction Head** und beschreibt den Druck, der am Saugstutzen einer Pumpe **mindestens** vorhanden sein muss, damit **keine Kavitation** auftritt.
+
+Sie wird auch als **Haltedruckhöhe** bezeichnet, da sie angibt, wie viel Druck am Saugstutzen mindestens vorhanden sein muss, damit die Pumpe nicht "hält" (also kavitationsbedingt ausfällt).
+
+Wir unterscheiden zwei Werte:
+
+- **NPSH<sub>erf</sub>** – der von der Pumpe **erforderliche** Mindestdruck. Diesen Wert gibt der Hersteller vor.
+- **NPSH<sub>vorh</sub>** – der tatsächlich **vorhandene** Druck am Saugstutzen, abhängig von unserer Aufbausituation.
+
+## Die Grundregel
+
+Damit unsere Pumpe kavitationsfrei läuft, muss gelten:
+
+```math
+NPSH_{vorh} > NPSH_{erf}
+```
+
+Der verfügbare Druck muss also **immer größer** sein als der von der Pumpe benötigte Mindestdruck.
+
+## NPSH<sub>erf</sub> – Was braucht die Pumpe?
+
+Den NPSH<sub>erf</sub> können wir nicht beeinflussen – er ist eine **Eigenschaft der Pumpe** und hängt von ihrer Bauart, Drehzahl und Fördermenge ab.
+
+Je höher die **Drehzahl** und je größer die **Fördermenge**, desto höher ist der NPSH<sub>erf</sub>.
+
+Den Wert finden wir im **Datenblatt** oder der **Pumpenkennlinie** des Herstellers.
+
+<figure>
+  <HannibalNPSH />
+  <figcaption>
+    NPSH<sub>erf</sub> in der Pumpenkennlinie der Hannibal
+  </figcaption>
+</figure>
+
+## NPSH<sub>vorh</sub> – Was liefert unsere Aufbausituation?
+
+Den verfügbaren NPSH können wir durch unseren Aufbau beeinflussen. Er berechnet sich aus:
+
+```math
+NPSH_{vorh} = \cfrac{p_{atm} - p_{Dampf}}{\rho \cdot g} - H_{geo} - H_{Reibung}
+```
+
+Dabei sind:
+- **p<sub>atm</sub>** – der Umgebungsluftdruck (sinkt mit zunehmender Höhe)
+- **p<sub>Dampf</sub>** – der Dampfdruck des Fördermediums (steigt mit der Temperatur)
+- **&rho;** – die Dichte des Fördermediums
+- **g** – die Erdbeschleunigung (9,81 m/s²)
+- **H<sub>geo</sub>** – die geodätische Saughöhe (Höhendifferenz zwischen Wasseroberfläche und Pumpe)
+- **H<sub>Reibung</sub>** – die Reibungsverluste in der Saugleitung
+
+## Was können wir als Maschinisten tun?
+
+Um den NPSH<sub>vorh</sub> möglichst **hoch** zu halten:
+
+- **Saughöhe minimieren** – Pumpe so nah wie möglich am Wasserspiegel aufstellen
+- **Saugleitung kurz halten** – weniger Reibungsverluste
+- **Große Schlauchdurchmesser** verwenden – reduziert Reibung und Strömungsgeschwindigkeit
+- **Knicke und Formteile vermeiden** – jedes Hindernis erhöht die Reibungsverluste
+- **Temperatur beachten** – warmes Wasser hat einen höheren Dampfdruck und reduziert den NPSH<sub>vorh</sub>
+- **Fördermenge anpassen** – weniger Förderleistung bedeutet weniger Reibung und niedrigeren NPSH<sub>erf</sub>
+
+## Zusammenhang mit Kavitation und Saughöhe
+
+NPSH ist die **Brücke** zwischen Kavitation und Saughöhe:
+
+- Die **Kavitation** zeigt uns, *was passiert*, wenn der Druck zu niedrig wird
+- Die **Reibung** zeigt uns, *welche Verluste* in unseren Leitungen auftreten
+- Der **NPSH** quantifiziert, *wie viel Druck mindestens nötig* ist
+- Die **Saughöhe** leitet daraus die *praktische Grenze* ab
+
+Wenn der NPSH<sub>vorh</sub> unter den NPSH<sub>erf</sub> fällt, beginnt die Kavitation – und damit die Zerstörung unserer Pumpe.
+
+<NextPage href="/theorie/stroemungslehre/saughoehe" name="Saughöhe" />

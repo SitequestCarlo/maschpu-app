@@ -42,10 +42,24 @@ export default component$(() => {
           </div>
         </Link>
 
+        <Link href="/theorie/stroemungslehre/stroemungsarten">
+          <div class={styles.title}>Strömungsarten</div>
+          <div class={styles.description}>
+            Was sind laminare und turbulente Strömungen?
+          </div>
+        </Link>
+
         <Link href="/theorie/stroemungslehre/reibung">
           <div class={styles.title}>Reibung</div>
           <div class={styles.description}>
             Wo ensteht Reibung und welchen Einfluss hat Sie?
+          </div>
+        </Link>
+
+        <Link href="/theorie/stroemungslehre/npsh">
+          <div class={styles.title}>NPSH</div>
+          <div class={styles.description}>
+            Wann beginnt die Pumpe zu kavitieren?
           </div>
         </Link>
 
@@ -78,6 +92,13 @@ export default component$(() => {
           </div>
         </Link>
 
+        <Link href="/theorie/pumpentechnik/pumpenkennlinie">
+          <div class={styles.title}>Pumpenkennlinie</div>
+          <div class={styles.description}>
+            Wie liest man eine Pumpenkennlinie und bestimmt den Betriebspunkt?
+          </div>
+        </Link>
+
         {/*         <Link href="/theorie/pumpentechnik/drehschieber">
           <div class={styles.title}>Drehschieberpumpen (Vakuumpumpen)</div>
           <div class={styles.description}>
@@ -85,6 +106,7 @@ export default component$(() => {
           </div>
         </Link> */}
       </div>
+      
       {/* 
       <h2>Motorentechnik</h2>
       <div class={styles.list}>
@@ -169,33 +191,30 @@ export default component$(() => {
         </Link> */}
       </div>
 
-      <h2>Pufferbecken</h2>
+      <h2>Einsatzmittel</h2>
       <div class={styles.list}>
-        <Link href="/theorie/pufferbecken/faltsilo-24m3-becken">
+        <Link href="/theorie/einsatzmittel/faltsilo-24m3-becken">
           <div class={styles.title}>Faltsilo 24m³ Becken</div>
           <div class={styles.description}>
             Ein robustes Standard-Becken für große Wassermengen.
           </div>
         </Link>
 
-        <Link href="/theorie/pufferbecken/palettenbecken-klein">
+        <Link href="/theorie/einsatzmittel/palettenbecken-klein">
           <div class={styles.title}>Palettenbecken (klein)</div>
           <div class={styles.description}>
             Ein schnell und einfach zu errichtendes Pufferbecken.
           </div>
         </Link>
 
-        <Link href="/theorie/pufferbecken/palettenbecken-gross">
+        <Link href="/theorie/einsatzmittel/palettenbecken-gross">
           <div class={styles.title}>Palettenbecken (groß)</div>
           <div class={styles.description}>
             Ein stabiles Pufferbecken für größere Mengen Wasser.
           </div>
         </Link>
-      </div>
 
-      <h2>Sonderausstattung</h2>
-      <div class={styles.list}>
-        <Link href="/theorie/sonderausstattung/schacht-einlauftonne">
+        <Link href="/theorie/einsatzmittel/schacht-einlauftonne">
           <div class={styles.title}>Schacht-Einlauftonne (SET)</div>
           <div class={styles.description}>
             Mobile Vorrichtung der Fa. Faszitech für das Einleiten in Schächte

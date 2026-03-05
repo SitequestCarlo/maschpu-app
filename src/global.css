@@ -122,8 +122,13 @@ math {
 }
 
 table {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   margin-block: 1rem;
+}
+
+table th {
+  text-align: left;
 }
 
 table td {

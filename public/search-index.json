@@ -177,7 +177,7 @@
     ]
   },
   {
-    "url": "/theorie/pufferbecken/faltsilo-24m3-becken/",
+    "url": "/theorie/einsatzmittel/faltsilo-24m3-becken/",
     "title": "Faltsilo 24m³ Becken",
     "desc": "Ein selbstaufrichtendes Pufferbecken mit 24m³ Volumen",
     "tags": [
@@ -334,7 +334,20 @@
     ]
   },
   {
-    "url": "/theorie/pufferbecken/palettenbecken-gross/",
+    "url": "/theorie/stroemungslehre/npsh/",
+    "title": "NPSH",
+    "desc": "Was ist der NPSH-Wert und warum ist er für Maschinisten wichtig?",
+    "tags": [
+      "strömungslehre",
+      "npsh",
+      "net positive suction head",
+      "haltedruckhöhe",
+      "kavitation",
+      "saughöhe"
+    ]
+  },
+  {
+    "url": "/theorie/einsatzmittel/palettenbecken-gross/",
     "title": "Palettenbecken Groß",
     "desc": "Diese Pufferbecken aus Europaletten kann in verschiedenen Größen gebaut werden und kann zur Löschwasserbereitstellung für Hubschrauber genutzt werden.",
     "tags": [
@@ -346,7 +359,7 @@
     ]
   },
   {
-    "url": "/theorie/pufferbecken/palettenbecken-klein/",
+    "url": "/theorie/einsatzmittel/palettenbecken-klein/",
     "title": "Palettenbecken Klein",
     "desc": "Diese Pufferbecken aus Europaletten kann in verschiedenen Größen gebaut werden und hat einen sehr geringen Materialbedarf.",
     "tags": [
@@ -377,6 +390,19 @@
       "elektropumpen",
       "motorpumpen",
       "grosspumpen"
+    ]
+  },
+  {
+    "url": "/theorie/pumpentechnik/pumpenkennlinie/",
+    "title": "Pumpenkennlinie",
+    "desc": "Wie liest man eine Pumpenkennlinie und was sagt sie uns?",
+    "tags": [
+      "strömungslehre",
+      "pumpenkennlinie",
+      "betriebspunkt",
+      "förderhöhe",
+      "fördermenge",
+      "anlagenkennlinie"
     ]
   },
   {
@@ -424,7 +450,7 @@
     ]
   },
   {
-    "url": "/theorie/sonderausstattung/schacht-einlauftonne/",
+    "url": "/theorie/einsatzmittel/schacht-einlauftonne/",
     "title": "Schacht-Einlauftonne (SET)",
     "desc": "Mobile Vorrichtung der Fa. Faszitech für das Einleiten in Schächte und andere Einsatzbereiche.",
     "tags": [
@@ -469,6 +495,18 @@
       "spechtenhauser",
       "mini chiemsee",
       "schmutzwasser"
+    ]
+  },
+  {
+    "url": "/theorie/stroemungslehre/stroemungsarten/",
+    "title": "Strömungsarten",
+    "desc": "Wie verhält sich Strömung in verschiedenen Situationen?",
+    "tags": [
+      "strömungslehre",
+      "laminar",
+      "turbulent",
+      "reynolds-zahl",
+      "strömungsarten"
     ]
   },
   {

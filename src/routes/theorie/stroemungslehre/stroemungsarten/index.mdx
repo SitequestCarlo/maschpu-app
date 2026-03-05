@@ -1,0 +1,86 @@
+---
+title: Strömungsarten
+description: Wie verhält sich Strömung in verschiedenen Situationen?
+tags: strömungslehre, laminar, turbulent, reynolds-zahl, strömungsarten
+---
+
+import NextPage from "~/components/next-page/next-page";
+
+# Strömungsarten
+
+## Laminar und Turbulent
+
+Wenn Wasser durch eine Leitung fließt, kann es sich auf zwei grundlegend verschiedene Arten bewegen:
+
+<figure>
+    <img src="/gifs/laminar-turbulent.gif" alt="Laminare und turbulente Strömung" />
+    <figcaption>
+        Laminare (oben) und turbulente (unten) Strömung<br />
+        Quelle: <a href="https://www.tec-science.com/" target="_blank">tec-science</a>
+    </figcaption>
+</figure>
+
+### Laminare Strömung
+
+Bei einer **laminaren** Strömung bewegt sich die Flüssigkeit in geordneten, parallelen Schichten. Die Schichten gleiten übereinander, ohne sich zu vermischen.
+
+Man kann sich das vorstellen wie einen ruhig fließenden Bach – das Wasser fließt gleichmäßig und vorhersehbar.
+
+Laminare Strömung tritt bei **niedrigen Geschwindigkeiten** und in **kleinen Leitungen** auf.
+
+### Turbulente Strömung
+
+Bei einer **turbulenten** Strömung ist die Bewegung chaotisch. Es bilden sich Wirbel und die Flüssigkeit vermischt sich stark.
+
+Man kann sich das vorstellen wie eine Stromschnelle in einem Wildbach – unregelmäßig und aufgewühlt.
+
+Turbulente Strömung tritt bei **hohen Geschwindigkeiten** und in **großen Leitungen** auf.
+
+## Die Reynolds-Zahl
+
+Ob eine Strömung laminar oder turbulent ist, lässt sich mit der **Reynolds-Zahl** (Re) bestimmen:
+
+```math
+Re = \cfrac{v \cdot d}{\nu}
+```
+
+Dabei sind:
+- **v** – die Strömungsgeschwindigkeit in m/s
+- **d** – der Innendurchmesser der Leitung in m
+- **&nu;** – die kinematische Viskosität der Flüssigkeit in m²/s (für Wasser bei 20°C: ca. 1,0 · 10⁻⁶ m²/s)
+
+### Grenzwerte
+
+Bei einer Reynolds-Zahl **unter 2.300** ist die Strömung laminar und geordnet.
+
+Zwischen **2.300 und 4.000** befindet sich der Übergangsbereich, in dem die Strömung weder eindeutig laminar noch turbulent ist.
+
+Ab einer Reynolds-Zahl **über 4.000** ist die Strömung turbulent und chaotisch.
+
+## Was bedeutet das für uns?
+
+In der Praxis sind Strömungen in THW-Schlauchleitungen fast immer **turbulent**. Die Geschwindigkeiten und Durchmesser unserer Schläuche führen zu Reynolds-Zahlen weit über 4.000.
+
+Das hat eine wichtige Konsequenz: **Turbulente Strömung erzeugt deutlich mehr Reibung** als laminare Strömung.
+
+### Rechenbeispiel
+
+Ein F-Schlauch (Innendurchmesser 150mm) bei einer Fördermenge von 2000 l/min:
+
+```math
+v = \cfrac{Q}{A} = \cfrac{0{,}0333 \cfrac{m^3}{s}}{0{,}01767 m^2} \approx 1{,}9 \cfrac{m}{s}
+```
+
+```math
+Re = \cfrac{1{,}9 \cdot 0{,}15}{1{,}0 \cdot 10^{-6}} = 285.000
+```
+
+Mit einer Reynolds-Zahl von **285.000** ist die Strömung weit im turbulenten Bereich. Die Reibungsverluste sind entsprechend hoch.
+
+## Maßnahmen
+
+- **Mehr Leitungen parallel** legen → die Geschwindigkeit pro Leitung sinkt → die Reynolds-Zahl sinkt → weniger Reibung
+- **Größere Durchmesser** verwenden → bei gleicher Fördermenge sinkt die Geschwindigkeit → weniger turbulente Strömung
+- **Formteile vermeiden** → diese erzeugen zusätzliche Verwirbelungen
+
+<NextPage href="/theorie/stroemungslehre/reibung" name="Reibung" />
