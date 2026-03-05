@@ -17,17 +17,17 @@ import NextPage from "~/components/next-page/next-page";
 
 Um den Venturi-Effekt zu verstehen, müssen wir uns kurz an die verschiedenen Druckanteile erinnern.
 
-<Druckaufteilung style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} />
+<Druckaufteilung alt="Aufteilung des Drucks in statischen und dynamischen Anteil" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} />
 
 Der Einfachheit halber betrachten wir den Venturi-Effekt in einem komplett waagerechten Leitungsteil. Damit fallen Effekte durch den Schweredruck raus. Übrig bleiben nur **Oberflächendruck** und **Staudruck**.
 
-<Bernoulli />
+<Bernoulli alt="Bernoulli-Gleichung ohne Schweredruck" />
 
 ## Der Venturi-Effekt
 
 Beim Venturi-Effekt betrachten wir immer Drücke an zwei verschiedenen Stellen.
 
-<VenturiBasis style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} />
+<VenturiBasis alt="Venturi-Rohr mit zwei Messpunkten" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} />
 
 ```math
 p_1 = p_2
@@ -43,7 +43,7 @@ Dann wird unser Medium doppelt so schnell fließen. Dadurch erhöht sich der Sta
 Aber der Druck ist doch konstant? Wie kann sich da der Staudruck erhöhen?
 Ganz einfach: Der Oberflächendruck verringert sich um den gleichen Betrag, um den der Staudruck größer wird.
 
-<VenturiDruckaenderung style={{ padding: "1rem 0" }} />
+<VenturiDruckaenderung alt="Druckänderung bei Querschnittsverengung" style={{ padding: "1rem 0" }} />
 
 Das bedeutet: Dort, wo der Querschnitt verengt ist und das Fluid schneller fließt, wird der Oberflächendruck geringer.
 Mit diesem geringeren Oberflächendruck lassen sich Gase oder Flüssigkeiten ansaugen.
@@ -64,7 +64,7 @@ Bei ihr wird auf der Rohrseite mit dem niedrigeren Querschnitt ein seitliches Ro
 
 Dadurch kommt die Wasseroberfläche mit der Umgebungsluft in Kontakt. Die Umgebungsluft wird auf Grund des geringen Oberflächendrucks in das Wasser gesaugt.
 
-<VenturiSaug style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} />
+<VenturiSaug alt="Venturi-Düse mit seitlichem Ansaugrohr" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} />
 
 So lässt sich Luft/Sauerstoff in eine Wasserleitung einbringen. Das kann sehr effektiv bei der Gewässerbelüftung genutzt werden.
 
