@@ -1,5 +1,5 @@
-import { component$, Slot, useSignal, useContextProvider } from "@builder.io/qwik";
-import type { RequestHandler } from "@builder.io/qwik-city";
+import { component$, Slot, useSignal, useContextProvider, useVisibleTask$ } from "@builder.io/qwik";
+import { type RequestHandler, useLocation } from "@builder.io/qwik-city";
 import NavBar from "~/components/nav-bar/nav-bar";
 import SearchOverlay from "~/components/search/search-overlay";
 import { SearchContext } from "~/contexts/search-context";
@@ -18,6 +18,14 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 export default component$(() => {
   const searchOpen = useSignal(false);
   useContextProvider(SearchContext, searchOpen);
+
+  const loc = useLocation();
+
+  // eslint-disable-next-line qwik/no-use-visible-task
+  useVisibleTask$(({ track }) => {
+    track(() => loc.url.pathname);
+    document.querySelector('.content')?.scrollTo(0, 0);
+  });
 
   return (
     <>

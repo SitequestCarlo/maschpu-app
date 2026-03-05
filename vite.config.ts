@@ -26,9 +26,11 @@ export default defineConfig(({ command, mode }): UserConfig => {
   return {
     plugins: [qwikCity({
       mdx: {
+        remarkPlugins: [
+          remarkMath
+        ],
         rehypePlugins: [
           [rehypeKatex, {output: "mathml", strict: false}],
-          [remarkMath]
         ]
       }
     }), qwikVite({
