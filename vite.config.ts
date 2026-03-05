@@ -30,7 +30,7 @@ export default defineConfig(({ command, mode }): UserConfig => {
           remarkMath
         ],
         rehypePlugins: [
-          [rehypeKatex, {output: "mathml", strict: false}],
+          [rehypeKatex, {output: "html", strict: false}],
         ]
       }
     }), qwikVite({

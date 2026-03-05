@@ -6,6 +6,7 @@ import { CacheProgress } from "./components/cache-progress/cache-progress";
 import { ServiceWorkerRegistration } from "./components/sw-registration/sw-registration";
 import { useNetworkProvider } from "./contexts/network-context";
 
+import "katex/dist/katex.min.css";
 import "./global.css";
 
 export default component$(() => {
@@ -23,7 +24,7 @@ export default component$(() => {
     <QwikCityProvider>
       <head>
         <meta charSet="utf-8" />
-        <link rel="manifest" href="/manifest.json" />
+        {import.meta.env.PROD && <link rel="manifest" href="/manifest.json" />}
         <meta name="theme-color" content="#fafafa" />
         <RouterHead />
       </head>
