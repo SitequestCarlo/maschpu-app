@@ -9,7 +9,6 @@ import {
 import { useNavigate } from "@builder.io/qwik-city";
 import styles from "~/styles/search.module.css";
 import SearchIcon from "~/assets/search-icon.svg?jsx";
-import searchIndex from "../../../public/search-index.json";
 
 interface SearchEntry {
   url: string;
@@ -24,7 +23,7 @@ interface SearchOverlayProps {
 
 export default component$<SearchOverlayProps>(({ open }) => {
   const query = useSignal("");
-  const entries = searchIndex as SearchEntry[];
+  const entries = useSignal<SearchEntry[]>([]);
   const filtered = useSignal<SearchEntry[]>([]);
   const inputRef = useSignal<HTMLInputElement>();
   const visible = useSignal(false);
@@ -48,15 +47,22 @@ export default component$<SearchOverlayProps>(({ open }) => {
     visible.value = true;
     closing.value = false;
 
-    // Wait for Qwik to re-render (input enters DOM), then transfer focus.
-    // iOS allows this because keyboard is already open from the temp input.
+    // Load search index on first open
+    if (entries.value.length === 0) {
+      fetch("/search-index.json")
+        .then((r) => r.json())
+        .then((data) => {
+          entries.value = data;
+        });
+    }
+
     setTimeout(() => inputRef.value?.focus(), 50);
   });
 
   // Filter results when query changes
   useTask$(({ track }) => {
     const q = track(() => query.value).toLowerCase().trim();
-    const all = entries;
+    const all = track(() => entries.value);
 
     if (!q || q.length < 2) {
       filtered.value = [];

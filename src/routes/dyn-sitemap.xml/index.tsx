@@ -1,7 +1,37 @@
 import type { RequestHandler } from "@builder.io/qwik-city";
 import { routes } from "@qwik-city-plan";
+import { readdirSync, readFileSync, statSync } from "fs";
+import { join, relative, sep } from "path";
 
 const SITE_URL = "https://maschpu.de";
+
+/**
+ * Collect URL paths of pages marked as draft: true
+ */
+function collectDraftUrls(): Set<string> {
+  const routesDir = join(process.cwd(), "src", "routes");
+  const drafts = new Set<string>();
+
+  function walk(dir: string) {
+    for (const name of readdirSync(dir)) {
+      const full = join(dir, name);
+      if (statSync(full).isDirectory()) {
+        walk(full);
+      } else if (name === "index.mdx") {
+        const content = readFileSync(full, "utf-8");
+        const fm = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+        if (fm && /^draft:\s*true$/m.test(fm[1])) {
+          let rel = relative(routesDir, full).split(sep).join("/").replace(/\/index\.mdx$/, "");
+          rel = rel.replace(/\([^)]+\)\//g, "");
+          drafts.add("/" + rel + "/");
+        }
+      }
+    }
+  }
+
+  walk(routesDir);
+  return drafts;
+}
 
 /**
  * Routes to exclude from sitemap
@@ -57,6 +87,7 @@ function getChangefreq(route: string): string {
  */
 function createSitemap(baseUrl: string): string {
   const today = new Date().toISOString().split("T")[0];
+  const draftUrls = collectDraftUrls();
 
   // Extract routes from Qwik City plan
   const siteRoutes = routes
@@ -67,6 +98,8 @@ function createSitemap(baseUrl: string): string {
       // Exclude routes matching exclusion patterns
       if (EXCLUDED_PATTERNS.some((pattern) => pattern.test(route)))
         return false;
+      // Exclude draft pages
+      if (draftUrls.has(route)) return false;
       return true;
     })
     .sort();

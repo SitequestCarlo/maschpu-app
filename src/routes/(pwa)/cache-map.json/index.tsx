@@ -89,6 +89,7 @@ export const onGet: RequestHandler = async (ev) => {
       "/favicon.svg",
       "/maskable-icon.png",
       "/apple-touch-icon-180x180.png",
+      "/search-index.json",
     ];
     paths.push(...publicAssets);
 
