@@ -50,16 +50,16 @@ Den Wert finden wir im **Datenblatt** oder der **Pumpenkennlinie** des Herstelle
 Den verfügbaren NPSH können wir durch unseren Aufbau beeinflussen. Er berechnet sich aus:
 
 ```math
-NPSH_{vorh} = \cfrac{p_{atm} - p_{Dampf}}{\rho \cdot g} - H_{geo} - H_{Reibung}
+NPSH_{v} = \frac{p_{atm} - p_D}{\rho \cdot g} - H_{geo} - H_{R}
 ```
 
 Dabei sind:
 - **p<sub>atm</sub>** – der Umgebungsluftdruck (sinkt mit zunehmender Höhe)
-- **p<sub>Dampf</sub>** – der Dampfdruck des Fördermediums (steigt mit der Temperatur)
+- **p<sub>D</sub>** – der Dampfdruck des Fördermediums (steigt mit der Temperatur)
 - **&rho;** – die Dichte des Fördermediums
 - **g** – die Erdbeschleunigung (9,81 m/s²)
 - **H<sub>geo</sub>** – die geodätische Saughöhe (Höhendifferenz zwischen Wasseroberfläche und Pumpe)
-- **H<sub>Reibung</sub>** – die Reibungsverluste in der Saugleitung
+- **H<sub>R</sub>** – die Reibungsverluste in der Saugleitung
 
 ## Was können wir als Maschinisten tun?
 
@@ -81,4 +81,4 @@ NPSH ist die **Brücke** zwischen Kavitation und Saughöhe:
 - Der **NPSH** quantifiziert, *wie viel Druck mindestens nötig* ist
 - Die **Saughöhe** leitet daraus die *praktische Grenze* ab
 
-Wenn der NPSH<sub>vorh</sub> unter den NPSH<sub>erf</sub> fällt, beginnt die Kavitation – und damit die Zerstörung unserer Pumpe.
+Wenn der NPSH<sub>vorh</sub> unter den NPSH<sub>erf</sub> fällt, beginnt die Kavitation – und damit die Zerstörung unserer Pumpe.

@@ -181,3 +181,15 @@ h2 + ul a[title]::after {
   font-size: 12px;
   color: #666;
 }
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  word-wrap: break-word;
+}
