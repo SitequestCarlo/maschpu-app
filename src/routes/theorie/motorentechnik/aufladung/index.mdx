@@ -1,0 +1,77 @@
+---
+title: Aufladung
+description: Saugmotor vs. Turbolader – wie kommt mehr Luft in den Motor?
+tags: motorentechnik, aufladung, saugmotor, turbolader, ladeluftkühler, abgasturbolader
+---
+
+import NextPage from "~/components/next-page/next-page";
+
+{/* import Saugmotor from "./assets/saugmotor-schema.png?jsx"; */}
+{/* import Turbo from "./assets/turbolader-schema.png?jsx"; */}
+{/* import Ladeluft from "./assets/ladeluftkuehler.png?jsx"; */}
+
+# Aufladung
+
+## Saugmotor (Naturansaugung)
+
+Beim Saugmotor wird die Luft allein durch den **Unterdruck** angesaugt, der beim Abwärtshub des Kolbens entsteht (1. Takt).
+
+{/* TODO: Bild/Schema Saugmotor */}
+{/* <Saugmotor alt="Schema eines Saugmotors" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+Die Luft strömt durch den **Luftfilter** und das **Ansaugrohr** in den Zylinder. Dabei kann maximal so viel Luft angesaugt werden, wie dem **Hubraum** des Zylinders entspricht – in der Praxis sogar etwas weniger, durch Strömungsverluste.
+
+- Einfacher Aufbau, weniger Verschleißteile
+- Spontaneres Ansprechverhalten
+- Geringere Leistung als aufgeladene Motoren
+
+_Beispiel im THW: Spechtenhauser Atlantica_
+
+## Turbolader (Abgasturboaufladung)
+
+Ein Saugmotor kann nur so viel Luft ansaugen, wie seinem Hubraum entspricht. Wollen wir **mehr Leistung**, ohne den Motor größer zu bauen, müssen wir **mehr Luft** in den Zylinder bekommen.
+
+Genau das macht ein **Turbolader**: Er nutzt die **Energie der Abgase**, um **mehr Luft** in den Zylinder zu pressen, als der Motor von alleine ansaugen könnte.
+
+{/* TODO: Bild/Schema Turbolader */}
+{/* <Turbo alt="Schema eines Turboladers" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+### Aufbau
+
+Ein Turbolader besteht aus zwei Schaufelrädern auf einer gemeinsamen Welle:
+
+1. **Turbine** (Abgasseite): Die Abgase treiben das Turbinenrad an
+2. **Verdichter** (Ansaugseite): Das Verdichterrad komprimiert die Ansaugluft
+
+Die Turbine dreht dabei mit **bis zu 300.000 U/min** bei kleinen Turboladern.
+
+### Wirkung
+
+Durch die Verdichtung der Ansaugluft gelangt **mehr Sauerstoff** in den Zylinder. Dadurch kann mehr Kraftstoff verbrannt werden, was die **Leistung** des Motors deutlich steigert – ohne den Motor selbst größer zu machen.
+
+- Mehr Leistung bei gleichem Hubraum
+- Besserer Wirkungsgrad
+- Verzögertes Ansprechen ("Turboloch") bei niedrigen Drehzahlen
+
+_Beispiele im THW: Hannibal, DIA 1, DIA 2, Börger 5.000, Börger 25.000 – alle Großpumpen-Dieselmotoren sind turboaufgeladen._
+
+## Ladeluftkühlung
+
+Die Verdichtung der Luft durch den Turbolader erzeugt **Wärme**. Warme Luft ist weniger dicht und enthält weniger Sauerstoff.
+
+{/* TODO: Bild/Schema Ladeluftkühler */}
+{/* <Ladeluft alt="Schema eines Ladeluftkühlers" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+Ein **Ladeluftkühler** kühlt die verdichtete Luft ab, bevor sie in den Motor gelangt. Dadurch wird die Luft wieder **dichter** und es passt noch mehr Sauerstoff in den Zylinder.
+
+## Zusammenfassung
+
+| Merkmal | Saugmotor | Turbolader |
+|---|---|---|
+| **Luftzufuhr** | Nur durch Kolben-Unterdruck | Zusätzlich durch Verdichter |
+| **Leistung** | Geringer | Höher (bei gleichem Hubraum) |
+| **Aufbau** | Einfacher | Komplexer |
+| **Ansprechverhalten** | Direkt | Leicht verzögert |
+| **Im THW** | Motorpumpen | Großpumpen (Diesel) |
+
+<NextPage href="/theorie/motorentechnik/kuehlung" name="Kühlung" />

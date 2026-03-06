@@ -1,0 +1,109 @@
+---
+title: Bauformen von Verbrennungsmotoren
+description: 4-Takt-Diesel-Reihenmotor – die Standardbauform im THW
+tags: motorentechnik, bauformen, 4-takt, diesel, reihenmotor
+---
+
+import NextPage from "~/components/next-page/next-page";
+
+{/* import Zweitakt from "./assets/2-takt-vs-4-takt.png?jsx"; */}
+{/* import Reihe from "./assets/reihenmotor.png?jsx"; */}
+{/* import VMotor from "./assets/v-motor.png?jsx"; */}
+{/* import Boxer from "./assets/boxermotor.png?jsx"; */}
+{/* import Stern from "./assets/sternmotor.png?jsx"; */}
+{/* import Wankel from "./assets/wankelmotor.png?jsx"; */}
+
+# Bauformen
+
+## Unsere Motoren im THW
+
+Fast alle Pumpen-Motoren im THW sind **4-Takt-Diesel-Reihenmotoren**. Diese drei Begriffe schauen wir uns genauer an.
+
+## 4-Takt-Motor
+
+Beim 4-Takt-Motor wird der Arbeitszyklus in **vier Kolbenhüben** (zwei Kurbelwellenumdrehungen) abgeschlossen:
+
+1. **Ansaugen** – Luft wird in den Zylinder gesaugt
+2. **Verdichten** – die Luft wird komprimiert
+3. **Arbeiten** – Verbrennung drückt den Kolben nach unten
+4. **Ausstoßen** – Abgase werden ausgestoßen
+
+Die Details zu den einzelnen Takten schauen wir uns im nächsten Kapitel an.
+
+- **Vorteil:** Besserer Wirkungsgrad, geringerer Verbrauch, sauberere Verbrennung
+- **Nachteil:** Komplexerer Aufbau (Ventilsteuerung nötig)
+
+**Alle Pumpen-Motoren im THW sind 4-Takt-Motoren.**
+
+{/* TODO: Bild/Schema 4-Takt-Motor */}
+{/* <Zweitakt alt="Schema eines 4-Takt-Motors" /> */}
+
+## Dieselmotor
+
+Beim Dieselmotor wird der Kraftstoff in **hoch verdichtete, heiße Luft** eingespritzt und entzündet sich von selbst (**Selbstzündung**).
+
+Im Gegensatz dazu wird beim Ottomotor (Benzin) ein fertiges Kraftstoff-Luft-Gemisch durch eine **Zündkerze** gezündet (Fremdzündung).
+
+| | Dieselmotor | Ottomotor (Benzin) |
+|---|---|---|
+| **Zündung** | Selbstzündung | Fremdzündung (Zündkerze) |
+| **Verdichtung** | 15:1 bis 23:1 | 8:1 bis 12:1 |
+| **Drehmoment** | Höher | Geringer |
+| **Drehzahl** | Niedriger | Höher |
+| **Wirkungsgrad** | Besser | Geringer |
+| **Aufbau** | Robuster, schwerer | Leichter |
+
+_Diesel im THW: Hannibal, DIA 1, DIA 2, Börger 5.000, Börger 25.000_
+
+_Benzin im THW: Spechtenhauser Atlantica_
+
+## Reihenmotor
+
+Die Zylinder stehen in einer **Reihe** hintereinander. Das ist die einfachste und verbreitetste Bauform.
+
+{/* TODO: Bild Reihenmotor-Schema */}
+{/* <Reihe alt="Schema eines Reihenmotors" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+- Einfacher Aufbau, günstige Fertigung
+- Kompakt in der Breite
+- Typische Bezeichnungen: R3, R4, R6
+
+**Die meisten Pumpen-Dieselmotoren im THW sind Reihenmotoren (R3 oder R4).**
+
+## Andere Bauformen im Überblick
+
+Die oben genannten Bauformen sind für uns im THW am wichtigsten. Der Vollständigkeit halber hier ein kurzer Überblick über weitere Motortypen:
+
+### 2-Takt-Motor
+
+Beim 2-Takt-Motor wird der Arbeitszyklus in nur **zwei Kolbenhüben** (eine Kurbelwellenumdrehung) abgeschlossen. Einfacherer Aufbau, aber höherer Verbrauch und mehr Emissionen. Heute kaum noch im THW vertreten – vereinzelt in älteren Motorsägen oder Trennschleifern.
+
+### V-Motor
+
+Die Zylinder sind in **zwei Reihen** im Winkel (meist 60° oder 90°) angeordnet. Kürzer als ein Reihenmotor, aber breiter. Typische Bezeichnungen: V6, V8, V12.
+
+{/* TODO: Bild V-Motor-Schema */}
+{/* <VMotor alt="Schema eines V-Motors" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+### Boxermotor
+
+Die Zylinder stehen sich **gegenüber** (180°) und arbeiten gegenläufig. Niedriger Schwerpunkt und ruhiger Lauf, aber breiter Aufbau. Im THW **nicht** vertreten.
+
+{/* TODO: Bild Boxermotor-Schema */}
+{/* <Boxer alt="Schema eines Boxermotors" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+### Sternmotor
+
+Zylinder **sternförmig** um die Kurbelwelle angeordnet. Historisch im Flugzeugbau eingesetzt, im THW **nicht** vertreten.
+
+{/* TODO: Bild Sternmotor-Schema */}
+{/* <Stern alt="Schema eines Sternmotors" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+### Wankelmotor (Kreiskolbenmotor)
+
+Ein **dreieckiger Kolben** dreht sich in einer ovalen Kammer – keine Hubbewegung, sondern eine rotierende Bewegung. Sehr kompakt, aber höherer Verbrauch und Verschleiß. Im THW **nicht** vertreten.
+
+{/* TODO: Bild/GIF Wankelmotor */}
+{/* <Wankel alt="Funktionsprinzip eines Wankelmotors" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+<NextPage href="/theorie/motorentechnik/arbeitsweise" name="4-Takt Arbeitsverfahren" />

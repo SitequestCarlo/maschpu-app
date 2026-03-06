@@ -1,0 +1,96 @@
+---
+title: 4-Takt Arbeitsverfahren
+description: Wie funktioniert ein 4-Takt Verbrennungsmotor? Die vier Takte im Detail.
+tags: motorentechnik, 4-takt, arbeitsverfahren, ansaugen, verdichten, arbeiten, ausstoßen, otto, diesel
+---
+
+import NextPage from "~/components/next-page/next-page";
+
+{/* import Takt1 from "./assets/takt-1-ansaugen.png?jsx"; */}
+{/* import Takt2 from "./assets/takt-2-verdichten.png?jsx"; */}
+{/* import Takt3 from "./assets/takt-3-arbeiten.png?jsx"; */}
+{/* import Takt4 from "./assets/takt-4-ausstossen.png?jsx"; */}
+{/* import Animation from "./assets/4-takt-animation.gif"; */}
+
+# 4-Takt Arbeitsverfahren
+
+Alle Verbrennungsmotoren im THW arbeiten nach dem **4-Takt-Prinzip**. Bei diesem Verfahren durchläuft der Kolben **vier Hübe** (zwei Auf- und zwei Abwärtsbewegungen), das entspricht **zwei vollständigen Kurbelwellenumdrehungen**.
+
+{/* TODO: Animation/GIF 4-Takt-Motor */}
+{/*
+<figure>
+  <img src="/gifs/4-takt-animation.gif" alt="Animation des 4-Takt Arbeitsverfahrens" />
+  <figcaption>
+    Quelle: <a href="https://www.tec-science.com/" target="_blank">tec-science</a>
+  </figcaption>
+</figure>
+*/}
+
+## 1. Takt – Ansaugen
+
+Der Kolben bewegt sich **nach unten** (vom oberen Totpunkt zum unteren Totpunkt).
+
+Das **Einlassventil** ist geöffnet, das **Auslassventil** geschlossen.
+
+Durch die Abwärtsbewegung entsteht ein **Unterdruck** im Zylinder, der das Frischgas ansaugt.
+
+- **Ottomotor:** Es wird ein fertiges **Kraftstoff-Luft-Gemisch** angesaugt
+- **Dieselmotor:** Es wird nur **reine Luft** angesaugt
+
+{/* TODO: Bild Takt 1 */}
+{/* <Takt1 alt="1. Takt: Ansaugen – Kolben bewegt sich nach unten, Einlassventil offen" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+## 2. Takt – Verdichten
+
+Der Kolben bewegt sich **nach oben** (vom unteren zum oberen Totpunkt).
+
+**Beide Ventile** sind geschlossen. Das angesaugte Gas wird **komprimiert**.
+
+Durch die Verdichtung steigen **Druck** und **Temperatur** im Zylinder stark an.
+
+- **Ottomotor:** Verdichtungsverhältnis ca. **8:1 bis 12:1** → Temperatur ca. 400–500°C
+- **Dieselmotor:** Verdichtungsverhältnis ca. **15:1 bis 23:1** → Temperatur ca. 700–900°C
+
+Das höhere Verdichtungsverhältnis beim Diesel ist notwendig, damit sich der Kraftstoff **von selbst** entzündet.
+
+{/* TODO: Bild Takt 2 */}
+{/* <Takt2 alt="2. Takt: Verdichten – Kolben bewegt sich nach oben, beide Ventile geschlossen" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+## 3. Takt – Arbeiten (Verbrennung)
+
+Der Kolben steht am **oberen Totpunkt**. Jetzt wird die Verbrennung eingeleitet:
+
+- **Ottomotor:** Die **Zündkerze** erzeugt einen Funken und zündet das Gemisch
+- **Dieselmotor:** Der Kraftstoff wird unter hohem Druck **eingespritzt** und entzündet sich an der heißen, verdichteten Luft selbst
+
+Die Verbrennung erzeugt Temperaturen von **über 2.000°C** und drückt den Kolben mit großer Kraft **nach unten**.
+
+Diese Kraft wird über das **Pleuel** auf die **Kurbelwelle** übertragen und in eine Drehbewegung umgewandelt. Das ist der einzige Takt, der **Arbeit verrichtet** – die anderen drei Takte sind "Hilfstakte".
+
+{/* TODO: Bild Takt 3 */}
+{/* <Takt3 alt="3. Takt: Arbeiten – Verbrennung drückt den Kolben nach unten" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+## 4. Takt – Ausstoßen
+
+Der Kolben bewegt sich wieder **nach oben**.
+
+Das **Auslassventil** öffnet sich, das **Einlassventil** bleibt geschlossen.
+
+Die **Abgase** werden durch die Aufwärtsbewegung aus dem Zylinder geschoben.
+
+Anschließend beginnt der Kreislauf von vorne.
+
+{/* TODO: Bild Takt 4 */}
+{/* <Takt4 alt="4. Takt: Ausstoßen – Kolben schiebt Abgase durch das Auslassventil" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+## Otto vs. Diesel – Der Unterschied
+
+| | Ottomotor (Benzin) | Dieselmotor |
+|---|---|---|
+| **Zündung** | Fremdzündung (Zündkerze) | Selbstzündung (Einspritzung) |
+| **Ansaugung** | Kraftstoff-Luft-Gemisch | Nur Luft |
+| **Verdichtung** | 8:1 bis 12:1 | 15:1 bis 23:1 |
+| **Drehmoment** | Geringer | Höher |
+| **Drehzahl** | Höher | Niedriger |
+
+<NextPage href="/theorie/motorentechnik/ansaugung" name="Ansaugung und Aufladung" />

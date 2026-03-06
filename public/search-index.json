@@ -1,5 +1,62 @@
 [
   {
+    "url": "/theorie/motorentechnik/arbeitsweise/",
+    "title": "4-Takt Arbeitsverfahren",
+    "desc": "Wie funktioniert ein 4-Takt Verbrennungsmotor? Die vier Takte im Detail.",
+    "tags": [
+      "motorentechnik",
+      "4-takt",
+      "arbeitsverfahren",
+      "ansaugen",
+      "verdichten",
+      "arbeiten",
+      "ausstoßen",
+      "otto",
+      "diesel"
+    ]
+  },
+  {
+    "url": "/theorie/motorentechnik/ansaugung/",
+    "title": "Ansaugung",
+    "desc": "Wie kommt die Luft in den Motor? Luftfilter und Saugmotor.",
+    "tags": [
+      "motorentechnik",
+      "ansaugung",
+      "luftfilter",
+      "saugmotor"
+    ]
+  },
+  {
+    "url": "/theorie/motorentechnik/aufladung/",
+    "title": "Aufladung",
+    "desc": "Wie funktioniert ein Turbolader und was ist ein Ladeluftkühler?",
+    "tags": [
+      "motorentechnik",
+      "aufladung",
+      "turbolader",
+      "ladeluftkühler",
+      "abgasturbolader"
+    ]
+  },
+  {
+    "url": "/theorie/motorentechnik/bauformen/",
+    "title": "Bauformen von Verbrennungsmotoren",
+    "desc": "Überblick über die verschiedenen Bauformen und Motortypen",
+    "tags": [
+      "motorentechnik",
+      "bauformen",
+      "2-takt",
+      "4-takt",
+      "diesel",
+      "benzin",
+      "reihenmotor",
+      "v-motor",
+      "boxer",
+      "sternmotor",
+      "wankel"
+    ]
+  },
+  {
     "url": "/rechner/min-durchmesser/",
     "title": "Berechne den erforderlich Durchmesser",
     "desc": "Dieser Rechner verwendet die Hazen-Wiliams-Gleichung, um den erfoderlichen Leitungsduchmesser für eine bestimmte Fördermenge zu ermitteln.",
@@ -157,6 +214,18 @@
     ]
   },
   {
+    "url": "/theorie/motorentechnik/einfuehrung/",
+    "title": "Einführung in die Motorentechnik",
+    "desc": "Welche Motoren werden im THW eingesetzt und warum ist dieses Wissen wichtig?",
+    "tags": [
+      "motorentechnik",
+      "einführung",
+      "verbrennungsmotor",
+      "diesel",
+      "benzin"
+    ]
+  },
+  {
     "url": "/theorie/pumpentechnik/einfuehrung/",
     "title": "Einführung in die Pumpentechnik",
     "desc": "tags: pumpentechnik, einführung, pumpenarten",
@@ -249,6 +318,20 @@
       "pumpentechnik",
       "kreiselpumpe",
       "zentrifugalpumpe"
+    ]
+  },
+  {
+    "url": "/theorie/motorentechnik/kuehlung/",
+    "title": "Kühlung von Verbrennungsmotoren",
+    "desc": "Luft-, Wasser- und Ölkühlung bei Verbrennungsmotoren. Kleiner und großer Kühlkreislauf.",
+    "tags": [
+      "motorentechnik",
+      "kühlung",
+      "luftkühlung",
+      "wasserkühlung",
+      "ölkühlung",
+      "kühlkreislauf",
+      "thermostat"
     ]
   },
   {

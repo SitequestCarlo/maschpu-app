@@ -7,6 +7,51 @@ export default component$(() => {
     <>
       <h1>Theorie</h1>
 
+{/*       <h2>Motorentechnik</h2>
+      <div class={styles.list}>
+        <Link href="/theorie/motorentechnik/einfuehrung">
+          <div class={styles.title}>Einführung</div>
+          <div class={styles.description}>
+            Welche Motoren werden für Pumpen genutzt und wie funktionieren sie?
+          </div>
+        </Link>
+
+        <Link href="/theorie/motorentechnik/bauformen">
+          <div class={styles.title}>Bauformen</div>
+          <div class={styles.description}>
+            Welche Bauformen von Motoren gibt es?
+          </div>
+        </Link>
+
+        <Link href="/theorie/motorentechnik/arbeitsweise">
+          <div class={styles.title}>Arbeitsweise (4-Takt)</div>
+          <div class={styles.description}>
+            Wie funktionieren Diesel- und Benzinmotoren?
+          </div>
+        </Link>
+
+        <Link href="/theorie/motorentechnik/ansaugung">
+          <div class={styles.title}>Ansaugung</div>
+          <div class={styles.description}>
+            Luftfilter und Saugmotor – wie kommt die Luft in den Motor?
+          </div>
+        </Link>
+
+        <Link href="/theorie/motorentechnik/aufladung">
+          <div class={styles.title}>Aufladung</div>
+          <div class={styles.description}>
+            Turbolader und Ladeluftkühlung – mehr Leistung durch mehr Luft.
+          </div>
+        </Link>
+
+        <Link href="/theorie/motorentechnik/kuehlung">
+          <div class={styles.title}>Kühlung</div>
+          <div class={styles.description}>
+            Luft-, Wasser- und Ölkühlung - wie funktionieren sie?
+          </div>
+        </Link>
+      </div> */}
+
       <h2>Strömungslehre</h2>
       <div class={styles.list}>
         <Link href="/theorie/stroemungslehre/einfuehrung">
@@ -92,6 +137,13 @@ export default component$(() => {
           </div>
         </Link>
 
+        {/*         <Link href="/theorie/pumpentechnik/drehschieber">
+          <div class={styles.title}>Drehschieberpumpen (Vakuumpumpen)</div>
+          <div class={styles.description}>
+            Wie funktionieren Drehschieberpumpen?
+          </div>
+        </Link> */}
+
         <Link href="/theorie/pumpentechnik/pumpenkennlinie">
           <div class={styles.title}>Pumpenkennlinie</div>
           <div class={styles.description}>
@@ -99,52 +151,7 @@ export default component$(() => {
           </div>
         </Link>
 
-        {/*         <Link href="/theorie/pumpentechnik/drehschieber">
-          <div class={styles.title}>Drehschieberpumpen (Vakuumpumpen)</div>
-          <div class={styles.description}>
-            Wie funktionieren Drehschieberpumpen?
-          </div>
-        </Link> */}
       </div>
-      
-      {/* 
-      <h2>Motorentechnik</h2>
-      <div class={styles.list}>
-        <Link href="/theorie/motorentechnik/einfuehrung">
-          <div class={styles.title}>Einführung</div>
-          <div class={styles.description}>
-            Welche Motoren werden für Pumpen genutzt und wie funktionieren sie?
-          </div>
-        </Link>
-
-        <Link href="/theorie/motorentechnik/bauformen">
-          <div class={styles.title}>Bauformen</div>
-          <div class={styles.description}>
-            Welche Bauformen von Motoren gibt es?
-          </div>
-        </Link>
-
-        <Link href="/theorie/motorentechnik/arbeitsweise">
-          <div class={styles.title}>Arbeitsweise (4-Takt)</div>
-          <div class={styles.description}>
-            Wie funktionieren Diesel- und Benzinmotoren?
-          </div>
-        </Link>
-
-        <Link href="/theorie/motorentechnik/ansaugung">
-          <div class={styles.title}>Ansaugung und Aufladung</div>
-          <div class={styles.description}>
-            Wie funktioniert die Ansaugung bei Verbrennungsmotoren?
-          </div>
-        </Link>
-
-        <Link href="/theorie/motorentechnik/kuehlung">
-          <div class={styles.title}>Kühlung</div>
-          <div class={styles.description}>
-            Luft-, Wasser- und Ölkühlung - wie funktionieren sie?
-          </div>
-        </Link>
-      </div> */}
 
       <h2>Einsatztaktik</h2>
       <div class={styles.list}>

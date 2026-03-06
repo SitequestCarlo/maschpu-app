@@ -1,0 +1,108 @@
+---
+title: Kühlung von Verbrennungsmotoren
+description: Luft-, Wasser- und Ölkühlung bei Verbrennungsmotoren. Kleiner und großer Kühlkreislauf.
+tags: motorentechnik, kühlung, luftkühlung, wasserkühlung, ölkühlung, kühlkreislauf, thermostat
+---
+
+import NextPage from "~/components/next-page/next-page";
+
+{/* import Luftkuehlung from "./assets/luftkuehlung.png?jsx"; */}
+{/* import KleinerKreislauf from "./assets/kleiner-kuehlkreislauf.png?jsx"; */}
+{/* import GrosserKreislauf from "./assets/grosser-kuehlkreislauf.png?jsx"; */}
+{/* import Oelkuehlung from "./assets/oelkuehlung.png?jsx"; */}
+
+# Kühlung
+
+## Warum muss ein Motor gekühlt werden?
+
+Bei der Verbrennung im Zylinder entstehen Temperaturen von **über 2.000°C**. Ohne Kühlung würde der Motor innerhalb kürzester Zeit **überhitzen** und schwere Schäden erleiden:
+
+- **Kolbenfresser** – der Kolben dehnt sich zu stark aus und verklemmt im Zylinder
+- **Zerstörung der Dichtungen** – Kopfdichtung, O-Ringe etc. versagen
+- **Ölverlust** – das Motoröl verliert seine Schmiereigenschaften
+- **Verzug** – Motorblock und Zylinderkopf verziehen sich
+
+Etwa **ein Drittel** der im Kraftstoff enthaltenen Energie geht als Wärme verloren und muss abgeführt werden.
+
+## Luftkühlung
+
+Bei der Luftkühlung wird die Wärme **direkt an die umgebende Luft** abgegeben. Der Motor hat dafür **Kühlrippen**, die die Oberfläche vergrößern.
+
+{/* TODO: Bild Luftkühlung mit Kühlrippen */}
+{/* <Luftkuehlung alt="Motor mit Kühlrippen für Luftkühlung" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+Oft unterstützt ein **Gebläse** die Luftkühlung, damit auch im Stand oder bei geringer Fahrtgeschwindigkeit genug Luft an den Motor gelangt.
+
+- Einfacher Aufbau, kein Kühlmittel nötig
+- Geringerer Wartungsaufwand
+- Weniger effektiv bei hoher Motorleistung
+- Motor läuft lauter (keine dämpfende Wassermantel)
+
+_Beispiel im THW: Kleinere Motorpumpen und Aggregate_
+
+## Wasserkühlung (Flüssigkeitskühlung)
+
+Die Wasserkühlung ist das verbreitetste System bei **leistungsstarken Motoren**. Ein **Kühlmittel** (Wasser-Glykol-Gemisch) zirkuliert durch den Motor und transportiert die Wärme ab.
+
+### Kleiner Kühlkreislauf (Warmlaufphase)
+
+Wenn der Motor **kalt** ist, muss er möglichst schnell auf **Betriebstemperatur** kommen. Dafür gibt es den kleinen Kühlkreislauf:
+
+{/* TODO: Bild/Schema kleiner Kühlkreislauf */}
+{/* <KleinerKreislauf alt="Schema des kleinen Kühlkreislaufs" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+Der **Thermostat** ist geschlossen. Das Kühlmittel zirkuliert nur zwischen **Motor** und **Wasserpumpe**, ohne durch den Kühler zu fließen.
+
+Dadurch erwärmt sich der Motor schnell, was wichtig ist für:
+- Geringeren **Verschleiß** (kalte Motoren verschleißen stärker)
+- Bessere **Verbrennung** und weniger Emissionen
+- Schnelleres Erreichen der optimalen **Öl-Temperatur**
+
+### Großer Kühlkreislauf (Betriebstemperatur)
+
+Erreicht das Kühlmittel ca. **80–90°C**, öffnet der **Thermostat** und gibt den Weg zum **Kühler** frei:
+
+{/* TODO: Bild/Schema großer Kühlkreislauf */}
+{/* <GrosserKreislauf alt="Schema des großen Kühlkreislaufs mit Kühler" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+Das Kühlmittel fließt jetzt den vollen Kreislauf:
+
+1. Die **Wasserpumpe** fördert das Kühlmittel durch den Motor
+2. Das Kühlmittel nimmt die Wärme im **Motorblock** und **Zylinderkopf** auf
+3. Das erwärmte Kühlmittel fließt durch den **Kühler** (Wärmetauscher)
+4. Im Kühler wird die Wärme an die **Umgebungsluft** abgegeben (unterstützt durch einen Lüfter)
+5. Das abgekühlte Kühlmittel fließt zurück zur Wasserpumpe
+
+### Bestandteile
+
+| Bauteil | Funktion |
+|---|---|
+| **Wasserpumpe** | Fördert das Kühlmittel durch den Kreislauf |
+| **Thermostat** | Regelt den Wechsel zwischen kleinem und großem Kreislauf |
+| **Kühler** | Wärmetauscher, gibt Wärme an die Luft ab |
+| **Lüfter** | Unterstützt den Kühler bei geringem Fahrtwind |
+| **Ausgleichsbehälter** | Gleicht Volumenänderungen des Kühlmittels aus |
+| **Kühlmittel** | Wasser-Glykol-Gemisch (Frostschutz + Korrosionsschutz) |
+
+_Beispiele im THW: Alle Großpumpen-Motoren (Hannibal, DIA, Börger)_
+
+## Ölkühlung
+
+Das **Motoröl** hat neben der Schmierung auch eine wichtige **Kühlfunktion**. Es nimmt Wärme an heißen Bauteilen auf (z.B. Kolbenunterseite, Turbolader-Lager) und gibt sie über die **Ölwanne** oder einen separaten **Ölkühler** ab.
+
+{/* TODO: Bild/Schema Ölkühlung */}
+{/* <Oelkuehlung alt="Schema der Ölkühlung" style={{ padding: "1rem 4rem", width: "calc(100% - 8rem)" }} /> */}
+
+Ein **Ölkühler** ist ein kleiner Wärmetauscher, der entweder:
+- **Luft-gekühlt** ist (eigener kleiner Kühler)
+- **Wasser-gekühlt** ist (Wärmetauscher im Kühlmittelkreislauf)
+
+Die Ölkühlung ist besonders wichtig für den **Turbolader**, dessen Lager extrem hohen Temperaturen ausgesetzt sind.
+
+### Was können wir als Maschinisten tun?
+
+- **Ölstand** vor jedem Einsatz prüfen – zu wenig Öl bedeutet auch zu wenig Kühlung
+- **Kühlmittelstand** kontrollieren
+- Motor nach hoher Belastung **nicht sofort abstellen** – dem Turbolader Zeit geben, sich herunterzukühlen (Nachlaufkühlung)
+- Auf **Warnlampen** achten (Öldruckwarnung, Kühlmitteltemperatur)
+- **Kühler und Kühlrippen** frei von Verschmutzung halten
